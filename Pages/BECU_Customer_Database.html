@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BECU Customer Database</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+	  }
+    .frame {  /* The background bar behind the BECU Logo */
+      position: absolute;
+      width: 100%;
+      height: 63px;
+      background: #e6e6e6;
+    }
+    .input-icons a {
+      position:absolute;
+      color: black;
+      background-color: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      top:30%;
+    }
+    /* The following 4 sections of codes are for the links on the horizonal menu */
+    .input-icons a:link {
+      text-decoration: none;
+    }
+    .input-icons a:visited {
+      text-decoration: none;
+    }
+    .input-icons a:hover {
+      text-decoration: underline;
+    }
+    .input-icons a:active {
+      color: white;
+      text-decoration: underline;
+    }
+    /* #account{ ID for the account button
+      position: absolute;
+      left: 85%;
+      top: 20%;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #e60000;
+      font-size: 20px;
+      font-weight: bold;
+    } */
+    /* The following 3 sections of codes are for the icons on the input */
+    .input-icons i {
+      position: absolute;
+    }
+    .input-icons {
+      width: 100%;
+      /*margin-bottom: 10px;*/
+    }
+    .icon {
+      color: #e60000;
+      font-size:28px;
+      top:25%;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    /* The following 5 sections of codes are for the icon bar */
+    .icon-bar-background{
+      position: absolute;
+      top: 63px;
+      left: 0;
+      width: 4.5%;
+      height: 91.5%;
+      overflow: auto;
+      background: #cc0000;
+    }
+    .icon-bar {
+      position: relative;
+      top: 8%; /* Set a specific position */
+      width: 100%; /* Set a specific width */
+      background-color: #cc0000;  /* Dark-red background */
+    }
+    .icon-bar a {
+      display: block; /* Make the links appear below each other instead of side-by-side */
+      text-align: center; /* Center-align text */
+      padding: 15px;  /* Add some padding */
+      transition: all 0.3s ease;  /* Add transition for hover effects */
+      color: white; /* White text color */
+      font-size: 34px;  /* Increased font-size */
+    }
+    .icon-bar a:hover {
+      /*background-color: #A9A9A9; /*dark gray */
+      background-color: #00CED1; /*dark turquoise */
+    }
+    .active {
+      background-color: black;
+    }
+    p {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #Search{ /* ID for the search input */
+      position: absolute;
+      top: 9%;
+      right: 2.5%;
+      width: 13%;
+      height: 0.5%;
+      border: solid black;
+      border-radius: 15px;
+      padding-left: 35px;
+      font-size: 20px;
+      background-color: transparent;
+    }
+    .profile{ /* The user profile section */
+      position: absolute;
+      top: 14%;
+      left:17.5%;
+      width: 70%;
+      height: 40%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #F5F5F5;
+    }
+    /* The following 3 sections of codes change the placeholder's color */
+    ::placeholder {
+      color: black;
+      opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: black;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: black;
+    }
+    .title {  /* The titles for verification sections */
+      color:black;
+      font-size:24px
+    }
+    .first_verification{ /* The user info verification section */
+      position: absolute;
+      top: 60%;
+      left: 5.2%;
+      width: 38%;
+      height: 28%;
+      overflow: auto;
+      background: #F5F5F5;
+      /*background: #F5F5F5;*/
+    }
+    .voice_verification{ /* The user voice verification section */
+      position: absolute;
+      top: 60%;
+      left: 45.2%;
+      width: 54%;
+      height: 28%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #F5F5F5;
+    }
+    #authentication{ /* ID for the submit button*/
+      position: absolute;
+      bottom: 3%;
+      width: 25%;
+      height: 6%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #008080;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
+        outline: none;
+    }
+   </style>
+</head>
+<body>
+  <div class="frame">
+    <img src="BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+    <div class="input-icons">
+      <i class="fa fa-user-plus icon" style="left:21.5%;"></i>
+      <a href="BECU Add New User.html" style="left:24%;">Add New Customer</a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-address-card icon" style="left:43.5%;"></i>
+      <a href="#" style="left:46%;"><u>Customer Database</u></a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
+      <a href="#" style="left:68%;">System Dashboard</a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
+      <a href="#" style="left:90%;">Account</a>
+    <!-- <input type="button" name="account" id="account" value="Account"> -->
+    </div>
+  </div>
+  <div class="icon-bar-background">
+    <div class="icon-bar">
+      <a class="active" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-bell"></i></a>
+      <a href="#"><i class="fa fa-search"></i></a>
+      <a href="#"><i class="fa fa-headphones"></i></a>
+      <a href="#"><i class="fa fa-phone"></i></a>
+      <a href="#"><i class="fa fa-comment-o"></i></a>
+      <a href="#"><i class="fa fa-bar-chart"></i></a>
+      <a href="#"><i class="fa fa-question-circle-o"></i></a>
+      <a href="#"><i class="fa fa-cogs"></i></a>
+    </div>
+  </div>
+  <div>
+    <p style="top:6%; left:45%; color:black; font-size:24px"><b><u>Customer Profile</u></p>
+    <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <div class="input-icons">
+        <i class="fa fa-search" style="top:9.5%; right:17%; color:gray; font-size:20px"></i>
+        <input class="input-field" type="text" name="Search" id="Search" placeholder="Search">
+      </div>
+    </form>
+  </div>
+  <div class="profile">
+    <img src="BECU_Customer_Profile.png" alt="BECU Customer Profile" style="position:relative; height:100%">
+  </div>
+  <div class="title">
+    <p style="bottom:38%; left:17.5%;"><u>First Verification</u></p>
+    <p style="bottom:38%; left:65.4%;"><u>Voice Verification</u></p>
+  </div>
+  <div class="first_verification">
+    <img src="BECU_First_Verification.png" alt="BECU First Verification" style="position:relative; left:7%; width:80%;">
+  </div>
+  <div class="voice_verification">
+    <img src="BECU_Voice_Verification.png" alt="BECU Voice Verification" style="position:relative; left:7%; width:90%;">
+  </div>
+  <div>
+    <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <input type="button" name="submit" id="authentication" value="System Authenticated" style="left: 20%;">
+      <input type="button" name="submit" id="authentication" value="Agent Authenticated" style="right: 15%;">
+    </form>
+  </div>
+</body>
+</html>

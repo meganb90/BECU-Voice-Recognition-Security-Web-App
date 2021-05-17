@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BECU Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+	  }
+    .frame {  /* The background bar behind the BECU Logo*/
+      width: 100%;
+      height: 63px;
+      background: #e6e6e6;
+    }
+    input {
+      display: block;
+      margin : 0 auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .login{ /* The user login section*/
+      position: absolute;
+      right: 0;
+      width: 42.5%;
+      height: 91.5%;
+      overflow: auto;
+      background: #004080;
+    }
+    h1{ /* Header for the user login section */
+      text-align: center;
+      color: #FFFFFF;
+      margin: 100px 0px 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+    }
+    #Uname{ /* ID for username input*/
+      width: 90%;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      padding-left: 30px;
+      font-size: 20px;
+    }
+    #Pass{ /* ID for password input*/
+      width: 90%;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      padding-left: 30px;
+      font-size: 20px;
+    }
+    #log{ /* ID for the login button*/
+      width: 45%;
+      height: 55px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    /* The following 4 sections of codes are for the icons on the input*/
+    .input-icons i {
+      position: absolute;
+    }
+    .input-icons {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .icon {
+      color: black;
+      padding: 20px 0px 0px 10px; /* top | right | bottom | left */
+      width: 70px;
+      text-align: left;
+      font-size: 18px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    a{
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    /* The following 4 sections of codes are for the forget password link */
+    .link_center a:link {
+      text-decoration: none;
+    }
+    .link_center a:visited {
+      text-decoration: none;
+    }
+    .link_center a:hover {
+      text-decoration: underline;
+    }
+    .link_center a:active {
+      text-decoration: underline;
+    }
+    .link_center {  /* Center the hyperlink */
+      text-align: center;
+    }
+    .size { /* The background image for the voice log-in feacture*/
+      position: absolute;
+      top: 17%;
+      left: 12%;
+      /*width: 550px;*/
+      width: 37%;
+      /*height: 650px;*/
+      height: 60%;
+    }
+  	/*label{ For adding username or password label before the input
+      		color: #FFFFFF;
+      		font-size: 17px;
+  	}
+  	span{
+      color: white;
+      font-size: 17px;
+  	}*/
+   </style>
+</head>
+<body>
+  <div class="frame">
+    <img src="BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+  </div>
+  <div class="login">
+    <form id="login" method="get" action="login.php" style="max-width:400px;margin:auto">
+      <h1><b>User Login</b></h1><br>
+      <!-- <label><b>User Name
+      </b>
+    </label> -->
+      <div class="input-icons">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" name="Uname" id="Uname" placeholder="Username">
+        <br>
+      </div>
+      <div class="input-icons">
+        <i class="fa fa-lock icon"></i>
+        <input class="input-field" type="Password" name="Pass" id="Pass" placeholder="Password">
+        <br><br><br>
+      </div>
+      <!-- <input type="text" name="Uname" id="Uname" placeholder="Username">
+      <br> -->
+      <!-- <label><b>Password
+      </b>
+      </label> -->
+      <!-- <input type="Password" name="Pass" id="Pass" placeholder="Password">
+      <br><br> -->
+      <a href="BECU Add New User.html"><input type="button" name="log" id="log" value="LOGIN >"></a>
+      <br>
+      <!-- <input type="checkbox" id="check"> -->
+      <!-- <span>Remember me</span> -->
+      <div class="link_center">
+        <a href="#">Forgot your password</a>
+      </div>
+    </form>
+  </div>
+      <img class="size" src="BECU_Voice_Login_Feature.png" alt="BECU Voice Log-in">
+</body>
+</html>

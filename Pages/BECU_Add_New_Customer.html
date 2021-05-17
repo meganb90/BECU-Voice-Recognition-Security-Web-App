@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BECU Add New Customer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+	  }
+    .frame {  /* The background bar behind the BECU Logo */
+      position: absolute;
+      width: 100%;
+      height: 63px;
+      background: #e6e6e6;
+    }
+    .input-icons a {
+      position:absolute;
+      color: black;
+      background-color: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      top:30%;
+    }
+    /* The following 4 sections of codes are for the links on the horizonal menu */
+    .input-icons a:link {
+      text-decoration: none;
+    }
+    .input-icons a:visited {
+      text-decoration: none;
+    }
+    .input-icons a:hover {
+      text-decoration: underline;
+    }
+    .input-icons a:active {
+      color: white;
+      text-decoration: underline;
+    }
+    /* #account{ ID for the account button
+      position: absolute;
+      left: 85%;
+      top: 20%;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #e60000;
+      font-size: 20px;
+      font-weight: bold;
+    } */
+    /* The following 3 sections of codes are for the icons on the input */
+    .input-icons i {
+      position: absolute;
+    }
+    .input-icons {
+      width: 100%;
+      /*margin-bottom: 10px;*/
+    }
+    .icon {
+      color: #e60000;
+      font-size:28px;
+      top:25%;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    /* The following 5 sections of codes are for the icon bar */
+    .icon-bar-background{
+      position: absolute;
+      top: 63px;
+      left: 0;
+      width: 4.5%;
+      height: 91.5%;
+      overflow: auto;
+      background: #cc0000;
+    }
+    .icon-bar {
+      position: relative;
+      top: 8%; /* Set a specific position */
+      width: 100%; /* Set a specific width */
+      background-color: #cc0000;  /* Dark-red background */
+    }
+    .icon-bar a {
+      display: block; /* Make the links appear below each other instead of side-by-side */
+      text-align: center; /* Center-align text */
+      padding: 15px;  /* Add some padding */
+      transition: all 0.3s ease;  /* Add transition for hover effects */
+      color: white; /* White text color */
+      font-size: 34px;  /* Increased font-size */
+    }
+    .icon-bar a:hover {
+      /*background-color: #A9A9A9; /*dark gray */
+      background-color: #00CED1; /*dark turquoise */
+    }
+    .active {
+      background-color: black;
+    }
+    p {
+      position: absolute;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #Search{ /* ID for the search input */
+      position: absolute;
+      top: 9%;
+      right: 2.5%;
+      width: 13%;
+      height: 0.5%;
+      border: solid black;
+      border-radius: 15px;
+      padding-left: 35px;
+      font-size: 20px;
+      background-color: transparent;
+    }
+    .data{ /* The user database input section */
+      position: absolute;
+      top: 14%;
+      left: 5.2%;
+      width: 94%;
+      height: 25%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #F5F5F5;
+    }
+    #FirstLine{ /* ID for first line user database input */
+      position: absolute;
+      top: 10%;
+      height: 8%;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: #6cafc6;
+    }
+    #SecondLine{ /* ID for second line user database input */
+      position: absolute;
+      top: 35%;
+      height: 8%;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: #6cafc6;
+    }
+    #ThirdLine{ /* ID for third line user database input */
+      position: absolute;
+      top: 60%;
+      height: 20%;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: #6cafc6;
+    }
+    /* The following 3 sections of codes change the placeholder's color */
+    ::placeholder {
+      color: black;
+      opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: black;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: black;
+    }
+    .recording{ /* The user voice recording section */
+      position: absolute;
+      top: 52%;
+      left: 5.2%;
+      width: 94%;
+      height: 39%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #F5F5F5;
+    }
+    #submit{ /* ID for the submit button*/
+      position: absolute;
+      bottom: 1.5%;
+      right: 3.5%;
+      width: 13%;
+      height: 6%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
+        outline: none;
+    }
+   </style>
+</head>
+<body>
+  <div class="frame">
+    <img src="\images\BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+    <div class="input-icons">
+      <i class="fa fa-user-plus icon" style="left:21.5%;"></i>
+      <a href="BECU Add New User.html" style="left:24%;"><u>Add New Customer</u></a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-address-card icon" style="left:43.5%;"></i>
+      <a href="BECU Customer Database.html" style="left:46%;">Customer Database</a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
+      <a href="#" style="left:68%;">System Dashboard</a>
+    </div>
+    <div class="input-icons">
+      <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
+      <a href="#" style="left:90%;">Account</a>
+    <!-- <input type="button" name="account" id="account" value="Account"> -->
+    </div>
+  </div>
+  <div class="icon-bar-background">
+    <div class="icon-bar">
+      <a class="active" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-bell"></i></a>
+      <a href="#"><i class="fa fa-search"></i></a>
+      <a href="#"><i class="fa fa-headphones"></i></a>
+      <a href="#"><i class="fa fa-phone"></i></a>
+      <a href="#"><i class="fa fa-comment-o"></i></a>
+      <a href="#"><i class="fa fa-bar-chart"></i></a>
+      <a href="#"><i class="fa fa-question-circle-o"></i></a>
+      <a href="#"><i class="fa fa-cogs"></i></a>
+    </div>
+  </div>
+  <div>
+    <div class="input-icons">
+      <i class="fa fa-pencil-square-o icon" style="top:8.5%; left:5.5%; color:black; font-size:38px"></i>
+      <p style="top:7%; left:9%; color:black; font-size:20px"><b>Customer Profile</p>
+      <!--<i class="fa fa-search" style="top:7.5%; right:9%; color:black; font-size:20px"></i>-->
+      <form method="get" action="login.php" style="max-width:400px; margin:auto">
+        <div class="input-icons">
+          <i class="fa fa-search" style="top:9.5%; right:17%; color:gray; font-size:20px"></i>
+          <input class="input-field" type="text" name="Search" id="Search" placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="data">
+    <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <input class="input-field" type="text" name="FirstName" id="FirstLine" placeholder="First Name" style="left:1%; width:23%;">
+      <input class="input-field" type="text" name="LastName" id="FirstLine" placeholder="Last Name" style="left:27%; width:23%;">
+      <input class="input-field" type="text" name="Gender" id="FirstLine" placeholder="Gender" style="left:53%; width:16%;">
+      <input class="input-field" type="text" name="DOB" id="FirstLine" placeholder="Date of Birth" style="left:72%; width:25%;">
+      <input class="input-field" type="text" name="AccountNo." id="SecondLine" placeholder="Account No." style="left:1%; width:23%;">
+      <input class="input-field" type="text" name="SNN" id="SecondLine" placeholder="SNN" style="left:27%; width:23%;">
+      <input class="input-field" type="text" name="ID" id="SecondLine" placeholder="ID" style="left:53%; width:16%;">
+      <input class="input-field" type="text" name="Phone" id="SecondLine" placeholder="Phone" style="left:72%; width:25%;">
+      <input class="input-field" type="text" name="Address" id="ThirdLine" placeholder="Address" style="left:1%; width:96%;">
+    </form>
+  </div>
+  <div class="input-icons">
+    <i class="fa fa-microphone icon" style="top:41%; left:35%; color:#2251dd; font-size:80px"></i>
+    <p style="top:38%; left:45%; color:#2251dd; font-size:40px">Voice Recording</p>
+  </div>
+  <div class="recording">
+    <img src="\images\BECU_Recording.png" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
+  </div>
+  <div>
+    <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <a href="BECU Customer Database.html"><input type="button" name="submit" id="submit" value="SUBMIT"></a>
+    </form>
+  </div>
+</body>
+</html>

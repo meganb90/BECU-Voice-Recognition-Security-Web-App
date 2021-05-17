@@ -1,5 +1,5 @@
 {
-    "staticWebApps.appSubpath": "/",
-    "staticWebApps.apiSubpath": "api",
+    "staticWebApps.appSubpath": "/Users/buime/BECU-Voice-Recognition-Security-Web-App",
+    "staticWebApps.apiSubpath": "",
     "staticWebApps.outputSubpath": "build"
 }

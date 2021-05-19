@@ -48,23 +48,36 @@ function register(){
 	var address = document.getElementById("Address").value;
 	var email = document.getElementById("Email").value;
 
-	var request_data = {
-		"service": "register",
-		"Fname": firstname,
-		"Lname": lastname,
-		"Gender": gender,
-		"DOB": date_of_birth,
-		"AccountNo": acount_number,
-		"SSN": ssn,
-		"CustID": id,
-		"Phone": phone,
-		"Address": address,
-		"Email": email
-	};
+	var user_input = [firstname, lastname, gender, date_of_birth, acount_number, ssn, id, phone, address, email];
+	var incomplete = false;
 
-	var request_str = dict2jsonEncode(request_data);
+	for (i = 0; i < user_input.length; i++) {
+  	if (user_input[i] == "") {
+			incomplete = true;
+		}
+	}
 
-	httpPost(SERVER_URL, request_str, actions_after_register);
+	if (incomplete) {
+		alert("The customer profile is not completed");
+	} else {
+		var request_data = {
+			"service": "register",
+			"Fname": firstname,
+			"Lname": lastname,
+			"Gender": gender,
+			"DOB": date_of_birth,
+			"AccountNo": acount_number,
+			"SSN": ssn,
+			"CustID": id,
+			"Phone": phone,
+			"Address": address,
+			"Email": email
+		};
+
+		var request_str = dict2jsonEncode(request_data);
+
+		httpPost(SERVER_URL, request_str, actions_after_register);
+	}
 }
 
 function actions_after_register(){
@@ -81,5 +94,6 @@ function actions_after_register(){
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 	}
+	
 	alert(decode_dict["message"]);
 }

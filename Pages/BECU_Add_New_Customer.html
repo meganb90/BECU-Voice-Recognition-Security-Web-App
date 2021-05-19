@@ -4,6 +4,8 @@
     <title>BECU Add New Customer</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="Script/functions.js"></script>
+    <script type="text/javascript" src="Script/utils.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -127,15 +129,15 @@
     }
     .data{ /* The user database input section */
       position: absolute;
-      top: 14%;
+      top: 13%;
       left: 5.2%;
       width: 94%;
-      height: 25%;
+      height: 26%;
       overflow: auto;
       /*background: #f2f2f2;*/
       background: #F5F5F5;
     }
-    #FirstLine{ /* ID for first line user database input */
+    #FirstName, #LastName, #Gender, #DOB{ /* ID for first line user database input */
       position: absolute;
       top: 10%;
       height: 8%;
@@ -144,7 +146,7 @@
       font-size: 20px;
       background-color: #6cafc6;
     }
-    #SecondLine{ /* ID for second line user database input */
+    #AccountNo, #SSN, #ID, #Phone{ /* ID for second line user database input */
       position: absolute;
       top: 35%;
       height: 8%;
@@ -153,10 +155,10 @@
       font-size: 20px;
       background-color: #6cafc6;
     }
-    #ThirdLine{ /* ID for third line user database input */
+    #Address, #Email{ /* ID for third line user database input */
       position: absolute;
       top: 60%;
-      height: 20%;
+      height: 15%;
       border: none;
       border-radius: 5px;
       font-size: 20px;
@@ -183,7 +185,20 @@
       /*background: #f2f2f2;*/
       background: #F5F5F5;
     }
-    #submit{ /* ID for the submit button*/
+    #Register{ /* ID for the submit button*/
+      position: absolute;
+      top: 75%;
+      right: 3.5%;
+      width: 13%;
+      height: 20%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    #Enroll{ /* ID for the submit button*/
       position: absolute;
       bottom: 1.5%;
       right: 3.5%;
@@ -203,14 +218,14 @@
 </head>
 <body>
   <div class="frame">
-    <img src="/Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+    <a href="https://www.becu.org/"><img src="Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;"></a>
     <div class="input-icons">
       <i class="fa fa-user-plus icon" style="left:21.5%;"></i>
-      <a href="/Pages/BECU_Add_New_Customer.html" style="left:24%;"><u>Add New Customer</u></a>
+      <a href="BECU_Add_New_User.html" style="left:24%;"><u>Add New Customer</u></a>
     </div>
     <div class="input-icons">
       <i class="fa fa-address-card icon" style="left:43.5%;"></i>
-      <a href="/Pages/BECU_Customer_Database.html" style="left:46%;">Customer Database</a>
+      <a href="BECU_Customer_Database.html" style="left:46%;">Customer Database</a>
     </div>
     <div class="input-icons">
       <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
@@ -250,28 +265,31 @@
   </div>
   <div class="data">
     <form method="get" action="login.php" style="max-width:400px; margin:auto">
-      <input class="input-field" type="text" name="FirstName" id="FirstLine" placeholder="First Name" style="left:1%; width:23%;">
-      <input class="input-field" type="text" name="LastName" id="FirstLine" placeholder="Last Name" style="left:27%; width:23%;">
-      <input class="input-field" type="text" name="Gender" id="FirstLine" placeholder="Gender" style="left:53%; width:16%;">
-      <input class="input-field" type="text" name="DOB" id="FirstLine" placeholder="Date of Birth" style="left:72%; width:25%;">
-      <input class="input-field" type="text" name="AccountNo." id="SecondLine" placeholder="Account No." style="left:1%; width:23%;">
-      <input class="input-field" type="text" name="SNN" id="SecondLine" placeholder="SNN" style="left:27%; width:23%;">
-      <input class="input-field" type="text" name="ID" id="SecondLine" placeholder="ID" style="left:53%; width:16%;">
-      <input class="input-field" type="text" name="Phone" id="SecondLine" placeholder="Phone" style="left:72%; width:25%;">
-      <input class="input-field" type="text" name="Address" id="ThirdLine" placeholder="Address" style="left:1%; width:96%;">
+        <input class="input-field" type="text" name="FirstName" id="FirstName" placeholder="First Name" style="top:5%; left:1%; width:23%;">
+        <input class="input-field" type="text" name="LastName" id="LastName" placeholder="Last Name" style="top:5%; left:27%; width:23%;">
+        <input class="input-field" type="text" name="Gender" id="Gender" placeholder="Gender" style="top:5%; left:53%; width:16%;">
+        <input class="input-field" type="text" name="DOB" id="DOB" placeholder="Date of Birth (Month/Date/Year)" style="top:5%; left:72%; width:25%;">
+        <input class="input-field" type="text" name="AccountNo" id="AccountNo" placeholder="Account Number" style="top:25%; left:1%; width:23%;">
+        <input class="input-field" type="text" name="SSN" id="SSN" placeholder="Social Security Number" style="top:25%; left:27%; width:23%;">
+        <input class="input-field" type="text" name="ID" id="ID" placeholder="ID" style="top:25%; left:53%; width:16%;">
+        <input class="input-field" type="text" name="Phone" id="Phone" placeholder="Phone Number" style="top:25%; left:72%; width:25%;">
+        <input class="input-field" type="text" name="Address" id="Address" placeholder="Address" style="top:45%; left:1%; width:49%;">
+        <input class="input-field" type="text" name="Email" id="Email" placeholder="Email" style="top:45%; left:53%; width:44%;">
     </form>
+    <input type="button" name="Register" id="Register" value="REGISTER" onclick="register()">
   </div>
   <div class="input-icons">
     <i class="fa fa-microphone icon" style="top:41%; left:35%; color:#2251dd; font-size:80px"></i>
     <p style="top:38%; left:45%; color:#2251dd; font-size:40px">Voice Recording</p>
   </div>
   <div class="recording">
-    <img src="/Images/BECU_Recording.PNG" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
+    <img src="Images/BECU_Recording.png" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
   </div>
-  <div>
-    <form method="get" action="login.php" style="max-width:400px; margin:auto">
-      <a href="/Pages/BECU_Customer_Database.html"><input type="button" name="submit" id="submit" value="SUBMIT"></a>
-    </form>
-  </div>
+  <a href="BECU_Customer_Database.html"><input type="button" name="Enroll" id="Enroll" value="ENROLL"></a>
 </body>
+<!-- <script type="text/javascript">
+  setCookie("CustID", document.getElementById("FirstName").value, 30);
+  var returned_id = getCookie("CustID");
+  console.log(returned_id);
+</script> -->
 </html>

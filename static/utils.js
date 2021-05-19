@@ -52,7 +52,9 @@ function getCookie(cname){
     // Loop through all cookies, and return the correct value
     for(var i=0; i<ca.length; i++) {
         var c = ca[i].trim();
-        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        if (c.indexOf(name)==0) {
+          return c.substring(name.length,c.length);
+        }
     }
 
     // Return an empty string by default
@@ -76,6 +78,7 @@ function httpPost(url, postData, postProcesses){
     */
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.addEventListener("load", postProcesses);
+    // xmlHttp.open("POST", url);
     xmlHttp.open("POST", url);
     // maybe you would like to use json for input!!
     xmlHttp.setRequestHeader("Content-Type", "application/json/;charset=UTF-8");

@@ -1,4 +1,4 @@
-var SERVER_URL = "https://centralserver.azurewebsites.net/api/info"
+var SERVER_URL = "https://becucentralserver.azurewebsites.net/api/info"
 
 var SCREEN_WIDTH = window.innerWidth
 var SCREEN_HEIGHT = window.innerHeight

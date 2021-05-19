@@ -76,9 +76,10 @@ function actions_after_register(){
 		setCookie("CustID", id, 30);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
+	} else {
+		setCookie("CustID", 0, 30);
+		var returned_id = getCookie("CustID");
+		console.log(returned_id);
 	}
-
-	// var returned_id = getCookie("CustID");
-	// console.log(returned_id);
 	alert(decode_dict["message"]);
 }

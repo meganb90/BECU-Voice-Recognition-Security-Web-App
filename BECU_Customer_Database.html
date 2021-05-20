@@ -115,6 +115,18 @@
       position: absolute;
       font-family: Arial, Helvetica, sans-serif;
     }
+    #IDLookUp {
+      position: absolute;
+      top: 9%;
+      left: 23%;
+      width: 13%;
+      height: 0.5%;
+      border: solid black;
+      border-radius: 15px;
+      padding-left: 35px;
+      font-size: 20px;
+      background-color: transparent;
+    }
     #Search{ /* ID for the search input */
       position: absolute;
       top: 9%;
@@ -127,15 +139,51 @@
       font-size: 20px;
       background-color: transparent;
     }
-    .profile{ /* The user profile section */
+    .profile_left{ /* The user profile section */
       position: absolute;
-      top: 14%;
-      left:17.5%;
-      width: 70%;
-      height: 40%;
+      top: 15%;
+      left:5%;
+      width: 35%;
+      height: 53%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #E8E8E8;
+    }
+    .profile_right{ /* The user profile section */
+      position: absolute;
+      top: 15%;
+      left:40%;
+      width: 60%;
+      height: 53%;
       overflow: auto;
       /*background: #f2f2f2;*/
       background: #F5F5F5;
+    }
+    #AccountNo_Display, #Name_Display, #Gender_Display, #DOB_Display, #SSN_Display, #ID_Display, #Email_Display, #PhoneNumber_Display, #Address_Display {
+      position: relative;
+      left:3%;
+      color:black;
+      font-size:20px;
+    }
+    #VoiceProfileID, #AccountOpenedDate, #LastActiveDate {
+      position: relative;
+      top:62%;
+      left:5%;
+      color:black;
+      font-size:20px;
+    }
+    #DisplayProfile{ /* ID for the register button*/
+      position: absolute;
+      top: 9%;
+      left: 40%;
+      width: 7%;
+      height: 4%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 20px;
+      font-weight: bold;
     }
     /* The following 3 sections of codes change the placeholder's color */
     ::placeholder {
@@ -207,7 +255,6 @@
     <div class="input-icons">
       <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
       <a href="#" style="left:90%;">Account</a>
-    <!-- <input type="button" name="account" id="account" value="Account"> -->
     </div>
   </div>
   <div class="icon-bar-background">
@@ -223,19 +270,38 @@
       <a href="#"><i class="fa fa-cogs"></i></a>
     </div>
   </div>
-  <div>
-    <p style="top:6%; left:45%; color:black; font-size:24px"><b><u>Customer Profile</u></p>
+  <div class="input-icons">
+    <i class="fa fa-id-badge" style="top:8.5%; left:5.5%; color:black; font-size:38px"></i>
+    <p style="top:7%; left:9%; color:black; font-size:20px"><b><u>Customer Profile</u></p>
     <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <i class="fa fa-search" style="top:9.5%; left:24%; color:gray; font-size:20px"></i>
+      <input class="input-field" type="text" name="IDLookUp" id="IDLookUp" placeholder="User ID Lookup">
+      <input type="button" name="DisplayProfile" id="DisplayProfile" value="SUBMIT" onclick="display_profile()">
       <div class="input-icons">
         <i class="fa fa-search" style="top:9.5%; right:17%; color:gray; font-size:20px"></i>
         <input class="input-field" type="text" name="Search" id="Search" placeholder="Search">
       </div>
     </form>
   </div>
-  <div class="profile">
-    <img src="Images/BECU_Customer_Profile.png" alt="BECU Customer Profile" style="position:relative; height:100%">
+  <div class="profile_right">
+    <p id="AccountNo_Display">Account Number:</p>
+    <p id="Name_Display">Name:</p>
+    <p id="Gender_Display">Gender:</p>
+    <p id="DOB_Display">Date of Birth:</p>
+    <p id="SSN_Display">SSN:</p>
+    <p id="ID_Display">User ID:</p>
+    <p id="Email_Display">Email:</p>
+    <p id="PhoneNumber_Display">Phone Number:</p>
+    <p id="Address_Display">Address:</p>
   </div>
-  <div class="title">
+  <div class="profile_left">
+    <p style="position: absolute; left:40%; color:black; font-size:30px">Profile</p>
+    <i class="fa fa-user" style="position: absolute; top:20%; left:40%; color:black; font-size:140px"></i>
+    <p id="VoiceProfileID">Customer Voice ID:</p>
+    <p id="AccountOpenedDate">Account Opened:</p>
+    <p id="LastActiveDate">Last Active:</p>
+  </div>
+  <!-- <div class="title">
     <p style="bottom:38%; left:17.5%;"><u>First Verification</u></p>
     <p style="bottom:38%; left:65.4%;"><u>Voice Verification</u></p>
   </div>
@@ -250,6 +316,6 @@
       <input type="button" name="submit" id="authentication" value="System Authenticated" style="left: 20%;">
       <input type="button" name="submit" id="authentication" value="Agent Authenticated" style="right: 15%;">
     </form>
-  </div>
+  </div> -->
 </body>
 </html>

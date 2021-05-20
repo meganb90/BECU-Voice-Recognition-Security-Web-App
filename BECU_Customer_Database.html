@@ -86,7 +86,7 @@
       top: 63px;
       left: 0;
       width: 4.5%;
-      height: 91.5%;
+      height: 172%;
       overflow: auto;
       background: #cc0000;
     }
@@ -185,6 +185,49 @@
       font-size: 20px;
       font-weight: bold;
     }
+    #AccountNo_Checkbox, #DOB_Checkbox, #SSN_Checkbox{
+      position: relative;
+      top: 18%;
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      color: gray;
+    }
+    #AccountNo_Label, #DOB_Label, #SSN_Label{
+      position: relative;
+      top: 18%;
+      left: 10%;
+      font-size: 20px;
+      color: #686868;
+    }
+    #PhoneNumber_Checkbox, #Email_Checkbox, #Address_Checkbox{
+      position: relative;
+      top: 30%;
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      color: gray;
+    }
+    #PhoneNumber_Label, #Email_Label, #Address_Label{
+      position: relative;
+      top: 30%;
+      left: 10%;
+      font-size: 20px;
+      color: #686868;
+    }
+    #Security {
+      position: absolute;
+      top: 80%;
+      right: 3.5%;
+      width: 12%;
+      height: 15%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
+    }
     /* The following 3 sections of codes change the placeholder's color */
     ::placeholder {
       color: black;
@@ -199,6 +242,24 @@
     .title {  /* The titles for verification sections */
       color:black;
       font-size:24px
+    }
+    .security_questions{
+      position: absolute;
+      top: 75%;
+      left:5%;
+      width: 95%;
+      height: 45%;
+      overflow: auto;
+      background: #F5F5F5;
+    }
+    .verification{
+      position: absolute;
+      top: 127%;
+      left:5%;
+      width: 95%;
+      height: 53%;
+      overflow: auto;
+      background: #F5F5F5;
     }
     .first_verification{ /* The user info verification section */
       position: absolute;
@@ -272,7 +333,7 @@
   </div>
   <div class="input-icons">
     <i class="fa fa-id-badge" style="top:8.5%; left:5.5%; color:black; font-size:38px"></i>
-    <p style="top:7%; left:9%; color:black; font-size:20px"><b><u>Customer Profile</u></p>
+    <p style="top:6.5%; left:9%; color:black; font-size:22px"><b><u>Customer Profile</u></p>
     <form method="get" action="login.php" style="max-width:400px; margin:auto">
       <i class="fa fa-search" style="top:9.5%; left:24%; color:gray; font-size:20px"></i>
       <input class="input-field" type="text" name="IDLookUp" id="IDLookUp" placeholder="User ID Lookup">
@@ -300,6 +361,33 @@
     <p id="VoiceProfileID">Customer Voice ID:</p>
     <p id="AccountOpenedDate">Account Opened:</p>
     <p id="LastActiveDate">Last Active:</p>
+  </div>
+  <i class="fa fa-exclamation-circle" style="position: absolute; top:69.5%; left:5.5%; color:black; font-size:38px"></i>
+  <p style="position: absolute; top:67.5%; left:9%; color:black; font-size:22px"><b><u>Security Questions Verification</u></p>
+  <div class="security_questions">
+    <p style="position: absolute; left:10%; color:#0dbab1; font-size:22px"><b>Primary Questions</p>
+    <input type="checkbox" id="AccountNo_Checkbox" name="AccountNo_Checkbox" value="AccountNo">
+    <label for="AccountNo_Checkbox" id="AccountNo_Label">Account Number</label><br>
+    <input type="checkbox" id="DOB_Checkbox" name="DOB_Checkbox" value="DOB">
+    <label for="DOB_Checkbox" id="DOB_Label">Date of Birth</label><br>
+    <input type="checkbox" id="SSN_Checkbox" name="SSN_Checkbox" value="SSN">
+    <label for="SSN_Checkbox" id="SSN_Label">SSN - last 4 digits</label><br><br>
+    <p style="position: absolute; top:40%; left:10%; color:#FFA500; font-size:22px"><b>Secondary Questions</p>
+    <p style="position: absolute; top:42%; left:27%; color:gray; font-size:18px">(optional if primary questions are all answered correctly)</p>
+    <input type="checkbox" id="PhoneNumber_Checkbox" name="PhoneNumber_Checkbox" value="PhoneNumber">
+    <label for="PhoneNumber_Checkbox" id="PhoneNumber_Label">Phone Number</label><br>
+    <input type="checkbox" id="Email_Checkbox" name="Email_Checkbox" value="Email">
+    <label for="Email_Checkbox" id="Email_Label">Email Address</label><br>
+    <input type="checkbox" id="Address_Checkbox" name="Address_Checkbox" value="Address">
+    <label for="Address_Checkbox" id="Address_Label">Resident Address</label><br><br>
+    <p style="position: absolute; top:83%; left:10%; color:black; font-size:20px"><b>Important Note</p>
+    <p style="position: absolute; top:84%; left:21%; color:gray; font-size:18px"><b>- require at least 3 correct answers to pass</p>
+    <input type="button" name="Security" id="Security" value="SUBMIT" onclick="security_questions()">
+  </div>
+  <i class="fa fa-volume-up" style="position: absolute; top:121%; left:5.5%; color:black; font-size:38px"></i>
+  <p style="position: absolute; top:119%; left:9%; color:black; font-size:22px"><b><u>Voice Verification</u></p>
+  <div class="verification">
+
   </div>
   <!-- <div class="title">
     <p style="bottom:38%; left:17.5%;"><u>First Verification</u></p>

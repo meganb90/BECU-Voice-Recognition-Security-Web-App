@@ -1,7 +1,3 @@
-// /* user_id for voice profile enrollment and verification,
-// and customer information lookup */
-// var user_id = 0;
-
 function login(){
 	// var request_data = {
 	// 	"service": "seasonal",
@@ -94,6 +90,50 @@ function actions_after_register(){
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 	}
-	
+
 	alert(decode_dict["message"]);
+}
+
+function display_profile(){
+	var id = document.getElementById("IDLookUp").value;
+
+	if (id == "") {
+		alert("Please type in the user ID");
+	} else {
+		var request_data = {
+			"service": "display_profile",
+			"CustID": id
+		};
+
+		var request_str = dict2jsonEncode(request_data);
+
+		httpPost(SERVER_URL, request_str, actions_after_display_profile);
+	}
+}
+
+function actions_after_display_profile(){
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+
+	if (decode_dict["indicator"] == true) {
+		var id = document.getElementById("IDLookUp").value;
+		setCookie("CustID", id, 30);
+		var returned_id = getCookie("CustID");
+		console.log(returned_id);
+
+		document.getElementById("AccountNo_Display").innerHTML = "Account Number: " + decode_dict["message"]["AccountNo"];
+		document.getElementById("Name_Display").innerHTML = "Name: " + decode_dict["message"]["Fname"] + " " + decode_dict["message"]["Lname"];
+		document.getElementById("Gender_Display").innerHTML = "Gender: " + decode_dict["message"]["Gender"];
+		document.getElementById("DOB_Display").innerHTML = "Date of Birth: " + decode_dict["message"]["DOB"];
+		document.getElementById("SSN_Display").innerHTML = "SSN: " + decode_dict["message"]["SSN"];
+		document.getElementById("ID_Display").innerHTML = "User ID: " + decode_dict["message"]["CustID"];
+		document.getElementById("Email_Display").innerHTML = "Email: " + decode_dict["message"]["Email"];
+		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number: " + decode_dict["message"]["PhoneNumber"];
+
+	} else {
+		setCookie("CustID", 0, 30);
+		var returned_id = getCookie("CustID");
+		console.log(returned_id);
+		alert(decode_dict["message"]);
+	}
 }

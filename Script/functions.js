@@ -181,9 +181,13 @@ function security_questions() {
 			setCookie("Security_Questions", 0, 30);
 			alert("Success: Proceed to voice verification");
 		} else {
-			var attempt = getCookie("Security_Questions") + 1;
-			console.log(attempt);
-			setCookie("Security_Questions", attempt, 30);
+			if (getCookie("Security_Questions") == "") {
+				setCookie("Security_Questions", 1, 30);
+			} else {
+				var attempt = getCookie("Security_Questions") + 1;
+				console.log(attempt);
+				setCookie("Security_Questions", attempt, 30);
+			}
 			alert("Fail: Try again");
 		}
 	}

@@ -164,7 +164,7 @@ function security_questions() {
 
 	var questions = [account_number_checkbox, dob_checkbox, ssn_checkbox, phone_number_checkbox, email_checkbox, address_checkbox];
 	var correct_answers = 0;
-	var fail_attempts = getCookie("Security_Questions");
+	var fail_attempts = parseInt(getCookie("Security_Questions"));
 	console.log(fail_attempts);
 
 	for (i = 0; i < questions.length; i++) {
@@ -181,7 +181,7 @@ function security_questions() {
 			setCookie("Security_Questions", 0, 30);
 			alert("Success: Proceed to voice verification");
 		} else {
-			var attempt = getCookie("Security_Questions");
+			var attempt = parseInt(getCookie("Security_Questions"));
 			console.log(attempt);
 			if (attempt == "" || attempt == 0) {
 				setCookie("Security_Questions", 1, 30);

@@ -82,11 +82,11 @@ function actions_after_register() {
 
 	if (decode_dict["indicator"] == true) {
 		var id = document.getElementById("ID").value;
-		setCookie("CustID", id, 30);
+		setCookie("CustID", id);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 	} else {
-		setCookie("CustID", 0, 30);
+		setCookie("CustID", 0);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 	}
@@ -125,7 +125,7 @@ function actions_after_display_profile() {
 
 	if (decode_dict["indicator"] == true) {
 		var id = document.getElementById("IDLookUp").value;
-		setCookie("CustID", id, 30);
+		setCookie("CustID", id);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 
@@ -139,7 +139,7 @@ function actions_after_display_profile() {
 		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number: " + decode_dict["message"]["PhoneNumber"];
 
 	} else {
-		setCookie("CustID", 0, 30);
+		setCookie("CustID", 0);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number:";
@@ -178,15 +178,16 @@ function security_questions() {
 		alert("Fail: No more attempts");
 	} else {
 		if (correct_answers >= 3) {
-			setCookie("Security_Questions", 0, 30);
+			setCookie("Security_Questions", 0);
 			alert("Success: Proceed to voice verification");
 		} else {
 			var attempt = parseInt(getCookie("Security_Questions"));
 			console.log(attempt);
 			if (attempt == "" || attempt == 0) {
-				setCookie("Security_Questions", 1, 30);
+				setCookie("Security_Questions", 1);
 			} else {
-				setCookie("Security_Questions", attempt++, 30);
+				attempt = attempt + 1;
+				setCookie("Security_Questions", attempt);
 				console.log(getCookie("Security_Questions"));
 			}
 			alert("Fail: Try again");

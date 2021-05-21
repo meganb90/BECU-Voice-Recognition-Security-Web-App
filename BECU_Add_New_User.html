@@ -146,7 +146,7 @@
       font-size: 20px;
       background-color: #6cafc6;
     }
-    #AccountNo, #SSN, #ID, #Phone{ /* ID for second line user database input */
+    #AccountNo, #SSN, #CustID, #Phone{ /* ID for second line user database input */
       position: absolute;
       top: 35%;
       height: 8%;
@@ -177,10 +177,10 @@
     }
     .recording{ /* The user voice recording section */
       position: absolute;
-      top: 52%;
+      top: 48%;
       left: 5.2%;
       width: 94%;
-      height: 39%;
+      height: 50%;
       overflow: auto;
       /*background: #f2f2f2;*/
       background: #F5F5F5;
@@ -213,6 +213,60 @@
     }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
+    }
+    .recordingButton{ /* ID for the submit button*/
+      width: 20%;
+      height:10%;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      background: #0014cc;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #createVoiceProfileButton{ /* ID for the submit button*/
+      position: absolute;
+      bottom: 1.5%;
+      right: 3.5%;
+      width: 13%;
+      height: 6%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .deleteButton{ /* ID for the submit button*/
+      position: absolute;
+      width: 6%;
+      height: 10%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .sound-clips{
+      align-items: center;
+    }
+    .clipLabel{
+      right: 63%;
+    }
+    input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
+        outline: none;
+    }
+    #deleteProfileButton{ /* ID for the search input */
+      position: absolute;
+      top: 93%;
+      right: 20%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
     }
    </style>
 </head>
@@ -271,7 +325,7 @@
         <input class="input-field" type="text" name="DOB" id="DOB" placeholder="Date of Birth (Month/Date/Year)" style="top:5%; left:72%; width:25%;">
         <input class="input-field" type="text" name="AccountNo" id="AccountNo" placeholder="Account Number" style="top:25%; left:1%; width:23%;">
         <input class="input-field" type="text" name="SSN" id="SSN" placeholder="Social Security Number" style="top:25%; left:27%; width:23%;">
-        <input class="input-field" type="text" name="ID" id="ID" placeholder="ID" style="top:25%; left:53%; width:16%;">
+        <input class="input-field" type="text" name="CustID" id="CustID" placeholder="Customer ID" style="top:25%; left:53%; width:16%;">
         <input class="input-field" type="text" name="Phone" id="Phone" placeholder="Phone Number" style="top:25%; left:72%; width:25%;">
         <input class="input-field" type="text" name="Address" id="Address" placeholder="Address" style="top:45%; left:1%; width:49%;">
         <input class="input-field" type="text" name="Email" id="Email" placeholder="Email" style="top:45%; left:53%; width:44%;">
@@ -279,16 +333,55 @@
     <input type="button" name="Register" id="Register" value="REGISTER" onclick="register()">
   </div>
   <div class="input-icons">
+  <i class="fa fa-microphone icon" style="top:42%; left:5.5%; color:black; font-size:38px"></i>
+  <p style="top:40%; left:8.25%; color:black; font-size:22px"><b><u>Creating Voice Profile</u></p>
+</div>
+<div class="recording">
+  <center>
+    <section class="main-controls">
+      <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="recordingButton">Start Recording</button>
+        </div>
+    </section>
+    <section class="sound-clips"></section>
+    <section class="results">
+      <textarea id="resultDiv" style="position:absolute; top:30%; left:1%; width:300px;height:200px"></textarea>
+    </section>
+  </center>
+  <!-- <img src="/Images/BECU_Recording.PNG" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%"> -->
+</div>
+<div id="content">
+  <table width="100%"></table>
+    <tr>
+      <td></td>
+      <td><button id="createVoiceProfileButton">Enroll</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button id="deleteProfileButton">Delete Voice Profile</button></td>
+    </tr>
+    <!-- <tr>
+      <td><textarea id="resultDiv" style="position:absolute;width:500px;height:200px"></textarea></td>
+    </tr> -->
+  </table>
+</div>
+<div id="warning">
+  <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+</div>
+  <!-- <div class="input-icons">
     <i class="fa fa-microphone icon" style="top:41%; left:35%; color:#2251dd; font-size:80px"></i>
     <p style="top:38%; left:45%; color:#2251dd; font-size:40px">Voice Recording</p>
   </div>
   <div class="recording">
     <img src="Images/BECU_Recording.png" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
-  </div>
-  <a href="BECU_Customer_Database.html"><input type="button" name="Enroll" id="Enroll" value="ENROLL"></a>
-</body>
-<script>
+  </div> -->
+  <!-- <a href="BECU_Customer_Database.html"><input type="button" name="Enroll" id="Enroll" value="ENROLL"></a> -->
+  <script src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+  <script src="Script/AudioCapture.js"></script>
+  <script src="Script/EnrollSpeaker.js"></script>
+<!-- <script>
   document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
-  document.cookie = "Security_Questions=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
-</script>
+</script> -->
+</body>
 </html>

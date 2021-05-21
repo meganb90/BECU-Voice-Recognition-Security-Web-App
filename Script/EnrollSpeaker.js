@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
       function (result) {
         profile = result;
         window.console.log(result);
+        
+        enrollment(result.profileId);
 
         resultDiv.innerHTML += "Profile created ProfileId: " + result.profileId;
         resultDiv.innerHTML += "\r\n";

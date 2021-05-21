@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>BECU Add New Customer</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -183,7 +183,20 @@
       /*background: #f2f2f2;*/
       background: #F5F5F5;
     }
-    #submit{ /* ID for the submit button*/
+    .recordingButton{ /* ID for the submit button*/
+      /* position: absolute;
+      bottom: 1.5%;
+      right: 3.5%; */
+      width: 18%;
+      height: 10%;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      background: #0014cc;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #createVoiceProfileButton{ /* ID for the submit button*/
       position: absolute;
       bottom: 1.5%;
       right: 3.5%;
@@ -196,21 +209,50 @@
       font-size: 30px;
       font-weight: bold;
     }
+    .deleteButton{ /* ID for the submit button*/
+      position: absolute;
+      width: 6%;
+      height: 10%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .sound-clips{
+      align-items: center;
+    }
+    .clipLabel{
+      /* position: absolute; */
+      right: 63%;
+    }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
+    }
+    #deleteProfileButton{ /* ID for the search input */
+      position: absolute;
+      top: 93%;
+      right: 20%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
     }
    </style>
 </head>
 <body>
   <div class="frame">
-    <img src="/Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+    <img src="../Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
     <div class="input-icons">
       <i class="fa fa-user-plus icon" style="left:21.5%;"></i>
-      <a href="/Pages/BECU_Add_New_Customer.html" style="left:24%;"><u>Add New Customer</u></a>
+      <a href="../Pages/BECU_Add_New_Customer.html" style="left:24%;"><u>Add New Customer</u></a>
     </div>
     <div class="input-icons">
       <i class="fa fa-address-card icon" style="left:43.5%;"></i>
-      <a href="/Pages/BECU_Customer_Database.html" style="left:46%;">Customer Database</a>
+      <a href="../Pages/BECU_Customer_Database.html" style="left:46%;">Customer Database</a>
     </div>
     <div class="input-icons">
       <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
@@ -262,16 +304,44 @@
     </form>
   </div>
   <div class="input-icons">
-    <i class="fa fa-microphone icon" style="top:41%; left:35%; color:#2251dd; font-size:80px"></i>
-    <p style="top:38%; left:45%; color:#2251dd; font-size:40px">Voice Recording</p>
+    <i class="fa fa-microphone icon" style="top:46%; left:5.5%; color:black; font-size:38px"></i>
+    <p style="top:45%; left:8.25%; color:black; font-size:20px"><b>Creating Voice Profile</p>
   </div>
   <div class="recording">
-    <img src="/Images/BECU_Recording.PNG" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
+    <center>
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+          <div id="buttons">
+            <button class="recordingButton">Start Recording</button>
+          </div>
+      </section>
+      <section class="sound-clips"></section>
+      <section class="results">
+        <textarea id="resultDiv" style="width:500px;height:200px"></textarea>
+      </section>
+    </center>
+    <!-- <img src="/Images/BECU_Recording.PNG" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%"> -->
   </div>
-  <div>
-    <form method="get" action="login.php" style="max-width:400px; margin:auto">
-      <a href="/Pages/BECU_Customer_Database.html"><input type="button" name="submit" id="submit" value="SUBMIT"></a>
-    </form>
+  <div id="content">
+    <table width="100%"></table>
+      <tr>
+        <td></td>
+        <td><button id="createVoiceProfileButton">Enroll</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="deleteProfileButton">Delete Voice Profile</button></td>
+      </tr>
+      <!-- <tr>
+        <td><textarea id="resultDiv" style="position:absolute;width:500px;height:200px"></textarea></td>
+      </tr> -->
+    </table>
   </div>
+  <div id="warning">
+    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+  </div>
+  <script src="../Scripts/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+  <script src="../Scripts/AudioCapture.js"></script>
+  <script src="../Scripts/EnrollSpeaker.js"></script>
 </body>
 </html>

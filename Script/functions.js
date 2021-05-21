@@ -9,8 +9,8 @@ function login() {
 
 	var request_data = {
 		"service": "login",
-		"Fname": username,
-		"Lname": password
+		"Username": username,
+		"Pass": password
 	};
 
 	var request_str = dict2jsonEncode(request_data);
@@ -39,12 +39,12 @@ function register() {
 	var date_of_birth = document.getElementById("DOB").value;
 	var account_number = document.getElementById("AccountNo").value;
 	var ssn = document.getElementById("SSN").value;
-	var id = document.getElementById("ID").value;
+	var custid = document.getElementById("CustID").value;
 	var phone = document.getElementById("Phone").value;
 	var address = document.getElementById("Address").value;
 	var email = document.getElementById("Email").value;
 
-	var user_input = [firstname, lastname, gender, date_of_birth, account_number, ssn, id, phone, address, email];
+	var user_input = [firstname, lastname, gender, date_of_birth, account_number, ssn, custid, phone, address, email];
 	var incomplete = false;
 
 	for (i = 0; i < user_input.length; i++) {
@@ -64,9 +64,9 @@ function register() {
 			"DOB": date_of_birth,
 			"AccountNo": account_number,
 			"SSN": ssn,
-			"CustID": id,
-			"Phone": phone,
-			"Address": address,
+			"CustID": custid,
+			"PhoneNumber": phone,
+			"ResAddress": address,
 			"Email": email
 		};
 
@@ -81,8 +81,8 @@ function actions_after_register() {
 	console.log(decode_dict);
 
 	if (decode_dict["indicator"] == true) {
-		var id = document.getElementById("ID").value;
-		setCookie("CustID", id);
+		var custid = document.getElementById("CustID").value;
+		setCookie("CustID", custid);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 	} else {
@@ -95,9 +95,9 @@ function actions_after_register() {
 }
 
 function display_profile() {
-	var id = document.getElementById("IDLookUp").value;
+	var custid = document.getElementById("IDLookUp").value;
 
-	if (id == "") {
+	if (custid == "") {
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number:";
 		document.getElementById("Name_Display").innerHTML = "Name:";
 		document.getElementById("Gender_Display").innerHTML = "Gender:";
@@ -106,11 +106,16 @@ function display_profile() {
 		document.getElementById("ID_Display").innerHTML = "User ID:";
 		document.getElementById("Email_Display").innerHTML = "Email:";
 		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number:";
+		document.getElementById("Address_Display").innerHTML = "Address:";
+		document.getElementById("VoiceProfileID").innerHTML = "Customer Voice ID:";
+		document.getElementById("AccountOpenedDate").innerHTML = "Account Opened:";
+		document.getElementById("LastActiveDate").innerHTML = "Last Active:";
+
 		alert("Please type in the user ID");
 	} else {
 		var request_data = {
 			"service": "display_profile",
-			"CustID": id
+			"CustID": custid
 		};
 
 		var request_str = dict2jsonEncode(request_data);
@@ -124,8 +129,8 @@ function actions_after_display_profile() {
 	console.log(decode_dict);
 
 	if (decode_dict["indicator"] == true) {
-		var id = document.getElementById("IDLookUp").value;
-		setCookie("CustID", id);
+		var custid = document.getElementById("IDLookUp").value;
+		setCookie("CustID", custid);
 		var returned_id = getCookie("CustID");
 		console.log(returned_id);
 
@@ -137,7 +142,10 @@ function actions_after_display_profile() {
 		document.getElementById("ID_Display").innerHTML = "User ID: " + decode_dict["message"]["CustID"];
 		document.getElementById("Email_Display").innerHTML = "Email: " + decode_dict["message"]["Email"];
 		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number: " + decode_dict["message"]["PhoneNumber"];
-
+		document.getElementById("Address_Display").innerHTML = "Address: " + decode_dict["message"]["ResAddress"];
+		document.getElementById("VoiceProfileID").innerHTML = "Customer Voice ID: " + decode_dict["message"]["VoiceProfileID"];
+		document.getElementById("AccountOpenedDate").innerHTML = "Account Opened: " + decode_dict["message"]["AccountOpenedDate"];
+		document.getElementById("LastActiveDate").innerHTML = "Last Active: " + decode_dict["message"]["LastActive"];
 	} else {
 		setCookie("CustID", 0);
 		var returned_id = getCookie("CustID");
@@ -150,6 +158,10 @@ function actions_after_display_profile() {
 		document.getElementById("ID_Display").innerHTML = "User ID:";
 		document.getElementById("Email_Display").innerHTML = "Email:";
 		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number:";
+		document.getElementById("Address_Display").innerHTML = "Address:";
+		document.getElementById("VoiceProfileID").innerHTML = "Customer Voice ID:";
+		document.getElementById("AccountOpenedDate").innerHTML = "Account Opened:";
+		document.getElementById("LastActiveDate").innerHTML = "Last Active:";
 		alert(decode_dict["message"]);
 	}
 }
@@ -193,4 +205,26 @@ function security_questions() {
 			alert("Fail: Try again");
 		}
 	}
+}
+
+function enrollment(voiceprofileid) {
+	var custid = getCookie("CustID");
+	console.log(custid);
+	console.log(voiceprofileid);
+
+	var request_data = {
+		"service": "enrollment",
+		"CustID": custid,
+		"VoiceProfileID": voiceprofileid
+	};
+
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_enrollment);
+}
+
+function actions_after_enrollment() {
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+	alert(decode_dict["message"]);
 }

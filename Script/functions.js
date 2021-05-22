@@ -1,9 +1,4 @@
 function login() {
-	// var request_data = {
-	// 	"service": "seasonal",
-	// 	"operation": "get_program_information",
-	// 	"carpark_id": getCookie("carpark_id")
-	// }
 	var username = document.getElementById("Username").value;
 	var password = document.getElementById("Password").value;
 
@@ -94,6 +89,28 @@ function actions_after_register() {
 	alert(decode_dict["message"]);
 }
 
+function enrollment(voiceprofileid) {
+	var custid = getCookie("CustID");
+	console.log(custid);
+	console.log(voiceprofileid);
+
+	var request_data = {
+		"service": "enrollment",
+		"CustID": custid,
+		"VoiceProfileID": voiceprofileid
+	};
+
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_enrollment);
+}
+
+function actions_after_enrollment() {
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+	alert(decode_dict["message"]);
+}
+
 function display_profile() {
 	var custid = document.getElementById("IDLookUp").value;
 
@@ -129,10 +146,14 @@ function actions_after_display_profile() {
 	console.log(decode_dict);
 
 	if (decode_dict["indicator"] == true) {
-		var custid = document.getElementById("IDLookUp").value;
-		setCookie("CustID", custid);
-		var returned_id = getCookie("CustID");
-		console.log(returned_id);
+		// var custid = document.getElementById("IDLookUp").value;
+		// setCookie("CustID", custid);
+		// var returned_id = getCookie("CustID");
+		// console.log(returned_id);
+
+		setCookie("VoiceProfileID", decode_dict["message"]["VoiceProfileID"]);
+		var voiceprofileid = getCookie("VoiceProfileID");
+		console.log(voiceprofileid);
 
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number: " + decode_dict["message"]["AccountNo"];
 		document.getElementById("Name_Display").innerHTML = "Name: " + decode_dict["message"]["Fname"] + " " + decode_dict["message"]["Lname"];
@@ -147,9 +168,10 @@ function actions_after_display_profile() {
 		document.getElementById("AccountOpenedDate").innerHTML = "Account Opened: " + decode_dict["message"]["AccountOpenedDate"];
 		document.getElementById("LastActiveDate").innerHTML = "Last Active: " + decode_dict["message"]["LastActive"];
 	} else {
-		setCookie("CustID", 0);
-		var returned_id = getCookie("CustID");
-		console.log(returned_id);
+		setCookie("VoiceProfileID", 0);
+		var voiceprofileid = getCookie("VoiceProfileID");
+		console.log(voiceprofileid);
+
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number:";
 		document.getElementById("Name_Display").innerHTML = "Name:";
 		document.getElementById("Gender_Display").innerHTML = "Gender:";
@@ -193,38 +215,16 @@ function security_questions() {
 			setCookie("Security_Questions", 0);
 			alert("Success: Proceed to voice verification");
 		} else {
-			var attempt = parseInt(getCookie("Security_Questions"));
+			var attempt = getCookie("Security_Questions");
 			console.log(attempt);
-			if (attempt == "" || attempt == 0) {
+			if (attempt == "") {
 				setCookie("Security_Questions", 1);
 			} else {
-				attempt = attempt + 1;
+				attempt = parseInt(attempt) + 1;
 				setCookie("Security_Questions", attempt);
-				console.log(getCookie("Security_Questions"));
 			}
+			console.log(getCookie("Security_Questions"));
 			alert("Fail: Try again");
 		}
 	}
-}
-
-function enrollment(voiceprofileid) {
-	var custid = getCookie("CustID");
-	console.log(custid);
-	console.log(voiceprofileid);
-
-	var request_data = {
-		"service": "enrollment",
-		"CustID": custid,
-		"VoiceProfileID": voiceprofileid
-	};
-
-	var request_str = dict2jsonEncode(request_data);
-
-	httpPost(SERVER_URL, request_str, actions_after_enrollment);
-}
-
-function actions_after_enrollment() {
-	var decode_dict = JSON.parse(this.responseText);
-	console.log(decode_dict);
-	alert(decode_dict["message"]);
 }

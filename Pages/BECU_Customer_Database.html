@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <title>BECU Customer Database</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="../Script/functions.js"></script>
+    <script type="text/javascript" src="../Script/utils.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -84,7 +86,7 @@
       top: 63px;
       left: 0;
       width: 4.5%;
-      height: 91.5%;
+      height: 172%;
       overflow: auto;
       background: #cc0000;
     }
@@ -113,6 +115,18 @@
       position: absolute;
       font-family: Arial, Helvetica, sans-serif;
     }
+    #IDLookUp {
+      position: absolute;
+      top: 9%;
+      left: 23%;
+      width: 13%;
+      height: 0.5%;
+      border: solid black;
+      border-radius: 15px;
+      padding-left: 35px;
+      font-size: 20px;
+      background-color: transparent;
+    }
     #Search{ /* ID for the search input */
       position: absolute;
       top: 9%;
@@ -125,15 +139,94 @@
       font-size: 20px;
       background-color: transparent;
     }
-    .profile{ /* The user profile section */
+    .profile_left{ /* The user profile section */
       position: absolute;
-      top: 14%;
-      left:17.5%;
-      width: 70%;
-      height: 40%;
+      top: 15%;
+      left:5%;
+      width: 35%;
+      height: 53%;
+      overflow: auto;
+      /*background: #f2f2f2;*/
+      background: #E8E8E8;
+    }
+    .profile_right{ /* The user profile section */
+      position: absolute;
+      top: 15%;
+      left:40%;
+      width: 60%;
+      height: 53%;
       overflow: auto;
       /*background: #f2f2f2;*/
       background: #F5F5F5;
+    }
+    #AccountNo_Display, #Name_Display, #Gender_Display, #DOB_Display, #SSN_Display, #ID_Display, #Email_Display, #PhoneNumber_Display, #Address_Display {
+      position: relative;
+      left:3%;
+      color:black;
+      font-size:20px;
+    }
+    #VoiceProfileID, #AccountOpenedDate, #LastActiveDate {
+      position: relative;
+      top:62%;
+      left:5%;
+      color:black;
+      font-size:20px;
+    }
+    #DisplayProfile{ /* ID for the register button*/
+      position: absolute;
+      top: 9%;
+      left: 40%;
+      width: 7%;
+      height: 4%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #AccountNo_Checkbox, #DOB_Checkbox, #SSN_Checkbox{
+      position: relative;
+      top: 18%;
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      color: gray;
+    }
+    #AccountNo_Label, #DOB_Label, #SSN_Label{
+      position: relative;
+      top: 18%;
+      left: 10%;
+      font-size: 20px;
+      color: #686868;
+    }
+    #PhoneNumber_Checkbox, #Email_Checkbox, #Address_Checkbox{
+      position: relative;
+      top: 30%;
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      color: gray;
+    }
+    #PhoneNumber_Label, #Email_Label, #Address_Label{
+      position: relative;
+      top: 30%;
+      left: 10%;
+      font-size: 20px;
+      color: #686868;
+    }
+    #Security {
+      position: absolute;
+      top: 80%;
+      right: 3.5%;
+      width: 12%;
+      height: 15%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 30px;
+      font-weight: bold;
     }
     /* The following 3 sections of codes change the placeholder's color */
     ::placeholder {
@@ -149,6 +242,24 @@
     .title {  /* The titles for verification sections */
       color:black;
       font-size:24px
+    }
+    .security_questions{
+      position: absolute;
+      top: 75%;
+      left:5%;
+      width: 95%;
+      height: 45%;
+      overflow: auto;
+      background: #F5F5F5;
+    }
+    .verification{
+      position: absolute;
+      top: 127%;
+      left:5%;
+      width: 95%;
+      height: 53%;
+      overflow: auto;
+      background: #F5F5F5;
     }
     .first_verification{ /* The user info verification section */
       position: absolute;
@@ -182,17 +293,89 @@
       font-size: 30px;
       font-weight: bold;
     }
+    .recordingButton{ /* ID for the submit button*/
+      /* position: absolute;
+      bottom: 1.5%;
+      right: 3.5%; */
+      width: 18%;
+      height: 10%;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      background: #0014cc;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #verifySpeakerButton{ /* ID for the submit button*/
+      position: absolute;
+      top: 170%;
+      right: 10%;
+      width: 6%;
+      height: 5%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .deleteButton{ /* ID for the submit button*/
+      position: absolute;
+      width: 6%;
+      height: 10%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .verifyButton{ /* ID for the submit button*/
+      position: absolute;
+      right: 25%;
+      width: 6%;
+      height: 10%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .sound-clips{
+      align-items: center;
+    }
+    .clipLabel{
+      position: absolute;
+      left: 30%;
+    }
+    .confidenceResult{
+      position: relative;
+      /* right: 20%;
+      top: 22%; */
+    }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
+    }
+    #authenticated{ /* ID for the search input */
+      position: absolute;
+      top: 170%;
+      right: 1%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #008080;
+      font-size: 30px;
+      font-weight: bold;
     }
    </style>
 </head>
 <body>
   <div class="frame">
-    <img src="/Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;">
+    <a href="https://www.becu.org/"><img src="../Images/BECU_Logo.png" alt="BECU Logo" style="position:relative; left:5%;"></a>
     <div class="input-icons">
       <i class="fa fa-user-plus icon" style="left:21.5%;"></i>
-      <a href="/Pages/BECU_Add_New_Customer.html" style="left:24%;">Add New Customer</a>
+      <a href="BECU_Add_New_User.html" style="left:24%;">Add New Customer</a>
     </div>
     <div class="input-icons">
       <i class="fa fa-address-card icon" style="left:43.5%;"></i>
@@ -205,7 +388,6 @@
     <div class="input-icons">
       <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
       <a href="#" style="left:90%;">Account</a>
-    <!-- <input type="button" name="account" id="account" value="Account"> -->
     </div>
   </div>
   <div class="icon-bar-background">
@@ -221,33 +403,107 @@
       <a href="#"><i class="fa fa-cogs"></i></a>
     </div>
   </div>
-  <div>
-    <p style="top:6%; left:45%; color:black; font-size:24px"><b><u>Customer Profile</u></p>
+  <div class="input-icons">
+    <i class="fa fa-id-badge" style="top:8.5%; left:5.5%; color:black; font-size:38px"></i>
+    <p style="top:6.5%; left:9%; color:black; font-size:22px"><b><u>Customer Profile</u></p>
     <form method="get" action="login.php" style="max-width:400px; margin:auto">
+      <i class="fa fa-search" style="top:9.5%; left:24%; color:gray; font-size:20px"></i>
+      <input class="input-field" type="text" name="IDLookUp" id="IDLookUp" placeholder="User ID Lookup">
+      <input type="button" name="DisplayProfile" id="DisplayProfile" value="SUBMIT" onclick="display_profile()">
       <div class="input-icons">
         <i class="fa fa-search" style="top:9.5%; right:17%; color:gray; font-size:20px"></i>
         <input class="input-field" type="text" name="Search" id="Search" placeholder="Search">
       </div>
     </form>
   </div>
-  <div class="profile">
-    <img src="/Images/BECU_Customer_Profile.PNG" alt="BECU Customer Profile" style="position:relative; height:100%">
+  <div class="profile_right">
+    <p id="AccountNo_Display">Account Number:</p>
+    <p id="Name_Display">Name:</p>
+    <p id="Gender_Display">Gender:</p>
+    <p id="DOB_Display">Date of Birth:</p>
+    <p id="SSN_Display">SSN:</p>
+    <p id="ID_Display">User ID:</p>
+    <p id="Email_Display">Email:</p>
+    <p id="PhoneNumber_Display">Phone Number:</p>
+    <p id="Address_Display">Address:</p>
   </div>
-  <div class="title">
+  <div class="profile_left">
+    <p style="position: absolute; left:40%; color:black; font-size:30px">Profile</p>
+    <i class="fa fa-user" style="position: absolute; top:20%; left:40%; color:black; font-size:140px"></i>
+    <p id="VoiceProfileID">Customer Voice ID:</p>
+    <p id="AccountOpenedDate">Account Opened:</p>
+    <p id="LastActiveDate">Last Active:</p>
+  </div>
+  <i class="fa fa-exclamation-circle" style="position: absolute; top:69.5%; left:5.5%; color:black; font-size:38px"></i>
+  <p style="position: absolute; top:67.5%; left:9%; color:black; font-size:22px"><b><u>Security Questions Verification</u></p>
+  <div class="security_questions">
+    <p style="position: absolute; left:10%; color:#0dbab1; font-size:22px"><b>Primary Questions</p>
+    <input type="checkbox" id="AccountNo_Checkbox" name="AccountNo_Checkbox" value="AccountNo">
+    <label for="AccountNo_Checkbox" id="AccountNo_Label">Account Number</label><br>
+    <input type="checkbox" id="DOB_Checkbox" name="DOB_Checkbox" value="DOB">
+    <label for="DOB_Checkbox" id="DOB_Label">Date of Birth</label><br>
+    <input type="checkbox" id="SSN_Checkbox" name="SSN_Checkbox" value="SSN">
+    <label for="SSN_Checkbox" id="SSN_Label">SSN - last 4 digits</label><br><br>
+    <p style="position: absolute; top:40%; left:10%; color:#FFA500; font-size:22px"><b>Secondary Questions</p>
+    <p style="position: absolute; top:42%; left:27%; color:gray; font-size:18px">(optional if primary questions are all answered correctly)</p>
+    <input type="checkbox" id="PhoneNumber_Checkbox" name="PhoneNumber_Checkbox" value="PhoneNumber">
+    <label for="PhoneNumber_Checkbox" id="PhoneNumber_Label">Phone Number</label><br>
+    <input type="checkbox" id="Email_Checkbox" name="Email_Checkbox" value="Email">
+    <label for="Email_Checkbox" id="Email_Label">Email Address</label><br>
+    <input type="checkbox" id="Address_Checkbox" name="Address_Checkbox" value="Address">
+    <label for="Address_Checkbox" id="Address_Label">Resident Address</label><br><br>
+    <p style="position: absolute; top:83%; left:10%; color:black; font-size:20px"><b>Important Note</p>
+    <p style="position: absolute; top:84%; left:21%; color:gray; font-size:18px"><b>- require at least 3 correct answers to pass</p>
+    <input type="button" name="Security" id="Security" value="SUBMIT" onclick="security_questions()">
+  </div>
+  <i class="fa fa-volume-up" style="position: absolute; top:121%; left:5.5%; color:black; font-size:38px"></i>
+  <p style="position: absolute; top:119%; left:9%; color:black; font-size:22px"><b><u>Voice Verification</u></p>
+  <div class="verification">
+    <center>
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+          <div id="buttons">
+            <button class="recordingButton">Start Recording</button>
+          </div>
+      </section>
+      <section class="sound-clips"></section>
+      <!-- <section class="results">
+        <textarea id="resultDiv" style="width:500px;height:200px"></textarea>
+      </section> -->
+    </center>
+  </div>
+  <div id="content">
+    <table width="100%"></table>
+      <tr>
+        <td></td>
+        <td><button id="authenticated">Customer is Authenticated</button></td>
+      </tr>
+    </table>
+  </div>
+  <div id="warning">
+    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+  </div>
+  <script>
+    document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+    document.cookie = "Security_Questions=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+  </script>
+  <script src="../Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+  <script src="../Script/Audio&VerifySpeaker.js"></script>
+  <!-- <div class="title">
     <p style="bottom:38%; left:17.5%;"><u>First Verification</u></p>
     <p style="bottom:38%; left:65.4%;"><u>Voice Verification</u></p>
   </div>
   <div class="first_verification">
-    <img src="/Images/BECU_First_Verification.PNG" alt="BECU First Verification" style="position:relative; left:7%; width:80%;">
+    <img src="Images/BECU_First_Verification.png" alt="BECU First Verification" style="position:relative; left:7%; width:80%;">
   </div>
   <div class="voice_verification">
-    <img src="/Images/BECU_Voice_Verification.PNG" alt="BECU Voice Verification" style="position:relative; left:7%; width:90%;">
+    <img src="Images/BECU_Voice_Verification.png" alt="BECU Voice Verification" style="position:relative; left:7%; width:90%;">
   </div>
   <div>
     <form method="get" action="login.php" style="max-width:400px; margin:auto">
       <input type="button" name="submit" id="authentication" value="System Authenticated" style="left: 20%;">
       <input type="button" name="submit" id="authentication" value="Agent Authenticated" style="right: 15%;">
     </form>
-  </div>
+  </div> -->
 </body>
 </html>

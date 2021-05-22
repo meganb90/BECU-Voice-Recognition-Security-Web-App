@@ -4,8 +4,10 @@
     <title>BECU Add New Customer</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
     <script type="text/javascript" src="Script/functions.js"></script>
     <script type="text/javascript" src="Script/utils.js"></script>
+    <script type="text/javascript" src="Script/EnrollSpeaker.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -180,7 +182,7 @@
       top: 48%;
       left: 5.2%;
       width: 94%;
-      height: 50%;
+      height: 51%;
       overflow: auto;
       /*background: #f2f2f2;*/
       background: #F5F5F5;
@@ -198,37 +200,24 @@
       font-size: 30px;
       font-weight: bold;
     }
-    #Enroll{ /* ID for the submit button*/
-      position: absolute;
-      bottom: 1.5%;
-      right: 3.5%;
-      width: 13%;
-      height: 6%;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      background: #cc0000;
-      font-size: 30px;
-      font-weight: bold;
-    }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
     }
     .recordingButton{ /* ID for the submit button*/
       width: 20%;
-      height:10%;
+      height:40px;
       border: none;
-      border-radius: 8px;
+      border-radius:8px;
       color: white;
-      background: #0014cc;
-      font-size: 22px;
+      background:#3C3CC7;
+      font-size: 25px;
       font-weight: bold;
     }
     #createVoiceProfileButton{ /* ID for the submit button*/
       position: absolute;
-      bottom: 1.5%;
+      bottom: 2%;
       right: 3.5%;
-      width: 13%;
+      width: 12%;
       height: 6%;
       border: none;
       border-radius: 10px;
@@ -237,22 +226,27 @@
       font-size: 30px;
       font-weight: bold;
     }
-    .deleteButton{ /* ID for the submit button*/
-      position: absolute;
-      width: 6%;
-      height: 10%;
+    .deleteButton{
+      position:relative;
+      top:-20px;
+      right:-10px;
+      width: 100px;
+      height: 35px;
       border: none;
-      border-radius: 10px;
+      border-radius:10px;
       color: white;
       background: #cc0000;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
     }
     .sound-clips{
-      align-items: center;
+      position:absolute;
+      top:120px;
+      left:39%;
     }
     .clipLabel{
-      right: 63%;
+      left:-32%;
+      font-size: 20px;
     }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
@@ -355,7 +349,7 @@
   <table width="100%"></table>
     <tr>
       <td></td>
-      <td><button id="createVoiceProfileButton">Enroll</button></td>
+      <td><button id="createVoiceProfileButton">ENROLL</button></td>
     </tr>
     <tr>
       <td></td>
@@ -377,11 +371,12 @@
     <img src="Images/BECU_Recording.png" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
   </div> -->
   <!-- <a href="BECU_Customer_Database.html"><input type="button" name="Enroll" id="Enroll" value="ENROLL"></a> -->
-  <script src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
-  <script src="Script/AudioCapture.js"></script>
-  <script src="Script/EnrollSpeaker.js"></script>
+  <!-- <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script> -->
+  <!-- <script type="text/javascript" src="Script/EnrollSpeaker.js"></script> -->
 <!-- <script>
   document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
 </script> -->
+<script type="text/javascript" src="Script/AudioCapture.js"></script>
 </body>
+<!-- <script type="text/javascript" src="Script/AudioCapture.js"></script> -->
 </html>

@@ -457,7 +457,7 @@
       <section class="main-controls">
         <canvas class="visualizer" height="60px"></canvas>
           <div id="buttons">
-            <button class="recordingButton">Start Recording</button>
+            <button class="recordingButton" id="recordingButton" disabled>Start Recording</button>
           </div>
       </section>
       <section class="sound-clips"></section>
@@ -467,7 +467,7 @@
     <table width="100%"></table>
       <tr>
         <td></td>
-        <td><button id="authenticated">Customer is Authenticated</button></td>
+        <td><button class="authenticated" id="authenticated" onclick="authentication()" disabled>Customer is Authenticated</button></td>
       </tr>
     </table>
   </div>
@@ -477,6 +477,7 @@
   <script>
     document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
     document.cookie = "Security_Questions=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+    document.cookie = "Verification=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
   </script>
   <script src="Script/Audio&VerifySpeaker.js"></script>
 </body>

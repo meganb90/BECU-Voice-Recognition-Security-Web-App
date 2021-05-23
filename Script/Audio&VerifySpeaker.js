@@ -31,7 +31,8 @@ var speechConfig, profile;
 
 // var endPoint = "https://westus2.api.cognitive.microsoft.com";
 // var restAPI = "/speaker/verification/v2.0/text-dependent/profiles/";
-// var profileID = "3484da2d-bc78-4965-95ae-2bd6e172c097";
+// var profileID = getCookie("VoiceProfileID");
+// console.log(profileID);
 // var profileURL = endPoint + restAPI + profileID;
 // var profileURL = "https://westus2.api.cognitive.microsoft.com/speaker/verification/v2.0/text-dependent/profiles/3484da2d-bc78-4965-95ae-2bd6e172c097";
 
@@ -182,7 +183,7 @@ if (navigator.mediaDevices.getUserMedia) {
                   result = "Fail"
                 }
                 verificationResult.innerHTML = result;
-                verification(result, confidence_level);
+                // verification(result, confidence_level);
             }
             },
             function(err) {

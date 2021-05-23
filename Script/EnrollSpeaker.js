@@ -1,38 +1,25 @@
 // status fields and start button in UI
 var resultDiv;
 var createVoiceProfileButton;
-// var verifySpeakerButton;
 var deleteProfileButton;
 
 // subscription key and region for speech services.
-var subscriptionKey = "237760c2cc8246ac9cd9d7917a75a129";
+var subscriptionKey = "ebbd248fda6544d09d6b1aeb9f7d1029";
 var serviceRegion = "westus";
-// var authorizationToken;
+
 var SpeechSDK;
 var client;
-// var filePicker, testFilePicker,audioFiles, testFile;
 var speechConfig, profile;
+
+var voiceprofileID;
 
 document.addEventListener("DOMContentLoaded", function () {
 
   createVoiceProfileButton = document.getElementById("createVoiceProfileButton");
-//   verifySpeakerButton = document.getElementById("verifySpeakerButton");
   deleteProfileButton = document.getElementById("deleteProfileButton");
-//   subscriptionKey = document.getElementById("subscriptionKey");
-//   serviceRegion = document.getElementById("serviceRegion");
   resultDiv = document.getElementById("resultDiv");
-//   filePicker = document.getElementById("filePicker");
-//   testFilePicker = document.getElementById("testFilePicker");
 
   deleteProfileButton.disabled = true;
-//   verifySpeakerButton.disabled = true;
-//   filePicker.addEventListener("change", function () {
-//       audioFiles = filePicker.files;
-//   });
-
-//   testFilePicker.addEventListener("change", function () {
-//       testFile = testFilePicker.files[0];
-//   });
 
   createVoiceProfileButton.addEventListener("click", function () {
 
@@ -62,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       function (result) {
         profile = result;
         window.console.log(result);
-        
+
         enrollment(result.profileId);
 
         resultDiv.innerHTML += "Profile created ProfileId: " + result.profileId;
@@ -126,49 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-//   verifySpeakerButton.addEventListener("click", function () {
-//     let pushStream = SpeechSDK.AudioInputStream.createPushStream();
-//     var arrayBuffer = audioStream[0];
-//     audioStream = [];
-//     console.log(arrayBuffer);
-//     pushStream.write(arrayBuffer);
-//     pushStream.close();
-
-//     let testAudioConfig = SpeechSDK.AudioConfig.fromStreamInput(pushStream);
-//     // let testAudioConfig = SpeechSDK.AudioConfig.fromWavFileInput(testFile);
-//     let recognizer = new SpeechSDK.SpeakerRecognizer(speechConfig, testAudioConfig);
-//     let model = SpeechSDK.SpeakerVerificationModel.fromProfile(profile);
-//     recognizer.recognizeOnceAsync(
-//       model,
-//       function(result) {
-//         window.console.log(result);
-//         let reason = result.reason;
-//         resultDiv.innerHTML += "(Verification result) Reason: " + SpeechSDK.ResultReason[reason];
-//         resultDiv.innerHTML += "\n";
-//         if( reason === SpeechSDK.ResultReason.Canceled ) {
-//           let cancellationDetails = SpeechSDK.SpeakerRecognitionCancellationDetails.fromResult(result);
-//           resultDiv.innerHTML += "(Verification canceled) Error Details: " + cancellationDetails.errorDetails;
-//           resultDiv.innerHTML += "\n";
-//           resultDiv.innerHTML += "(Verification canceled) Error Code: " + cancellationDetails.errorCode;
-//           resultDiv.innerHTML += "\n";
-//         } else {
-//           resultDiv.innerHTML += "(Verification result) Profile Id: " + result.profileId;
-//           resultDiv.innerHTML += "\n";
-//           resultDiv.innerHTML += "(Verification result) Score: " + result.score;
-//           resultDiv.innerHTML += "\r\n";
-//         }
-//       },
-//       function(err) {
-//         window.console.log(err);
-//         resultDiv.innerHTML += "ERROR: " + err;
-//       });
-//   });
-
   deleteProfileButton.addEventListener("click", function () {
       client.deleteProfileAsync(
         profile,
         function(result) {
-          resultDiv.innerHTML += "The customer's voice profile has been successfully enrolled!";
+          resultDiv.innerHTML += "The customer's voice profile has been successfully deleted!";
           resultDiv.innerHTML += "\r\n";
           deleteProfileButton.disabled = true;
         //   verifySpeakerButton.disabled = true;

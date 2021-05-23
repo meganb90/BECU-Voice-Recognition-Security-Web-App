@@ -257,7 +257,7 @@ function verification(result, confidence_level) {
 
 	var request_str = dict2jsonEncode(request_data);
 
-	httpPost(SERVER_URL, request_str, actions_after_login);
+	httpPost(SERVER_URL, request_str, actions_after_verification);
 }
 
 function actions_after_verification() {

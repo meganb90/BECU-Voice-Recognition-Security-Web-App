@@ -237,6 +237,9 @@ function security_questions() {
 }
 
 function verification(result, confidence_level) {
+	console.log(result);
+	console.log(confidence_level);
+
 	var fname = getCookie("Fname");
 	console.log(fname);
 

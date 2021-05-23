@@ -5,7 +5,7 @@ var deleteProfileButton;
 
 // subscription key and region for speech services.
 var subscriptionKey = "ebbd248fda6544d09d6b1aeb9f7d1029";
-var serviceRegion = "westus";
+var serviceRegion = "westus2";
 
 var SpeechSDK;
 var client;

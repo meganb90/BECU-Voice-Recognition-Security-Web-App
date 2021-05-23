@@ -31,9 +31,12 @@ var speechConfig, profile;
 
 // var endPoint = "https://westus2.api.cognitive.microsoft.com";
 // var restAPI = "/speaker/verification/v2.0/text-dependent/profiles/";
-var profileID = "3484da2d-bc78-4965-95ae-2bd6e172c097";
+// var profileID = "3484da2d-bc78-4965-95ae-2bd6e172c097";
 // var profileURL = endPoint + restAPI + profileID;
 // var profileURL = "https://westus2.api.cognitive.microsoft.com/speaker/verification/v2.0/text-dependent/profiles/3484da2d-bc78-4965-95ae-2bd6e172c097";
+
+var result;
+var confidence_level;
 
 //main block for doing the audio recording
 if (navigator.mediaDevices.getUserMedia) {
@@ -49,7 +52,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
     recordingButton.onclick = function() {
         recordingButtonStatus = !(recordingButtonStatus)
-        
+
         if (recordingButtonStatus){
             mediaRecorder.start();
             console.log(mediaRecorder.state);
@@ -82,6 +85,7 @@ if (navigator.mediaDevices.getUserMedia) {
       var deleteButton = document.createElement('button');
       var verifyButton = document.createElement('button');
       const confidenceResult = document.createElement('p');
+      const verificationResult = document.createElement('p');
 
       clipContainer.classList.add('clip');
       audio.setAttribute('controls', '');
@@ -90,24 +94,21 @@ if (navigator.mediaDevices.getUserMedia) {
 
       verifyButton.textContent = 'Verify';
 
-    //   if(clipName === null) {
-    //     clipLabel.textContent = 'My unnamed clip';
-    //   } else {
-    //     clipLabel.textContent = clipName;
-    //   }
-
       clipLabel.textContent = clipName;
 
       clipContainer.appendChild(clipLabel);
+      clipContainer.appendChild(confidenceResult);
+      clipContainer.appendChild(verificationResult);
       clipContainer.appendChild(audio);
       clipContainer.appendChild(deleteButton);
       clipContainer.appendChild(verifyButton);
-      clipContainer.appendChild(confidenceResult);
+      // clipContainer.appendChild(confidenceResult);
       soundClips.appendChild(clipContainer);
 
       deleteButton.className = "deleteButton";
       verifyButton.className = "verifyButton";
       confidenceResult.className = "confidenceResult";
+      verificationResult.className = "verificationResult";
       clipLabel.className = 'clipLabel';
 
     //   verifySpeakerButton.id = "verifySpeakerButton";
@@ -116,7 +117,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       audio.controls = true;
       const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-      
+
       // Convert Blob to ArrayBuffer
       var fileReader = new FileReader();
       var array;
@@ -137,7 +138,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       verifyButton.onclick = function(){
         // resultDiv = document.getElementById("resultDiv");
-        
+
         // deleteProfileButton.disabled = true;
         speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
         let pushStream = SpeechSDK.AudioInputStream.createPushStream();
@@ -146,12 +147,15 @@ if (navigator.mediaDevices.getUserMedia) {
         console.log(arrayBuffer);
         pushStream.write(arrayBuffer);
         pushStream.close();
-    
+
         let testAudioConfig = SpeechSDK.AudioConfig.fromStreamInput(pushStream);
         let recognizer = new SpeechSDK.SpeakerRecognizer(speechConfig, testAudioConfig);
-    
+
+        var profileID = getCookie("VoiceProfileID");
+        console.log(profileID);
+
         profile = new SpeechSDK.VoiceProfile(profileID, SpeechSDK.VoiceProfileType.TextDependentVerification);
-    
+
         let model = SpeechSDK.SpeakerVerificationModel.fromProfile(profile);
         recognizer.recognizeOnceAsync(
             model,
@@ -167,7 +171,18 @@ if (navigator.mediaDevices.getUserMedia) {
             } else {
                 // resultDiv.innerHTML += "(Verification result) Score: " + result.score;
                 // resultDiv.innerHTML += "\r\n";
+                // confidenceResult.textContent = (result.score * 100).toFixed(2) + '%';
                 confidenceResult.innerHTML = (result.score * 100).toFixed(2) + '%';
+                confidence_level = (result.score * 100).toFixed(2);
+                if (confidence_level >= 80) {
+                  result = "Pass";
+                } else if (confidence_level >= 70) {
+                  result = "Further Verification";
+                } else {
+                  result = "Fail"
+                }
+                verificationResult.innerHTML = result;
+                verification(result, confidence_level);
             }
             },
             function(err) {
@@ -175,7 +190,7 @@ if (navigator.mediaDevices.getUserMedia) {
             // resultDiv.innerHTML += "ERROR: " + err;
             });
       }
-      
+
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
         numOfRecordings = numOfRecordings - 1;

@@ -26,16 +26,7 @@ var serviceRegion = "westus2";
 // var authorizationToken;
 var SpeechSDK;
 var client;
-// var filePicker, testFilePicker,audioFiles, testFile;
 var speechConfig, profile;
-
-// var endPoint = "https://westus2.api.cognitive.microsoft.com";
-// var restAPI = "/speaker/verification/v2.0/text-dependent/profiles/";
-// var profileID = getCookie("VoiceProfileID");
-// console.log(profileID);
-// var profileURL = endPoint + restAPI + profileID;
-// var profileURL = "https://westus2.api.cognitive.microsoft.com/speaker/verification/v2.0/text-dependent/profiles/3484da2d-bc78-4965-95ae-2bd6e172c097";
-
 var result;
 var confidence_level;
 
@@ -152,7 +143,8 @@ if (navigator.mediaDevices.getUserMedia) {
         let testAudioConfig = SpeechSDK.AudioConfig.fromStreamInput(pushStream);
         let recognizer = new SpeechSDK.SpeakerRecognizer(speechConfig, testAudioConfig);
 
-        var profileID = getCookie("VoiceProfileID");
+        // var profileID = getCookie("VoiceProfileID");
+        var profileID = "ae0ddaee-355c-4ed6-a3c6-8d2eeec64ce3";
         console.log(profileID);
 
         profile = new SpeechSDK.VoiceProfile(profileID, SpeechSDK.VoiceProfileType.TextDependentVerification);
@@ -194,7 +186,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
-        numOfRecordings = numOfRecordings - 1;
+        // numOfRecordings = numOfRecordings - 1;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
 

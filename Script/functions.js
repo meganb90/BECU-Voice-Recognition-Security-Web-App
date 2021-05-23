@@ -146,14 +146,21 @@ function actions_after_display_profile() {
 	console.log(decode_dict);
 
 	if (decode_dict["indicator"] == true) {
-		// var custid = document.getElementById("IDLookUp").value;
-		// setCookie("CustID", custid);
-		// var returned_id = getCookie("CustID");
-		// console.log(returned_id);
-
 		setCookie("VoiceProfileID", decode_dict["message"]["VoiceProfileID"]);
 		var voiceprofileid = getCookie("VoiceProfileID");
 		console.log(voiceprofileid);
+
+		setCookie("Fname", decode_dict["message"]["Fname"]);
+		var fname = getCookie("Fname");
+		console.log(fname);
+
+		setCookie("Lname", decode_dict["message"]["Lname"]);
+		var lname = getCookie("Lname");
+		console.log(lname);
+
+		setCookie("AccountNo", decode_dict["message"]["AccountNo"]);
+		var accountno = getCookie("AccountNo");
+		console.log(accountno);
 
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number: " + decode_dict["message"]["AccountNo"];
 		document.getElementById("Name_Display").innerHTML = "Name: " + decode_dict["message"]["Fname"] + " " + decode_dict["message"]["Lname"];
@@ -227,4 +234,34 @@ function security_questions() {
 			alert("Fail: Try again");
 		}
 	}
+}
+
+function verification(result, confidence_level) {
+	var fname = getCookie("Fname");
+	console.log(fname);
+
+	var lname = getCookie("Lname");
+	console.log(lname);
+
+	var accountno = getCookie("AccountNo");
+	console.log(accountno);
+
+	var request_data = {
+		"service": "verification",
+		"Fname": fname,
+		"Lname": lname,
+		"AccountNo": accountno,
+		"Result": result,
+		"Accuracy": confidence_level
+	};
+
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_login);
+}
+
+function actions_after_verification() {
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+	alert(decode_dict["message"]);
 }

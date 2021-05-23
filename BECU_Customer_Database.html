@@ -4,8 +4,9 @@
     <title>BECU Customer Database</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="Script/functions.js"></script>
     <script type="text/javascript" src="Script/utils.js"></script>
+    <script type="text/javascript" src="Script/functions.js"></script>
+    <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -48,19 +49,6 @@
       color: white;
       text-decoration: underline;
     }
-    /* #account{ ID for the account button
-      position: absolute;
-      left: 85%;
-      top: 20%;
-      width: 150px;
-      height: 40px;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      background: #e60000;
-      font-size: 20px;
-      font-weight: bold;
-    } */
     /* The following 3 sections of codes are for the icons on the input */
     .input-icons i {
       position: absolute;
@@ -167,7 +155,7 @@
     }
     #VoiceProfileID, #AccountOpenedDate, #LastActiveDate {
       position: relative;
-      top:55%;
+      top:62%;
       left:5%;
       color:black;
       font-size:20px;
@@ -293,8 +281,85 @@
       font-size: 30px;
       font-weight: bold;
     }
+    .recordingButton{ /* ID for the submit button*/
+      width: 20%;
+      height:40px;
+      border: none;
+      border-radius:8px;
+      color: white;
+      background:#3C3CC7;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    #verifySpeakerButton{ /* ID for the submit button*/
+      position: absolute;
+      top: 170%;
+      right: 10%;
+      width: 6%;
+      height: 5%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .deleteButton{
+      position:relative;
+      top:-20px;
+      right:-10px;
+      width: 100px;
+      height: 35px;
+      border: none;
+      border-radius:10px;
+      color: white;
+      background: #cc0000;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .verifyButton{ /* ID for the submit button*/
+      position:relative;
+      top:-20px;
+      right:-20px;
+      width: 100px;
+      height: 35px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .sound-clips{
+      position:relative;
+      top:20px;
+    }
+    .clipLabel{
+      left:310px;
+      font-size: 20px;
+    }
+    .confidenceResult{
+      right:320px;
+      font-size: 20px;
+    }
+    .verificationResult{
+      right:270px;
+      font-size: 20px;
+    }
     input:focus, textarea:focus, select:focus{  /* Remove the outline for the input border */
         outline: none;
+    }
+    #authenticated{ /* ID for the search input */
+      position: absolute;
+      top: 172%;
+      right: 5%;
+      height:6%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #008080;
+      font-size: 30px;
+      font-weight: bold;
     }
    </style>
 </head>
@@ -307,11 +372,11 @@
     </div>
     <div class="input-icons">
       <i class="fa fa-address-card icon" style="left:43.5%;"></i>
-      <a href="#" style="left:46%;"><u>Customer Database</u></a>
+      <a href="BECU_Customer_Database.html" style="left:46%;"><u>Customer Database</u></a>
     </div>
     <div class="input-icons">
       <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
-      <a href="#" style="left:68%;">System Dashboard</a>
+      <a href="BECU_System_Dashboard.html" style="left:68%;">System Dashboard</a>
     </div>
     <div class="input-icons">
       <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
@@ -387,27 +452,31 @@
   <i class="fa fa-volume-up" style="position: absolute; top:121%; left:5.5%; color:black; font-size:38px"></i>
   <p style="position: absolute; top:119%; left:9%; color:black; font-size:22px"><b><u>Voice Verification</u></p>
   <div class="verification">
-
+    <center>
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+          <div id="buttons">
+            <button class="recordingButton">Start Recording</button>
+          </div>
+      </section>
+      <section class="sound-clips"></section>
+    </center>
   </div>
+  <div id="content">
+    <table width="100%"></table>
+      <tr>
+        <td></td>
+        <td><button id="authenticated">Customer is Authenticated</button></td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div id="warning">
+    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+  </div> -->
   <script>
     document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
     document.cookie = "Security_Questions=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
   </script>
-  <!-- <div class="title">
-    <p style="bottom:38%; left:17.5%;"><u>First Verification</u></p>
-    <p style="bottom:38%; left:65.4%;"><u>Voice Verification</u></p>
-  </div>
-  <div class="first_verification">
-    <img src="Images/BECU_First_Verification.png" alt="BECU First Verification" style="position:relative; left:7%; width:80%;">
-  </div>
-  <div class="voice_verification">
-    <img src="Images/BECU_Voice_Verification.png" alt="BECU Voice Verification" style="position:relative; left:7%; width:90%;">
-  </div>
-  <div>
-    <form method="get" action="login.php" style="max-width:400px; margin:auto">
-      <input type="button" name="submit" id="authentication" value="System Authenticated" style="left: 20%;">
-      <input type="button" name="submit" id="authentication" value="Agent Authenticated" style="right: 15%;">
-    </form>
-  </div> -->
+  <script src="Script/Audio&VerifySpeaker.js"></script>
 </body>
 </html>

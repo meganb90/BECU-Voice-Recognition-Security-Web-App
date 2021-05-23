@@ -183,7 +183,7 @@ if (navigator.mediaDevices.getUserMedia) {
                   result = "Fail"
                 }
                 verificationResult.innerHTML = result;
-                // verification(result, confidence_level);
+                verification(result, confidence_level);
             }
             },
             function(err) {

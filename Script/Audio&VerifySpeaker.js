@@ -143,8 +143,8 @@ if (navigator.mediaDevices.getUserMedia) {
         let testAudioConfig = SpeechSDK.AudioConfig.fromStreamInput(pushStream);
         let recognizer = new SpeechSDK.SpeakerRecognizer(speechConfig, testAudioConfig);
 
-        var profileID = getCookie("VoiceProfileID");
-        // var profileID = "ae0ddaee-355c-4ed6-a3c6-8d2eeec64ce3";
+        // var profileID = getCookie("VoiceProfileID");
+        var profileID = "ae0ddaee-355c-4ed6-a3c6-8d2eeec64ce3";
         console.log(profileID);
 
         profile = new SpeechSDK.VoiceProfile(profileID, SpeechSDK.VoiceProfileType.TextDependentVerification);
@@ -167,15 +167,43 @@ if (navigator.mediaDevices.getUserMedia) {
                 // confidenceResult.textContent = (result.score * 100).toFixed(2) + '%';
                 confidenceResult.innerHTML = (result.score * 100).toFixed(2) + '%';
                 confidence_level = (result.score * 100).toFixed(2);
-                if (confidence_level >= 80) {
-                  result = "Pass";
-                } else if (confidence_level >= 70) {
-                  result = "Further Verification";
-                } else {
-                  result = "Fail"
+
+                var fail_attempts_verification = parseInt(getCookie("Verification"));
+                console.log(fail_attempts_verification);
+
+                if (fail_attempts_verification == "") {
+                  setCookie("Verification", 0);
+                  fail_attempts_verification = parseInt(getCookie("Verification"));
+                  console.log(fail_attempts_verification);
                 }
-                verificationResult.innerHTML = result;
-                verification(result, confidence_level);
+
+                if (fail_attempts_verification == 3) {
+                  document.getElementById("recordingButton").disabled = true;
+                  alert("Fail: No more attempts");
+                } else {
+                  var attempt_verifcation = getCookie("Verification");
+                  console.log(attempt_verifcation);
+
+                  if (confidence_level >= 80) {
+                    result = "Pass";
+                    setCookie("Verification", 0);
+                    document.getElementById("authenticated").disabled = false;
+                  } else if (confidence_level >= 70) {
+                    result = "Further Verification";
+                    attempt_verifcation = parseInt(attempt_verifcation) + 1;
+                    setCookie("Verification", attempt_verifcation);
+                  } else {
+                    result = "Fail"
+                    setCookie("Verification", 3);
+                    document.getElementById("recordingButton").disabled = true;
+                    alert("Fail: No more attempts");
+                  }
+
+                  console.log(getCookie("Verification"));
+
+                  verificationResult.innerHTML = result;
+                  verification(result, confidence_level);
+                }
             }
             },
             function(err) {

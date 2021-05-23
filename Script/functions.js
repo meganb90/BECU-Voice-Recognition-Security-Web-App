@@ -219,6 +219,7 @@ function security_questions() {
 		alert("Fail: No more attempts");
 	} else {
 		if (correct_answers >= 3) {
+			document.getElementById("recordingButton").disabled = false;
 			setCookie("Security_Questions", 0);
 			alert("Success: Proceed to voice verification");
 		} else {
@@ -267,4 +268,8 @@ function actions_after_verification() {
 	var decode_dict = JSON.parse(this.responseText);
 	console.log(decode_dict);
 	alert(decode_dict["message"]);
+}
+
+function authentication() {
+	alert("The customer is autenticated!");
 }

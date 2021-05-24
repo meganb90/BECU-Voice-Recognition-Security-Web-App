@@ -22,7 +22,7 @@ var deleteProfileButton;
 
 // subscription key and region for speech services.
 // var subscriptionKey = "ebbd248fda6544d09d6b1aeb9f7d1029";
-var subscriptionKey = @Microsoft.KeyVault(SecretUri="https://becukey.vault.azure.net/secrets/SpeakerKey/8f40b5295c484fabab6236707738f5f3");
+var subscriptionKey;
 var serviceRegion = "westus2";
 // var authorizationToken;
 var SpeechSDK;
@@ -30,6 +30,21 @@ var client;
 var speechConfig, profile;
 var result;
 var confidence_level;
+
+function retrieve_voice() {
+	var request_data = {
+		"service": "retrieve"
+	};
+
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_retrieve_voice);
+}
+
+function actions_after_retrieve_voice() {
+	var decode_dict = JSON.parse(this.responseText);
+	subscriptionKey = decode_dict["message"];
+}
 
 //main block for doing the audio recording
 if (navigator.mediaDevices.getUserMedia) {
@@ -42,6 +57,7 @@ if (navigator.mediaDevices.getUserMedia) {
     const mediaRecorder = new MediaRecorder(stream);
 
     visualize(stream);
+    retrieve_voice();
 
     recordingButton.onclick = function() {
         recordingButtonStatus = !(recordingButtonStatus)

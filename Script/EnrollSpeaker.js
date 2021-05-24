@@ -7,14 +7,32 @@ var deleteProfileButton;
 // var subscriptionKey = "ebbd248fda6544d09d6b1aeb9f7d1029";
 // var serviceRegion = "westus2";
 
+var subscriptionKey;
+var serviceRegion = "westus2";
+
 var SpeechSDK;
 var client;
 var speechConfig, profile;
 
 var voiceprofileID;
 
-document.addEventListener("DOMContentLoaded", function () {
+function retrieve() {
+	var request_data = {
+		"service": "retrieve"
+	};
 
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_retrieve);
+}
+
+function actions_after_retrieve() {
+	var decode_dict = JSON.parse(this.responseText);
+	subscriptionKey = decode_dict["message"];
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  retrieve();
   createVoiceProfileButton = document.getElementById("createVoiceProfileButton");
   deleteProfileButton = document.getElementById("deleteProfileButton");
   resultDiv = document.getElementById("resultDiv");
@@ -25,21 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     createVoiceProfileButton.disabled = true;
     resultDiv.innerHTML = "";
-
-    // if we got an authorization token, use the token. Otherwise use the provided subscription key
-    // if (authorizationToken) {
-    //   speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, serviceRegion.value);
-    // } else {
-    //   if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
-    //     alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
-    //     createVoiceProfileButton.disabled = false;
-    //     return;
-    //   }
-    //   speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);
-    // }
-
-    var subscriptionKey = retrieve();
-    var serviceRegion = "westus2";
 
     speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
 

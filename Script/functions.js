@@ -273,3 +273,114 @@ function actions_after_verification() {
 function authentication() {
 	alert("The customer is autenticated!");
 }
+
+function GenerateTable() {
+    //Build an array containing Customer records.
+
+		var request_data = {
+			"service": "system_performance"
+		};
+
+		var request_str = dict2jsonEncode(request_data);
+
+		httpPost(SERVER_URL, request_str, actions_after_system_performanc);
+}
+
+function actions_after_system_performanc() {
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+
+	var message = decode_dict["message"];
+	console.log(decode_dict["message"]);
+
+	var system = [["Time", "Date", "First Name", "Last Name", "Result", "Accuracy"]];
+
+	console.log(message[0]["Time"]);
+	console.log(message.length);
+
+	for (i = 0; i < message.length; i++) {
+		var system_row = [];
+		system_row[0] = message[i]["Time"];
+		system_row[1] = message[i]["Date"];
+		system_row[2] = message[i]["Fname"];
+		system_row[3] = message[i]["Lname"];
+		system_row[4] = message[i]["Result"];
+		system_row[5] = message[i]["Accuracy"];
+		system.push(system_row);
+	}
+
+	console.log(system);
+
+	//Create a HTML Table element.
+	var table = document.createElement("TABLE");
+	table.border = "1";
+
+	//Get the count of columns.
+	var columnCount = system[0].length;
+
+	//Add the header row.
+	var row = table.insertRow(-1);
+	for (var i = 0; i < columnCount; i++) {
+			var headerCell = document.createElement("TH");
+			headerCell.innerHTML = system[0][i];
+			row.appendChild(headerCell);
+	}
+
+	//Add the data rows.
+	for (var i = 1; i < system.length; i++) {
+			row = table.insertRow(-1);
+			for (var j = 0; j < columnCount; j++) {
+					var cell = row.insertCell(-1);
+					cell.innerHTML = system[i][j];
+			}
+	}
+
+	var dvTable = document.getElementById("dvTable");
+	dvTable.innerHTML = "";
+	dvTable.appendChild(table);
+
+	var pass_case = decode_dict["result"]["Pass"];
+	var sus_case = decode_dict["result"]["Further_Verification"];
+	var fail_case = decode_dict["result"]["Fail"];
+
+	document.getElementById("pass").innerHTML = pass_case;
+	document.getElementById("suspicious").innerHTML = sus_case;
+	document.getElementById("fail").innerHTML = fail_case;
+
+	am4core.ready(function() {
+
+	// Themes begin
+	am4core.useTheme(am4themes_animated);
+	// Themes end
+
+	// Create chart instance
+	var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+	// Add data
+	chart.data = [ {
+		"Result": "Pass",
+		"Case": pass_case
+	}, {
+		"Result": "Fail",
+		"Case": fail_case
+	}, {
+		"Result": "Suspicious",
+		"Case": sus_case
+	}];
+
+	// Add and configure Series
+	var pieSeries = chart.series.push(new am4charts.PieSeries());
+	pieSeries.dataFields.value = "Case";
+	pieSeries.dataFields.category = "Result";
+	pieSeries.slices.template.stroke = am4core.color("#fff");
+	pieSeries.slices.template.strokeWidth = 2;
+	pieSeries.slices.template.strokeOpacity = 1;
+
+	// This creates initial animation
+	pieSeries.hiddenState.properties.opacity = 1;
+	pieSeries.hiddenState.properties.endAngle = -90;
+	pieSeries.hiddenState.properties.startAngle = -90;
+
+	}); // end am4core.ready()
+
+}

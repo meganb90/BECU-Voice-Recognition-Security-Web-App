@@ -4,9 +4,9 @@
     <title>BECU Add New Customer</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
-    <script type="text/javascript" src="Script/functions.js"></script>
     <script type="text/javascript" src="Script/utils.js"></script>
+    <script type="text/javascript" src="Script/functions.js"></script>
+    <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
     <script type="text/javascript" src="Script/EnrollSpeaker.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,6 +128,19 @@
       padding-left: 35px;
       font-size: 20px;
       background-color: transparent;
+    }
+    #DisplayProfile{ /* ID for the register button*/
+      position: absolute;
+      top: 9%;
+      left: 40%;
+      width: 7%;
+      height: 4%;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background: #cc0000;
+      font-size: 20px;
+      font-weight: bold;
     }
     .data{ /* The user database input section */
       position: absolute;
@@ -277,7 +290,7 @@
     </div>
     <div class="input-icons">
       <i class="fa fa-pie-chart icon" style="left:65.5%;"></i>
-      <a href="#" style="left:68%;">System Dashboard</a>
+      <a href="BECU_System_Dashboard.html" style="left:68%;">System Dashboard</a>
     </div>
     <div class="input-icons">
       <i class="fa fa-user-circle icon" style="left:87%; top:20%; font-size:36px"></i>
@@ -302,7 +315,6 @@
     <div class="input-icons">
       <i class="fa fa-pencil-square-o icon" style="top:8.5%; left:5.5%; color:black; font-size:38px"></i>
       <p style="top:6.5%; left:9%; color:black; font-size:22px"><b><u>Customer Profile</u></p>
-      <!--<i class="fa fa-search" style="top:7.5%; right:9%; color:black; font-size:20px"></i>-->
       <form method="get" action="login.php" style="max-width:400px; margin:auto">
         <div class="input-icons">
           <i class="fa fa-search" style="top:9.5%; right:17%; color:gray; font-size:20px"></i>
@@ -326,7 +338,7 @@
     </form>
     <input type="button" name="Register" id="Register" value="REGISTER" onclick="register()">
   </div>
-  <div class="input-icons">
+<div class="input-icons">
   <i class="fa fa-microphone icon" style="top:42%; left:5.5%; color:black; font-size:38px"></i>
   <p style="top:40%; left:8.25%; color:black; font-size:22px"><b><u>Creating Voice Profile</u></p>
 </div>
@@ -343,40 +355,23 @@
       <textarea id="resultDiv" style="position:absolute; top:30%; left:1%; width:300px;height:200px"></textarea>
     </section>
   </center>
-  <!-- <img src="/Images/BECU_Recording.PNG" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%"> -->
-</div>
-<div id="content">
-  <table width="100%"></table>
-    <tr>
-      <td></td>
-      <td><button id="createVoiceProfileButton">ENROLL</button></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><button id="deleteProfileButton">Delete Voice Profile</button></td>
-    </tr>
-    <!-- <tr>
-      <td><textarea id="resultDiv" style="position:absolute;width:500px;height:200px"></textarea></td>
-    </tr> -->
-  </table>
-</div>
-<div id="warning">
-  <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
-</div>
-  <!-- <div class="input-icons">
-    <i class="fa fa-microphone icon" style="top:41%; left:35%; color:#2251dd; font-size:80px"></i>
-    <p style="top:38%; left:45%; color:#2251dd; font-size:40px">Voice Recording</p>
   </div>
-  <div class="recording">
-    <img src="Images/BECU_Recording.png" alt="BECU Recording" style="position:relative; left:5%; width:75%; height:98%">
-  </div> -->
-  <!-- <a href="BECU_Customer_Database.html"><input type="button" name="Enroll" id="Enroll" value="ENROLL"></a> -->
-  <!-- <script type="text/javascript" src="Script/microsoft.cognitiveservices.speech.sdk.bundle.js"></script> -->
-  <!-- <script type="text/javascript" src="Script/EnrollSpeaker.js"></script> -->
-<!-- <script>
-  document.cookie = "CustID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
-</script> -->
-<script type="text/javascript" src="Script/AudioCapture.js"></script>
+  <div id="content">
+    <table width="100%"></table>
+      <tr>
+        <td></td>
+        <td><button id="createVoiceProfileButton">ENROLL</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="deleteProfileButton">Delete Voice Profile</button></td>
+      </tr>
+    </table>
+  </div>
+  <div id="warning">
+    <h1 style="font-weight:500;">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+  </div>
+  <script type="text/javascript" src="Script/AudioCapture.js"></script>
 </body>
 <!-- <script type="text/javascript" src="Script/AudioCapture.js"></script> -->
 </html>

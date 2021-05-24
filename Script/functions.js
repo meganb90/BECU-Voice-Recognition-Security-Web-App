@@ -89,6 +89,23 @@ function actions_after_register() {
 	alert(decode_dict["message"]);
 }
 
+function retrieve() {
+	var request_data = {
+		"service": "retrieve"
+	};
+
+	var request_str = dict2jsonEncode(request_data);
+
+	httpPost(SERVER_URL, request_str, actions_after_retrieve);
+}
+
+function actions_after_retrieve() {
+	var decode_dict = JSON.parse(this.responseText);
+	console.log(decode_dict);
+	alert(decode_dict["message"]);
+	return decode_dict["message"];
+}
+
 function enrollment(voiceprofileid) {
 	var custid = getCookie("CustID");
 	console.log(custid);

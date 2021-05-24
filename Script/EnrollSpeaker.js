@@ -5,11 +5,7 @@ var deleteProfileButton;
 
 // subscription key and region for speech services.
 // var subscriptionKey = "ebbd248fda6544d09d6b1aeb9f7d1029";
-// console.log(@Microsoft.KeyVault(SecretUri="https://becukey.vault.azure.net/secrets/SpeakerKey/8f40b5295c484fabab6236707738f5f3"));
-console.log(@Microsoft.KeyVault(SecretUri=https://becukey.vault.azure.net/secrets/SpeakerKey/8f40b5295c484fabab6236707738f5f3));
-
-var subscriptionKey = @Microsoft.KeyVault(SecretUri="https://becukey.vault.azure.net/secrets/SpeakerKey/8f40b5295c484fabab6236707738f5f3");
-var serviceRegion = "westus2";
+// var serviceRegion = "westus2";
 
 var SpeechSDK;
 var client;
@@ -41,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //   }
     //   speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);
     // }
+
+    var subscriptionKey = retrieve();
+    var serviceRegion = "westus2";
 
     speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
 

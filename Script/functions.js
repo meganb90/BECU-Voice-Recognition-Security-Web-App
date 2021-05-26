@@ -214,23 +214,25 @@ function security_questions() {
 		}
 	}
 
-	if (fail_attempts == 3) {
-		document.getElementById("Security").disabled = true;
-		alert("Fail: No more attempts");
+	if (correct_answers >= 3) {
+		document.getElementById("recordingButton").disabled = false;
+		document.getElementById("recordingButton").style.opacity = 1;
+		setCookie("Security_Questions", 0);
+		alert("Success: Proceed to voice verification");
 	} else {
-		if (correct_answers >= 3) {
-			document.getElementById("recordingButton").disabled = false;
-			setCookie("Security_Questions", 0);
-			alert("Success: Proceed to voice verification");
+		var attempt = getCookie("Security_Questions");
+		console.log(attempt);
+		if (attempt == "") {
+			setCookie("Security_Questions", 1);
 		} else {
-			var attempt = getCookie("Security_Questions");
-			console.log(attempt);
-			if (attempt == "") {
-				setCookie("Security_Questions", 1);
-			} else {
-				attempt = parseInt(attempt) + 1;
-				setCookie("Security_Questions", attempt);
-			}
+			attempt = parseInt(attempt) + 1;
+			setCookie("Security_Questions", attempt);
+		}
+		if (attempt == 3) {
+			document.getElementById("Security").disabled = true;
+			document.getElementById("Security").style.opacity = 0.3;
+			alert("Fail: No more attempts");
+		} else {
 			console.log(getCookie("Security_Questions"));
 			alert("Fail: Try again");
 		}

@@ -196,6 +196,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
                 if (fail_attempts_verification == 3) {
                   document.getElementById("recordingButton").disabled = true;
+									document.getElementById("recordingButton").style.opacity = 0.3;
                   alert("Fail: No more attempts");
                 } else {
                   var attempt_verifcation = getCookie("Verification");
@@ -205,6 +206,7 @@ if (navigator.mediaDevices.getUserMedia) {
                     result = "Pass";
                     setCookie("Verification", 0);
                     document.getElementById("authenticated").disabled = false;
+										document.getElementById("authenticated").style.opacity = 1;
                   } else if (confidence_level >= 70) {
                     result = "Further Verification";
                     attempt_verifcation = parseInt(attempt_verifcation) + 1;
@@ -213,6 +215,7 @@ if (navigator.mediaDevices.getUserMedia) {
                     result = "Fail"
                     setCookie("Verification", 3);
                     document.getElementById("recordingButton").disabled = true;
+										document.getElementById("recordingButton").style.opacity = 0.3;
                     alert("Fail: No more attempts");
                   }
 

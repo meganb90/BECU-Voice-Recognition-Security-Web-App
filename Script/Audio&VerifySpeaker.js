@@ -207,7 +207,7 @@ if (navigator.mediaDevices.getUserMedia) {
                     setCookie("Verification", 0);
                     document.getElementById("authenticated").disabled = false;
 										document.getElementById("authenticated").style.opacity = 1;
-                  } else if (confidence_level >= 70) {
+                  } else if (confidence_level >= 60) {
                     result = "Further Verification";
                     attempt_verifcation = parseInt(attempt_verifcation) + 1;
                     setCookie("Verification", attempt_verifcation);

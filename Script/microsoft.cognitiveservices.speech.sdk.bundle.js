@@ -16724,7 +16724,7 @@ var ConversationTranslator = /** @class */ (function (_super) {
         Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: 
+                    case 0:
                     // stop the speech websocket
                     return [4 /*yield*/, this.cancelSpeech()];
                     case 1:

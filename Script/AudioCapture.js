@@ -28,7 +28,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
     recordingButton.onclick = function() {
         recordingButtonStatus = !(recordingButtonStatus)
-        
+
         if (recordingButtonStatus){
             mediaRecorder.start();
             console.log(mediaRecorder.state);
@@ -45,14 +45,12 @@ if (navigator.mediaDevices.getUserMedia) {
             recordingButton.style.color = "";
             recordingButton.value = "Start Recording";
             recordingButton.innerHTML = "Start Recording";
-            // mediaRecorder.requestData();
         }
     }
 
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-    //   const clipName = prompt('Enter a name for your sound clip?','My unnamed clip');
       const clipName = 'Recording ' + numOfRecordings
 
       const clipContainer = document.createElement('article');
@@ -64,12 +62,6 @@ if (navigator.mediaDevices.getUserMedia) {
       audio.setAttribute('controls', '');
       deleteButton.textContent = 'Delete';
       deleteButton.className = 'delete';
-
-    //   if(clipName === null) {
-    //     clipLabel.textContent = 'My unnamed clip';
-    //   } else {
-    //     clipLabel.textContent = clipName;
-    //   }
 
       clipLabel.textContent = clipName;
 
@@ -83,7 +75,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       audio.controls = true;
       const blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-      
+
       // Convert Blob to ArrayBuffer
       var fileReader = new FileReader();
       var array;
@@ -92,7 +84,6 @@ if (navigator.mediaDevices.getUserMedia) {
         console.log("Array contains", array.byteLength, "bytes.");
         console.log(array);
         audioStream.push(array);
-        // document.getElementById("demo").innerHTML = audioStream.length;
         console.log(audioStream);
       };
       fileReader.readAsArrayBuffer(blob);
@@ -104,7 +95,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
-        numOfRecordings = numOfRecordings - 1;
+        // numOfRecordings = numOfRecordings + 1;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
       }
 
@@ -147,7 +138,6 @@ function visualize(stream) {
   const dataArray = new Uint8Array(bufferLength);
 
   source.connect(analyser);
-  //analyser.connect(audioCtx.destination);
 
   draw()
 

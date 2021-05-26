@@ -160,8 +160,7 @@ if (navigator.mediaDevices.getUserMedia) {
         let testAudioConfig = SpeechSDK.AudioConfig.fromStreamInput(pushStream);
         let recognizer = new SpeechSDK.SpeakerRecognizer(speechConfig, testAudioConfig);
 
-        // var profileID = getCookie("VoiceProfileID");
-        var profileID = "ae0ddaee-355c-4ed6-a3c6-8d2eeec64ce3";
+        var profileID = getCookie("VoiceProfileID");
         console.log(profileID);
 
         profile = new SpeechSDK.VoiceProfile(profileID, SpeechSDK.VoiceProfileType.TextDependentVerification);

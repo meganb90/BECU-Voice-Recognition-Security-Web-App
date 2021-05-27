@@ -146,14 +146,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(__webpack_require__(3), exports);
 __exportStar(__webpack_require__(41), exports);
 __exportStar(__webpack_require__(42), exports);
-__exportStar(__webpack_require__(219), exports);
-__exportStar(__webpack_require__(220), exports);
 __exportStar(__webpack_require__(221), exports);
 __exportStar(__webpack_require__(222), exports);
-__exportStar(__webpack_require__(235), exports);
-__exportStar(__webpack_require__(236), exports);
+__exportStar(__webpack_require__(223), exports);
+__exportStar(__webpack_require__(224), exports);
 __exportStar(__webpack_require__(237), exports);
-__exportStar(__webpack_require__(195), exports);
+__exportStar(__webpack_require__(238), exports);
+__exportStar(__webpack_require__(239), exports);
+__exportStar(__webpack_require__(197), exports);
 
 
 
@@ -3323,9 +3323,8 @@ __exportStar(__webpack_require__(46), exports);
 __exportStar(__webpack_require__(48), exports);
 __exportStar(__webpack_require__(49), exports);
 __exportStar(__webpack_require__(50), exports);
-__exportStar(__webpack_require__(157), exports);
 __exportStar(__webpack_require__(158), exports);
-__exportStar(__webpack_require__(160), exports);
+__exportStar(__webpack_require__(159), exports);
 __exportStar(__webpack_require__(161), exports);
 __exportStar(__webpack_require__(162), exports);
 __exportStar(__webpack_require__(163), exports);
@@ -3348,19 +3347,21 @@ __exportStar(__webpack_require__(179), exports);
 __exportStar(__webpack_require__(180), exports);
 __exportStar(__webpack_require__(181), exports);
 __exportStar(__webpack_require__(182), exports);
+__exportStar(__webpack_require__(183), exports);
 __exportStar(__webpack_require__(184), exports);
-__exportStar(__webpack_require__(185), exports);
 __exportStar(__webpack_require__(186), exports);
 __exportStar(__webpack_require__(187), exports);
-__exportStar(__webpack_require__(191), exports);
-__exportStar(__webpack_require__(192), exports);
-__exportStar(__webpack_require__(211), exports);
-__exportStar(__webpack_require__(212), exports);
+__exportStar(__webpack_require__(188), exports);
+__exportStar(__webpack_require__(189), exports);
+__exportStar(__webpack_require__(193), exports);
+__exportStar(__webpack_require__(194), exports);
 __exportStar(__webpack_require__(213), exports);
+__exportStar(__webpack_require__(214), exports);
 __exportStar(__webpack_require__(215), exports);
-__exportStar(__webpack_require__(216), exports);
 __exportStar(__webpack_require__(217), exports);
 __exportStar(__webpack_require__(218), exports);
+__exportStar(__webpack_require__(219), exports);
+__exportStar(__webpack_require__(220), exports);
 exports.OutputFormatPropertyName = "OutputFormat";
 exports.CancellationErrorCodePropertyName = "CancellationErrorCode";
 exports.ServicePropertiesPropertyName = "ServiceProperties";
@@ -3797,25 +3798,27 @@ Object.defineProperty(exports, "VoiceProfileEnrollmentCancellationDetails", { en
 var VoiceProfileResult_1 = __webpack_require__(124);
 Object.defineProperty(exports, "VoiceProfileResult", { enumerable: true, get: function () { return VoiceProfileResult_1.VoiceProfileResult; } });
 Object.defineProperty(exports, "VoiceProfileCancellationDetails", { enumerable: true, get: function () { return VoiceProfileResult_1.VoiceProfileCancellationDetails; } });
-var VoiceProfileClient_1 = __webpack_require__(125);
+var VoiceProfileAuthorizationPhraseResult_1 = __webpack_require__(125);
+Object.defineProperty(exports, "VoiceProfileAuthorizationPhraseResult", { enumerable: true, get: function () { return VoiceProfileAuthorizationPhraseResult_1.VoiceProfileAuthorizationPhraseResult; } });
+var VoiceProfileClient_1 = __webpack_require__(126);
 Object.defineProperty(exports, "VoiceProfileClient", { enumerable: true, get: function () { return VoiceProfileClient_1.VoiceProfileClient; } });
-var SpeakerRecognizer_1 = __webpack_require__(126);
+var SpeakerRecognizer_1 = __webpack_require__(127);
 Object.defineProperty(exports, "SpeakerRecognizer", { enumerable: true, get: function () { return SpeakerRecognizer_1.SpeakerRecognizer; } });
-var SpeakerIdentificationModel_1 = __webpack_require__(127);
+var SpeakerIdentificationModel_1 = __webpack_require__(128);
 Object.defineProperty(exports, "SpeakerIdentificationModel", { enumerable: true, get: function () { return SpeakerIdentificationModel_1.SpeakerIdentificationModel; } });
-var SpeakerVerificationModel_1 = __webpack_require__(128);
+var SpeakerVerificationModel_1 = __webpack_require__(129);
 Object.defineProperty(exports, "SpeakerVerificationModel", { enumerable: true, get: function () { return SpeakerVerificationModel_1.SpeakerVerificationModel; } });
-var AutoDetectSourceLanguageConfig_1 = __webpack_require__(129);
+var AutoDetectSourceLanguageConfig_1 = __webpack_require__(130);
 Object.defineProperty(exports, "AutoDetectSourceLanguageConfig", { enumerable: true, get: function () { return AutoDetectSourceLanguageConfig_1.AutoDetectSourceLanguageConfig; } });
-var AutoDetectSourceLanguageResult_1 = __webpack_require__(130);
+var AutoDetectSourceLanguageResult_1 = __webpack_require__(131);
 Object.defineProperty(exports, "AutoDetectSourceLanguageResult", { enumerable: true, get: function () { return AutoDetectSourceLanguageResult_1.AutoDetectSourceLanguageResult; } });
-var SourceLanguageConfig_1 = __webpack_require__(131);
+var SourceLanguageConfig_1 = __webpack_require__(132);
 Object.defineProperty(exports, "SourceLanguageConfig", { enumerable: true, get: function () { return SourceLanguageConfig_1.SourceLanguageConfig; } });
-var SpeakerRecognitionResult_1 = __webpack_require__(132);
+var SpeakerRecognitionResult_1 = __webpack_require__(133);
 Object.defineProperty(exports, "SpeakerRecognitionResult", { enumerable: true, get: function () { return SpeakerRecognitionResult_1.SpeakerRecognitionResult; } });
 Object.defineProperty(exports, "SpeakerRecognitionResultType", { enumerable: true, get: function () { return SpeakerRecognitionResult_1.SpeakerRecognitionResultType; } });
 Object.defineProperty(exports, "SpeakerRecognitionCancellationDetails", { enumerable: true, get: function () { return SpeakerRecognitionResult_1.SpeakerRecognitionCancellationDetails; } });
-var Exports_1 = __webpack_require__(133);
+var Exports_1 = __webpack_require__(134);
 Object.defineProperty(exports, "Conversation", { enumerable: true, get: function () { return Exports_1.Conversation; } });
 Object.defineProperty(exports, "ConversationExpirationEventArgs", { enumerable: true, get: function () { return Exports_1.ConversationExpirationEventArgs; } });
 Object.defineProperty(exports, "ConversationParticipantsChangedEventArgs", { enumerable: true, get: function () { return Exports_1.ConversationParticipantsChangedEventArgs; } });
@@ -3829,29 +3832,29 @@ Object.defineProperty(exports, "ParticipantChangedReason", { enumerable: true, g
 Object.defineProperty(exports, "User", { enumerable: true, get: function () { return Exports_1.User; } });
 var SpeechSynthesisOutputFormat_1 = __webpack_require__(65);
 Object.defineProperty(exports, "SpeechSynthesisOutputFormat", { enumerable: true, get: function () { return SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat; } });
-var SpeechSynthesizer_1 = __webpack_require__(145);
+var SpeechSynthesizer_1 = __webpack_require__(146);
 Object.defineProperty(exports, "SpeechSynthesizer", { enumerable: true, get: function () { return SpeechSynthesizer_1.SpeechSynthesizer; } });
-var SpeechSynthesisResult_1 = __webpack_require__(146);
+var SpeechSynthesisResult_1 = __webpack_require__(147);
 Object.defineProperty(exports, "SpeechSynthesisResult", { enumerable: true, get: function () { return SpeechSynthesisResult_1.SpeechSynthesisResult; } });
-var SpeechSynthesisEventArgs_1 = __webpack_require__(147);
+var SpeechSynthesisEventArgs_1 = __webpack_require__(148);
 Object.defineProperty(exports, "SpeechSynthesisEventArgs", { enumerable: true, get: function () { return SpeechSynthesisEventArgs_1.SpeechSynthesisEventArgs; } });
-var SpeechSynthesisWordBoundaryEventArgs_1 = __webpack_require__(148);
+var SpeechSynthesisWordBoundaryEventArgs_1 = __webpack_require__(149);
 Object.defineProperty(exports, "SpeechSynthesisWordBoundaryEventArgs", { enumerable: true, get: function () { return SpeechSynthesisWordBoundaryEventArgs_1.SpeechSynthesisWordBoundaryEventArgs; } });
-var SpeechSynthesisBookmarkEventArgs_1 = __webpack_require__(149);
+var SpeechSynthesisBookmarkEventArgs_1 = __webpack_require__(150);
 Object.defineProperty(exports, "SpeechSynthesisBookmarkEventArgs", { enumerable: true, get: function () { return SpeechSynthesisBookmarkEventArgs_1.SpeechSynthesisBookmarkEventArgs; } });
-var SpeechSynthesisVisemeEventArgs_1 = __webpack_require__(150);
+var SpeechSynthesisVisemeEventArgs_1 = __webpack_require__(151);
 Object.defineProperty(exports, "SpeechSynthesisVisemeEventArgs", { enumerable: true, get: function () { return SpeechSynthesisVisemeEventArgs_1.SpeechSynthesisVisemeEventArgs; } });
-var SpeakerAudioDestination_1 = __webpack_require__(151);
+var SpeakerAudioDestination_1 = __webpack_require__(152);
 Object.defineProperty(exports, "SpeakerAudioDestination", { enumerable: true, get: function () { return SpeakerAudioDestination_1.SpeakerAudioDestination; } });
-var ConversationTranscriptionCanceledEventArgs_1 = __webpack_require__(152);
+var ConversationTranscriptionCanceledEventArgs_1 = __webpack_require__(153);
 Object.defineProperty(exports, "ConversationTranscriptionCanceledEventArgs", { enumerable: true, get: function () { return ConversationTranscriptionCanceledEventArgs_1.ConversationTranscriptionCanceledEventArgs; } });
-var PronunciationAssessmentGradingSystem_1 = __webpack_require__(153);
+var PronunciationAssessmentGradingSystem_1 = __webpack_require__(154);
 Object.defineProperty(exports, "PronunciationAssessmentGradingSystem", { enumerable: true, get: function () { return PronunciationAssessmentGradingSystem_1.PronunciationAssessmentGradingSystem; } });
-var PronunciationAssessmentGranularity_1 = __webpack_require__(154);
+var PronunciationAssessmentGranularity_1 = __webpack_require__(155);
 Object.defineProperty(exports, "PronunciationAssessmentGranularity", { enumerable: true, get: function () { return PronunciationAssessmentGranularity_1.PronunciationAssessmentGranularity; } });
-var PronunciationAssessmentConfig_1 = __webpack_require__(155);
+var PronunciationAssessmentConfig_1 = __webpack_require__(156);
 Object.defineProperty(exports, "PronunciationAssessmentConfig", { enumerable: true, get: function () { return PronunciationAssessmentConfig_1.PronunciationAssessmentConfig; } });
-var PronunciationAssessmentResult_1 = __webpack_require__(156);
+var PronunciationAssessmentResult_1 = __webpack_require__(157);
 Object.defineProperty(exports, "PronunciationAssessmentResult", { enumerable: true, get: function () { return PronunciationAssessmentResult_1.PronunciationAssessmentResult; } });
 
 
@@ -3945,7 +3948,7 @@ var AudioConfig = /** @class */ (function () {
         if (audioStream instanceof Exports_2.AudioInputStream) {
             return new AudioConfigImpl(audioStream);
         }
-        if (audioStream instanceof MediaStream) {
+        if (typeof MediaStream !== "undefined" && audioStream instanceof MediaStream) {
             var pcmRecorder = new Exports_1.PcmRecorder();
             return new AudioConfigImpl(new Exports_1.MicAudioSource(pcmRecorder, null, null, audioStream));
         }
@@ -4299,6 +4302,7 @@ var AudioFileWriter = /** @class */ (function () {
         this.id = function () {
             return _this.privId;
         };
+        Contracts_1.Contracts.throwIfNullOrUndefined(fs.openSync, "\nFile System access not available, please use Push or PullAudioOutputStream");
         this.privFd = fs.openSync(filename, "w");
     }
     Object.defineProperty(AudioFileWriter.prototype, "format", {
@@ -6951,7 +6955,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AudioStreamFormatImpl = exports.AudioStreamFormat = void 0;
+exports.AudioStreamFormatImpl = exports.AudioStreamFormat = exports.AudioFormatTag = void 0;
+var AudioFormatTag;
+(function (AudioFormatTag) {
+    AudioFormatTag[AudioFormatTag["PCM"] = 1] = "PCM";
+    AudioFormatTag[AudioFormatTag["MuLaw"] = 2] = "MuLaw";
+    AudioFormatTag[AudioFormatTag["Siren"] = 3] = "Siren";
+    AudioFormatTag[AudioFormatTag["MP3"] = 4] = "MP3";
+    AudioFormatTag[AudioFormatTag["SILKSkype"] = 5] = "SILKSkype";
+    AudioFormatTag[AudioFormatTag["OGG_OPUS"] = 6] = "OGG_OPUS";
+    AudioFormatTag[AudioFormatTag["WEBM_OPUS"] = 7] = "WEBM_OPUS";
+    AudioFormatTag[AudioFormatTag["ALaw"] = 8] = "ALaw";
+})(AudioFormatTag = exports.AudioFormatTag || (exports.AudioFormatTag = {}));
 /**
  * Represents audio stream format used for custom audio input configurations.
  * @class AudioStreamFormat
@@ -7000,18 +7015,32 @@ var AudioStreamFormatImpl = /** @class */ (function (_super) {
      * @param {number} samplesPerSec - Samples per second.
      * @param {number} bitsPerSample - Bits per sample.
      * @param {number} channels - Number of channels.
+     * @param {AudioFormatTag} format - Audio format (PCM, alaw or mulaw).
      */
-    function AudioStreamFormatImpl(samplesPerSec, bitsPerSample, channels) {
+    function AudioStreamFormatImpl(samplesPerSec, bitsPerSample, channels, format) {
         if (samplesPerSec === void 0) { samplesPerSec = 16000; }
         if (bitsPerSample === void 0) { bitsPerSample = 16; }
         if (channels === void 0) { channels = 1; }
+        if (format === void 0) { format = AudioFormatTag.PCM; }
         var _this = _super.call(this) || this;
         _this.setString = function (view, offset, str) {
             for (var i = 0; i < str.length; i++) {
                 view.setUint8(offset + i, str.charCodeAt(i));
             }
         };
-        _this.formatTag = 1;
+        /* 1 for PCM; 6 for alaw; 7 for mulaw */
+        switch (format) {
+            case AudioFormatTag.PCM:
+                _this.formatTag = 1;
+                break;
+            case AudioFormatTag.ALaw:
+                _this.formatTag = 6;
+                break;
+            case AudioFormatTag.MuLaw:
+                _this.formatTag = 7;
+                break;
+            default:
+        }
         _this.bitsPerSample = bitsPerSample;
         _this.samplesPerSec = samplesPerSec;
         _this.channels = channels;
@@ -7028,8 +7057,8 @@ var AudioStreamFormatImpl = /** @class */ (function (_super) {
         _this.setString(view, 8, "WAVEfmt ");
         /* format chunk length */
         view.setUint32(16, 16, true);
-        /* sample format (raw) */
-        view.setUint16(20, 1, true);
+        /* audio format */
+        view.setUint16(20, _this.formatTag, true);
         /* channel count */
         view.setUint16(22, _this.channels, true);
         /* sample rate */
@@ -7447,23 +7476,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AudioOutputFormatImpl = exports.AudioFormatTag = void 0;
+exports.AudioOutputFormatImpl = void 0;
 var SpeechSynthesisOutputFormat_1 = __webpack_require__(65);
 var AudioStreamFormat_1 = __webpack_require__(62);
-var AudioFormatTag;
-(function (AudioFormatTag) {
-    AudioFormatTag[AudioFormatTag["PCM"] = 1] = "PCM";
-    AudioFormatTag[AudioFormatTag["MuLaw"] = 2] = "MuLaw";
-    AudioFormatTag[AudioFormatTag["Siren"] = 3] = "Siren";
-    AudioFormatTag[AudioFormatTag["MP3"] = 4] = "MP3";
-    AudioFormatTag[AudioFormatTag["SILKSkype"] = 5] = "SILKSkype";
-    AudioFormatTag[AudioFormatTag["OGG_OPUS"] = 6] = "OGG_OPUS";
-    AudioFormatTag[AudioFormatTag["WEBM_OPUS"] = 7] = "WEBM_OPUS";
-})(AudioFormatTag = exports.AudioFormatTag || (exports.AudioFormatTag = {}));
 /**
  * @private
  * @class AudioOutputFormatImpl
- * Updated in version 1.16.0
+ * Updated in version 1.17.0
  */
 // tslint:disable-next-line:max-classes-per-file
 var AudioOutputFormatImpl = /** @class */ (function (_super) {
@@ -7482,7 +7501,7 @@ var AudioOutputFormatImpl = /** @class */ (function (_super) {
      * @param {boolean} hasHeader - If the format has header or not.
      */
     function AudioOutputFormatImpl(formatTag, channels, samplesPerSec, avgBytesPerSec, blockAlign, bitsPerSample, audioFormatString, requestAudioFormatString, hasHeader) {
-        var _this = _super.call(this, samplesPerSec, bitsPerSample, channels) || this;
+        var _this = _super.call(this, samplesPerSec, bitsPerSample, channels, formatTag) || this;
         _this.formatTag = formatTag;
         _this.avgBytesPerSec = avgBytesPerSec;
         _this.blockAlign = blockAlign;
@@ -7500,58 +7519,64 @@ var AudioOutputFormatImpl = /** @class */ (function (_super) {
     AudioOutputFormatImpl.fromSpeechSynthesisOutputFormatString = function (speechSynthesisOutputFormatString) {
         switch (speechSynthesisOutputFormatString) {
             case "raw-8khz-8bit-mono-mulaw":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MuLaw, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "riff-16khz-16kbps-mono-siren":
-                return new AudioOutputFormatImpl(AudioFormatTag.Siren, 1, 16000, 2000, 40, 0, speechSynthesisOutputFormatString, "audio-16khz-16kbps-mono-siren", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.Siren, 1, 16000, 2000, 40, 0, speechSynthesisOutputFormatString, "audio-16khz-16kbps-mono-siren", true);
             case "audio-16khz-16kbps-mono-siren":
-                return new AudioOutputFormatImpl(AudioFormatTag.Siren, 1, 16000, 2000, 40, 0, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.Siren, 1, 16000, 2000, 40, 0, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-16khz-32kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 16000, 32 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 16000, 32 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-16khz-128kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 16000, 128 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 16000, 128 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-16khz-64kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 16000, 64 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 16000, 64 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-24khz-48kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 24000, 48 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 24000, 48 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-24khz-96kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 24000, 96 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 24000, 96 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-24khz-160kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 24000, 160 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 24000, 160 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "raw-16khz-16bit-mono-truesilk":
-                return new AudioOutputFormatImpl(AudioFormatTag.SILKSkype, 1, 16000, 32000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.SILKSkype, 1, 16000, 32000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "riff-8khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 8000, 16000, 2, 16, speechSynthesisOutputFormatString, "raw-8khz-16bit-mono-pcm", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 8000, 16000, 2, 16, speechSynthesisOutputFormatString, "raw-8khz-16bit-mono-pcm", true);
             case "riff-24khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 24000, 48000, 2, 16, speechSynthesisOutputFormatString, "raw-24khz-16bit-mono-pcm", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 24000, 48000, 2, 16, speechSynthesisOutputFormatString, "raw-24khz-16bit-mono-pcm", true);
             case "riff-8khz-8bit-mono-mulaw":
-                return new AudioOutputFormatImpl(AudioFormatTag.MuLaw, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, "raw-8khz-8bit-mono-mulaw", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MuLaw, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, "raw-8khz-8bit-mono-mulaw", true);
             case "raw-16khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 16000, 32000, 2, 16, speechSynthesisOutputFormatString, "raw-16khz-16bit-mono-pcm", false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 16000, 32000, 2, 16, speechSynthesisOutputFormatString, "raw-16khz-16bit-mono-pcm", false);
             case "raw-24khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 24000, 48000, 2, 16, speechSynthesisOutputFormatString, "raw-24khz-16bit-mono-pcm", false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 24000, 48000, 2, 16, speechSynthesisOutputFormatString, "raw-24khz-16bit-mono-pcm", false);
             case "raw-8khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 8000, 16000, 2, 16, speechSynthesisOutputFormatString, "raw-8khz-16bit-mono-pcm", false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 8000, 16000, 2, 16, speechSynthesisOutputFormatString, "raw-8khz-16bit-mono-pcm", false);
             case "ogg-16khz-16bit-mono-opus":
-                return new AudioOutputFormatImpl(AudioFormatTag.OGG_OPUS, 1, 16000, 8192, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.OGG_OPUS, 1, 16000, 8192, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "ogg-24khz-16bit-mono-opus":
-                return new AudioOutputFormatImpl(AudioFormatTag.OGG_OPUS, 1, 24000, 8192, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.OGG_OPUS, 1, 24000, 8192, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "raw-48khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 48000, 96000, 2, 16, speechSynthesisOutputFormatString, "raw-48khz-16bit-mono-pcm", false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 48000, 96000, 2, 16, speechSynthesisOutputFormatString, "raw-48khz-16bit-mono-pcm", false);
             case "riff-48khz-16bit-mono-pcm":
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 48000, 96000, 2, 16, speechSynthesisOutputFormatString, "raw-48khz-16bit-mono-pcm", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 48000, 96000, 2, 16, speechSynthesisOutputFormatString, "raw-48khz-16bit-mono-pcm", true);
             case "audio-48khz-96kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 48000, 96 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 48000, 96 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "audio-48khz-192kbitrate-mono-mp3":
-                return new AudioOutputFormatImpl(AudioFormatTag.MP3, 1, 48000, 192 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.MP3, 1, 48000, 192 << 7, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "ogg-48khz-16bit-mono-opus":
-                return new AudioOutputFormatImpl(AudioFormatTag.OGG_OPUS, 1, 48000, 12000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.OGG_OPUS, 1, 48000, 12000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "webm-16khz-16bit-mono-opus":
-                return new AudioOutputFormatImpl(AudioFormatTag.WEBM_OPUS, 1, 16000, 8000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.WEBM_OPUS, 1, 16000, 8000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
             case "webm-24khz-16bit-mono-opus":
-                return new AudioOutputFormatImpl(AudioFormatTag.WEBM_OPUS, 1, 24000, 8000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.WEBM_OPUS, 1, 24000, 8000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+            case "raw-24khz-16bit-mono-truesilk":
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.SILKSkype, 1, 24000, 48000, 2, 16, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+            case "raw-8khz-8bit-mono-alaw":
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.ALaw, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, speechSynthesisOutputFormatString, false);
+            case "riff-8khz-8bit-mono-alaw":
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.ALaw, 1, 8000, 8000, 1, 8, speechSynthesisOutputFormatString, "raw-8khz-8bit-mono-alaw", true);
             case "riff-16khz-16bit-mono-pcm":
             default:
-                return new AudioOutputFormatImpl(AudioFormatTag.PCM, 1, 16000, 32000, 2, 16, "riff-16khz-16bit-mono-pcm", "raw-16khz-16bit-mono-pcm", true);
+                return new AudioOutputFormatImpl(AudioStreamFormat_1.AudioFormatTag.PCM, 1, 16000, 32000, 2, 16, "riff-16khz-16bit-mono-pcm", "raw-16khz-16bit-mono-pcm", true);
         }
     };
     AudioOutputFormatImpl.getDefaultOutputFormat = function () {
@@ -7639,6 +7664,9 @@ var AudioOutputFormatImpl = /** @class */ (function (_super) {
         _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Ogg48Khz16BitMonoOpus] = "ogg-48khz-16bit-mono-opus",
         _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Webm16Khz16BitMonoOpus] = "webm-16khz-16bit-mono-opus",
         _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Webm24Khz16BitMonoOpus] = "webm-24khz-16bit-mono-opus",
+        _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Raw24Khz16BitMonoTrueSilk] = "raw-24khz-16bit-mono-truesilk",
+        _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Raw8Khz8BitMonoALaw] = "raw-8khz-8bit-mono-alaw",
+        _a[SpeechSynthesisOutputFormat_1.SpeechSynthesisOutputFormat.Riff8Khz8BitMonoALaw] = "riff-8khz-8bit-mono-alaw",
         _a);
     return AudioOutputFormatImpl;
 }(AudioStreamFormat_1.AudioStreamFormatImpl));
@@ -7659,7 +7687,7 @@ exports.SpeechSynthesisOutputFormat = void 0;
 /**
  * Define speech synthesis audio output formats.
  * @enum SpeechSynthesisOutputFormat
- * Updated in version 1.16.0
+ * Updated in version 1.17.0
  */
 var SpeechSynthesisOutputFormat;
 (function (SpeechSynthesisOutputFormat) {
@@ -7670,11 +7698,13 @@ var SpeechSynthesisOutputFormat;
     SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Raw8Khz8BitMonoMULaw"] = 0] = "Raw8Khz8BitMonoMULaw";
     /**
      * riff-16khz-16kbps-mono-siren
+     * @note Unsupported by the service. Do not use this value.
      * @member SpeechSynthesisOutputFormat.Riff16Khz16KbpsMonoSiren
      */
     SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Riff16Khz16KbpsMonoSiren"] = 1] = "Riff16Khz16KbpsMonoSiren";
     /**
      * audio-16khz-16kbps-mono-siren
+     * @note Unsupported by the service. Do not use this value.
      * @member SpeechSynthesisOutputFormat.Audio16Khz16KbpsMonoSiren
      */
     SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Audio16Khz16KbpsMonoSiren"] = 2] = "Audio16Khz16KbpsMonoSiren";
@@ -7796,6 +7826,24 @@ var SpeechSynthesisOutputFormat;
      * @member SpeechSynthesisOutputFormat.Webm24Khz16BitMonoOpus
      */
     SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Webm24Khz16BitMonoOpus"] = 25] = "Webm24Khz16BitMonoOpus";
+    /**
+     * raw-24khz-16bit-mono-truesilk
+     * Added in version 1.17.0
+     * @member SpeechSynthesisOutputFormat.Raw24Khz16BitMonoTrueSilk
+     */
+    SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Raw24Khz16BitMonoTrueSilk"] = 26] = "Raw24Khz16BitMonoTrueSilk";
+    /**
+     * raw-8khz-8bit-mono-alaw
+     * Added in version 1.17.0
+     * @member SpeechSynthesisOutputFormat.Raw8Khz8BitMonoALaw
+     */
+    SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Raw8Khz8BitMonoALaw"] = 27] = "Raw8Khz8BitMonoALaw";
+    /**
+     * riff-8khz-8bit-mono-alaw
+     * Added in version 1.17.0
+     * @member SpeechSynthesisOutputFormat.Riff8Khz8BitMonoALaw
+     */
+    SpeechSynthesisOutputFormat[SpeechSynthesisOutputFormat["Riff8Khz8BitMonoALaw"] = 28] = "Riff8Khz8BitMonoALaw";
 })(SpeechSynthesisOutputFormat = exports.SpeechSynthesisOutputFormat || (exports.SpeechSynthesisOutputFormat = {}));
 
 
@@ -9088,72 +9136,78 @@ var ResultReason;
      */
     ResultReason[ResultReason["RecognizedSpeech"] = 3] = "RecognizedSpeech";
     /**
+     * Indicates the speech result contains a finalized acceptance of a provided keyword.
+     * Speech recognition will continue unless otherwise configured.
+     * @member ResultReason.RecognizedKeyword
+     */
+    ResultReason[ResultReason["RecognizedKeyword"] = 4] = "RecognizedKeyword";
+    /**
      * Indicates the intent result contains hypothesis text and intent.
      * @member ResultReason.RecognizingIntent
      */
-    ResultReason[ResultReason["RecognizingIntent"] = 4] = "RecognizingIntent";
+    ResultReason[ResultReason["RecognizingIntent"] = 5] = "RecognizingIntent";
     /**
      * Indicates the intent result contains final text and intent.
      * Speech Recognition and Intent determination are now complete for this phrase.
      * @member ResultReason.RecognizedIntent
      */
-    ResultReason[ResultReason["RecognizedIntent"] = 5] = "RecognizedIntent";
+    ResultReason[ResultReason["RecognizedIntent"] = 6] = "RecognizedIntent";
     /**
      * Indicates the translation result contains hypothesis text and its translation(s).
      * @member ResultReason.TranslatingSpeech
      */
-    ResultReason[ResultReason["TranslatingSpeech"] = 6] = "TranslatingSpeech";
+    ResultReason[ResultReason["TranslatingSpeech"] = 7] = "TranslatingSpeech";
     /**
      * Indicates the translation result contains final text and corresponding translation(s).
      * Speech Recognition and Translation are now complete for this phrase.
      * @member ResultReason.TranslatedSpeech
      */
-    ResultReason[ResultReason["TranslatedSpeech"] = 7] = "TranslatedSpeech";
+    ResultReason[ResultReason["TranslatedSpeech"] = 8] = "TranslatedSpeech";
     /**
      * Indicates the synthesized audio result contains a non-zero amount of audio data
      * @member ResultReason.SynthesizingAudio
      */
-    ResultReason[ResultReason["SynthesizingAudio"] = 8] = "SynthesizingAudio";
+    ResultReason[ResultReason["SynthesizingAudio"] = 9] = "SynthesizingAudio";
     /**
      * Indicates the synthesized audio is now complete for this phrase.
      * @member ResultReason.SynthesizingAudioCompleted
      */
-    ResultReason[ResultReason["SynthesizingAudioCompleted"] = 9] = "SynthesizingAudioCompleted";
+    ResultReason[ResultReason["SynthesizingAudioCompleted"] = 10] = "SynthesizingAudioCompleted";
     /**
      * Indicates the speech synthesis is now started
      * @member ResultReason.SynthesizingAudioStarted
      */
-    ResultReason[ResultReason["SynthesizingAudioStarted"] = 10] = "SynthesizingAudioStarted";
+    ResultReason[ResultReason["SynthesizingAudioStarted"] = 11] = "SynthesizingAudioStarted";
     /**
      * Indicates the voice profile is being enrolled and customers need to send more audio to create a voice profile.
      * @member ResultReason.EnrollingVoiceProfile
      */
-    ResultReason[ResultReason["EnrollingVoiceProfile"] = 11] = "EnrollingVoiceProfile";
+    ResultReason[ResultReason["EnrollingVoiceProfile"] = 12] = "EnrollingVoiceProfile";
     /**
      * Indicates the voice profile has been enrolled.
      * @member ResultReason.EnrolledVoiceProfile
      */
-    ResultReason[ResultReason["EnrolledVoiceProfile"] = 12] = "EnrolledVoiceProfile";
+    ResultReason[ResultReason["EnrolledVoiceProfile"] = 13] = "EnrolledVoiceProfile";
     /**
      * Indicates successful identification of some speakers.
      * @member ResultReason.RecognizedSpeakers
      */
-    ResultReason[ResultReason["RecognizedSpeakers"] = 13] = "RecognizedSpeakers";
+    ResultReason[ResultReason["RecognizedSpeakers"] = 14] = "RecognizedSpeakers";
     /**
      * Indicates successfully verified one speaker.
      * @member ResultReason.RecognizedSpeaker
      */
-    ResultReason[ResultReason["RecognizedSpeaker"] = 14] = "RecognizedSpeaker";
+    ResultReason[ResultReason["RecognizedSpeaker"] = 15] = "RecognizedSpeaker";
     /**
      * Indicates a voice profile has been reset successfully.
      * @member ResultReason.ResetVoiceProfile
      */
-    ResultReason[ResultReason["ResetVoiceProfile"] = 15] = "ResetVoiceProfile";
+    ResultReason[ResultReason["ResetVoiceProfile"] = 16] = "ResetVoiceProfile";
     /**
      * Indicates a voice profile has been deleted successfully.
      * @member ResultReason.DeletedVoiceProfile
      */
-    ResultReason[ResultReason["DeletedVoiceProfile"] = 16] = "DeletedVoiceProfile";
+    ResultReason[ResultReason["DeletedVoiceProfile"] = 17] = "DeletedVoiceProfile";
 })(ResultReason = exports.ResultReason || (exports.ResultReason = {}));
 
 
@@ -11554,6 +11608,26 @@ var TranslationRecognizer = /** @class */ (function (_super) {
     TranslationRecognizer.prototype.close = function (cb, errorCb) {
         Contracts_1.Contracts.throwIfDisposed(this.privDisposedTranslationRecognizer);
         Exports_2.marshalPromiseToCallbacks(this.dispose(true), cb, errorCb);
+    };
+    /**
+     * handles ConnectionEstablishedEvent for conversation translation scenarios.
+     * @member TranslationRecognizer.prototype.onConnection
+     * @function
+     * @public
+     */
+    /* tslint:disable:no-empty */
+    TranslationRecognizer.prototype.onConnection = function () { };
+    /**
+     * handles disconnection events for conversation translation scenarios.
+     * @member TranslationRecognizer.prototype.onDisconnection
+     * @function
+     * @public
+     */
+    /* tslint:disable:no-empty */
+    TranslationRecognizer.prototype.onDisconnection = function () {
+        return __awaiter(this, void 0, void 0, function () { return __generator(this, function (_a) {
+            return [2 /*return*/];
+        }); });
     };
     TranslationRecognizer.prototype.dispose = function (disposing) {
         return __awaiter(this, void 0, void 0, function () {
@@ -14021,7 +14095,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VoiceProfileEnrollmentCancellationDetails = exports.VoiceProfileEnrollmentResult = void 0;
 var Exports_1 = __webpack_require__(43);
-var Contracts_1 = __webpack_require__(53);
 var Exports_2 = __webpack_require__(51);
 /**
  * Output format
@@ -14032,10 +14105,11 @@ var VoiceProfileEnrollmentResult = /** @class */ (function () {
         this.privReason = reason;
         this.privProperties = new Exports_2.PropertyCollection();
         if (this.privReason !== Exports_2.ResultReason.Canceled) {
-            this.privDetails = JSON.parse(json);
-            Contracts_1.Contracts.throwIfNullOrUndefined(json, "JSON");
-            if (this.privDetails.enrollmentStatus.toLowerCase() === "enrolling") {
-                this.privReason = Exports_2.ResultReason.EnrollingVoiceProfile;
+            if (!!json) {
+                this.privDetails = JSON.parse(json);
+                if (this.privDetails.enrollmentStatus.toLowerCase() === "enrolling") {
+                    this.privReason = Exports_2.ResultReason.EnrollingVoiceProfile;
+                }
             }
         }
         else {
@@ -14043,6 +14117,32 @@ var VoiceProfileEnrollmentResult = /** @class */ (function () {
             this.privProperties.setProperty(Exports_1.CancellationErrorCodePropertyName, Exports_2.CancellationErrorCode[Exports_2.CancellationErrorCode.ServiceError]);
         }
     }
+    VoiceProfileEnrollmentResult.FromIdentificationProfileList = function (json) {
+        var results = [];
+        for (var _i = 0, _a = json.profiles; _i < _a.length; _i++) {
+            var item = _a[_i];
+            var reason = item.enrollmentStatus.toLowerCase() === "enrolling" ?
+                Exports_2.ResultReason.EnrollingVoiceProfile : item.enrollmentStatus.toLowerCase() === "enrolled" ?
+                Exports_2.ResultReason.EnrolledVoiceProfile : Exports_2.ResultReason.Canceled;
+            var result = new VoiceProfileEnrollmentResult(reason, null, null);
+            result.privDetails = this.getIdentificationDetails(item);
+            results.push(result);
+        }
+        return results;
+    };
+    VoiceProfileEnrollmentResult.FromVerificationProfileList = function (json) {
+        var results = [];
+        for (var _i = 0, _a = json.profiles; _i < _a.length; _i++) {
+            var item = _a[_i];
+            var reason = item.enrollmentStatus.toLowerCase() === "enrolling" ?
+                Exports_2.ResultReason.EnrollingVoiceProfile : item.enrollmentStatus.toLowerCase() === "enrolled" ?
+                Exports_2.ResultReason.EnrolledVoiceProfile : Exports_2.ResultReason.Canceled;
+            var result = new VoiceProfileEnrollmentResult(reason, null, null);
+            result.privDetails = this.getVerificationDetails(item);
+            results.push(result);
+        }
+        return results;
+    };
     Object.defineProperty(VoiceProfileEnrollmentResult.prototype, "reason", {
         get: function () {
             return this.privReason;
@@ -14085,6 +14185,24 @@ var VoiceProfileEnrollmentResult = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    VoiceProfileEnrollmentResult.getIdentificationDetails = function (json) {
+        return {
+            audioSpeechLength: json.speechTime ? parseFloat(json.speechTime) : 0,
+            enrollmentStatus: json.enrollmentStatus,
+            enrollmentsLength: json.enrollmentSpeechTime ? parseFloat(json.enrollmentSpeechTime) : 0,
+            profileId: json.profileId || json.identificationProfileId,
+            remainingEnrollmentSpeechLength: json.remainingEnrollmentSpeechTime ? parseFloat(json.remainingEnrollmentSpeechTime) : 0
+        };
+    };
+    VoiceProfileEnrollmentResult.getVerificationDetails = function (json) {
+        return {
+            enrollmentStatus: json.enrollmentStatus,
+            enrollmentsCount: json.enrollmentsCount,
+            profileId: json.profileId || json.verificationProfileId,
+            remainingEnrollmentSpeechLength: json.remainingEnrollmentSpeechLength ? parseFloat(json.remainingEnrollmentSpeechLength) : 0,
+            remainingEnrollmentsCount: json.remainingEnrollments || json.remainingEnrollmentsCount
+        };
+    };
     return VoiceProfileEnrollmentResult;
 }());
 exports.VoiceProfileEnrollmentResult = VoiceProfileEnrollmentResult;
@@ -14222,6 +14340,60 @@ exports.VoiceProfileCancellationDetails = VoiceProfileCancellationDetails;
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoiceProfileAuthorizationPhraseResult = void 0;
+var Contracts_1 = __webpack_require__(53);
+var Exports_1 = __webpack_require__(51);
+/**
+ * Output format
+ * @class VoiceProfileAuthorizationPhraseResult
+ */
+var VoiceProfileAuthorizationPhraseResult = /** @class */ (function (_super) {
+    __extends(VoiceProfileAuthorizationPhraseResult, _super);
+    function VoiceProfileAuthorizationPhraseResult(reason, statusText, json) {
+        var _this = _super.call(this, reason, statusText) || this;
+        _this.privPhrases = [];
+        Contracts_1.Contracts.throwIfNullOrUndefined(json, "phrases array");
+        for (var _i = 0, json_1 = json; _i < json_1.length; _i++) {
+            var item = json_1[_i];
+            _this.privPhrases.push(item.passPhrase);
+        }
+        return _this;
+    }
+    Object.defineProperty(VoiceProfileAuthorizationPhraseResult.prototype, "phrases", {
+        get: function () {
+            return this.privPhrases;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return VoiceProfileAuthorizationPhraseResult;
+}(Exports_1.VoiceProfileResult));
+exports.VoiceProfileAuthorizationPhraseResult = VoiceProfileAuthorizationPhraseResult;
+
+
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -14348,6 +14520,78 @@ var VoiceProfileClient = /** @class */ (function () {
         }); })(), cb, err);
     };
     /**
+     * Get current information of a voice profile
+     * @member VoiceProfileClient.prototype.retrieveEnrollmentResultAsync
+     * @function
+     * @public
+     * @param {VoiceProfile} profile Voice Profile to retrieve info for
+     * @param cb - Callback invoked once Voice Profile has been created.
+     * @param err - Callback invoked in case of an error.
+     */
+    VoiceProfileClient.prototype.retrieveEnrollmentResultAsync = function (profile, cb, err) {
+        var _this = this;
+        Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.privAdapter.getProfileStatus(profile)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, new Exports_3.VoiceProfileEnrollmentResult(result.ok ? Exports_3.ResultReason.EnrolledVoiceProfile : Exports_3.ResultReason.Canceled, result.data, result.statusText)];
+                }
+            });
+        }); })(), cb, err);
+    };
+    /**
+     * Get all voice profiles on account with given voice profile type
+     * @member VoiceProfileClient.prototype.getAllProfilesAsync
+     * @function
+     * @public
+     * @param {VoiceProfileType} profileType profile type (identification/verification) for which to list profiles
+     * @param cb - Callback invoked once Profile list has been returned.
+     * @param err - Callback invoked in case of an error.
+     */
+    VoiceProfileClient.prototype.getAllProfilesAsync = function (profileType, cb, err) {
+        var _this = this;
+        Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.privAdapter.getProfiles(profileType)];
+                    case 1:
+                        result = _a.sent();
+                        if (profileType === Exports_3.VoiceProfileType.TextIndependentIdentification) {
+                            return [2 /*return*/, Exports_3.VoiceProfileEnrollmentResult.FromIdentificationProfileList(result.json())];
+                        }
+                        return [2 /*return*/, Exports_3.VoiceProfileEnrollmentResult.FromVerificationProfileList(result.json())];
+                }
+            });
+        }); })(), cb, err);
+    };
+    /**
+     * Get valid authorization phrases for voice profile enrollment
+     * @member VoiceProfileClient.prototype.getAuthorizationPhrasesAsync
+     * @function
+     * @public
+     * @param {string} lang Language string (locale) for Voice Profile
+     * @param cb - Callback invoked once phrases have been returned.
+     * @param err - Callback invoked in case of an error.
+     */
+    VoiceProfileClient.prototype.getAuthorizationPhrasesAsync = function (lang, cb, err) {
+        var _this = this;
+        Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.privAdapter.getAuthorizationPhrases(lang)];
+                    case 1:
+                        result = _a.sent();
+                        return [2 /*return*/, new Exports_3.VoiceProfileAuthorizationPhraseResult(result.ok ? Exports_3.ResultReason.EnrollingVoiceProfile : Exports_3.ResultReason.Canceled, result.statusText, result.json())];
+                }
+            });
+        }); })(), cb, err);
+    };
+    /**
      * Create a speaker recognition voice profile
      * @member VoiceProfileClient.prototype.enrollProfileAsync
      * @function
@@ -14362,14 +14606,13 @@ var VoiceProfileClient = /** @class */ (function () {
         var configImpl = audioConfig;
         Contracts_1.Contracts.throwIfNullOrUndefined(configImpl, "audioConfig");
         Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
-            var result, ret;
+            var result;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.privAdapter.createEnrollment(profile, configImpl)];
                     case 1:
                         result = _a.sent();
-                        ret = new Exports_3.VoiceProfileEnrollmentResult(result.ok ? Exports_3.ResultReason.EnrolledVoiceProfile : Exports_3.ResultReason.Canceled, result.data, result.statusText);
-                        return [2 /*return*/, ret];
+                        return [2 /*return*/, new Exports_3.VoiceProfileEnrollmentResult(result.ok ? Exports_3.ResultReason.EnrolledVoiceProfile : Exports_3.ResultReason.Canceled, result.data, result.statusText)];
                 }
             });
         }); })(), cb, err);
@@ -14453,7 +14696,7 @@ exports.VoiceProfileClient = VoiceProfileClient;
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14624,7 +14867,7 @@ exports.SpeakerRecognizer = SpeakerRecognizer;
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14672,7 +14915,7 @@ exports.SpeakerIdentificationModel = SpeakerIdentificationModel;
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14713,7 +14956,7 @@ exports.SpeakerVerificationModel = SpeakerVerificationModel;
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14807,7 +15050,7 @@ exports.AutoDetectSourceLanguageConfig = AutoDetectSourceLanguageConfig;
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14860,7 +15103,7 @@ exports.AutoDetectSourceLanguageResult = AutoDetectSourceLanguageResult;
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14914,7 +15157,7 @@ exports.SourceLanguageConfig = SourceLanguageConfig;
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15050,7 +15293,7 @@ exports.SpeakerRecognitionCancellationDetails = SpeakerRecognitionCancellationDe
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15059,35 +15302,35 @@ exports.SpeakerRecognitionCancellationDetails = SpeakerRecognitionCancellationDe
 // Licensed under the MIT license.
 // Multi-device Conversation is a Preview feature.
 Object.defineProperty(exports, "__esModule", { value: true });
-var Conversation_1 = __webpack_require__(134);
+var Conversation_1 = __webpack_require__(135);
 Object.defineProperty(exports, "Conversation", { enumerable: true, get: function () { return Conversation_1.Conversation; } });
 Object.defineProperty(exports, "ConversationImpl", { enumerable: true, get: function () { return Conversation_1.ConversationImpl; } });
-var ConversationCommon_1 = __webpack_require__(135);
+var ConversationCommon_1 = __webpack_require__(136);
 Object.defineProperty(exports, "ConversationCommon", { enumerable: true, get: function () { return ConversationCommon_1.ConversationCommon; } });
-var ConversationExpirationEventArgs_1 = __webpack_require__(136);
+var ConversationExpirationEventArgs_1 = __webpack_require__(137);
 Object.defineProperty(exports, "ConversationExpirationEventArgs", { enumerable: true, get: function () { return ConversationExpirationEventArgs_1.ConversationExpirationEventArgs; } });
-var ConversationParticipantsChangedEventArgs_1 = __webpack_require__(137);
+var ConversationParticipantsChangedEventArgs_1 = __webpack_require__(138);
 Object.defineProperty(exports, "ConversationParticipantsChangedEventArgs", { enumerable: true, get: function () { return ConversationParticipantsChangedEventArgs_1.ConversationParticipantsChangedEventArgs; } });
-var ConversationTranslationCanceledEventArgs_1 = __webpack_require__(138);
+var ConversationTranslationCanceledEventArgs_1 = __webpack_require__(139);
 Object.defineProperty(exports, "ConversationTranslationCanceledEventArgs", { enumerable: true, get: function () { return ConversationTranslationCanceledEventArgs_1.ConversationTranslationCanceledEventArgs; } });
-var ConversationTranslationEventArgs_1 = __webpack_require__(139);
+var ConversationTranslationEventArgs_1 = __webpack_require__(140);
 Object.defineProperty(exports, "ConversationTranslationEventArgs", { enumerable: true, get: function () { return ConversationTranslationEventArgs_1.ConversationTranslationEventArgs; } });
-var ConversationTranslationResult_1 = __webpack_require__(140);
+var ConversationTranslationResult_1 = __webpack_require__(141);
 Object.defineProperty(exports, "ConversationTranslationResult", { enumerable: true, get: function () { return ConversationTranslationResult_1.ConversationTranslationResult; } });
-var ConversationTranslator_1 = __webpack_require__(141);
+var ConversationTranslator_1 = __webpack_require__(142);
 Object.defineProperty(exports, "ConversationTranslator", { enumerable: true, get: function () { return ConversationTranslator_1.ConversationTranslator; } });
-var ConversationTranscriber_1 = __webpack_require__(142);
+var ConversationTranscriber_1 = __webpack_require__(143);
 Object.defineProperty(exports, "ConversationTranscriber", { enumerable: true, get: function () { return ConversationTranscriber_1.ConversationTranscriber; } });
-var IParticipant_1 = __webpack_require__(143);
+var IParticipant_1 = __webpack_require__(144);
 Object.defineProperty(exports, "Participant", { enumerable: true, get: function () { return IParticipant_1.Participant; } });
 Object.defineProperty(exports, "User", { enumerable: true, get: function () { return IParticipant_1.User; } });
-var ParticipantChangedReason_1 = __webpack_require__(144);
+var ParticipantChangedReason_1 = __webpack_require__(145);
 Object.defineProperty(exports, "ParticipantChangedReason", { enumerable: true, get: function () { return ParticipantChangedReason_1.ParticipantChangedReason; } });
 
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15447,8 +15690,8 @@ var ConversationImpl = /** @class */ (function (_super) {
         return _this;
     }
     Object.defineProperty(ConversationImpl.prototype, "conversationTranslator", {
-        set: function (value) {
-            this.privConversationTranslator = value;
+        set: function (conversationTranslator) {
+            this.privConversationTranslator = conversationTranslator;
         },
         enumerable: false,
         configurable: true
@@ -16231,7 +16474,7 @@ exports.ConversationImpl = ConversationImpl;
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16275,7 +16518,7 @@ exports.ConversationCommon = ConversationCommon;
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16321,7 +16564,7 @@ exports.ConversationExpirationEventArgs = ConversationExpirationEventArgs;
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16374,7 +16617,7 @@ exports.ConversationParticipantsChangedEventArgs = ConversationParticipantsChang
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16410,7 +16653,7 @@ exports.ConversationTranslationCanceledEventArgs = ConversationTranslationCancel
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16466,7 +16709,7 @@ exports.ConversationTranslationEventArgs = ConversationTranslationEventArgs;
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16525,7 +16768,7 @@ exports.ConversationTranslationResult = ConversationTranslationResult;
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16588,14 +16831,136 @@ var Exports_1 = __webpack_require__(43);
 var Exports_2 = __webpack_require__(4);
 var Contracts_1 = __webpack_require__(53);
 var Exports_3 = __webpack_require__(51);
-var Conversation_1 = __webpack_require__(134);
-var Exports_4 = __webpack_require__(133);
+var Conversation_1 = __webpack_require__(135);
+var Exports_4 = __webpack_require__(134);
 var SpeechState;
 (function (SpeechState) {
     SpeechState[SpeechState["Inactive"] = 0] = "Inactive";
     SpeechState[SpeechState["Connecting"] = 1] = "Connecting";
     SpeechState[SpeechState["Connected"] = 2] = "Connected";
 })(SpeechState = exports.SpeechState || (exports.SpeechState = {}));
+// tslint:disable:max-classes-per-file
+// child class of TranslationRecognizer meant only for use with ConversationTranslator
+var ConversationTranslationRecognizer = /** @class */ (function (_super) {
+    __extends(ConversationTranslationRecognizer, _super);
+    function ConversationTranslationRecognizer(speechConfig, audioConfig, translator) {
+        var _this = _super.call(this, speechConfig, audioConfig) || this;
+        _this.privSpeechState = SpeechState.Inactive;
+        if (!!translator) {
+            _this.privTranslator = translator;
+            _this.sessionStarted = function () {
+                _this.privSpeechState = SpeechState.Connected;
+            };
+            _this.sessionStopped = function () {
+                _this.privSpeechState = SpeechState.Inactive;
+            };
+            _this.recognized = function (tr, e) { return __awaiter(_this, void 0, void 0, function () {
+                var _a;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            if (!((_a = e.result) === null || _a === void 0 ? void 0 : _a.errorDetails)) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.cancelSpeech()];
+                        case 1:
+                            _b.sent();
+                            // TODO: format the error message contained in 'errorDetails'
+                            this.fireCancelEvent(e.result.errorDetails);
+                            _b.label = 2;
+                        case 2: return [2 /*return*/];
+                    }
+                });
+            }); };
+            _this.canceled = function (r, e) { return __awaiter(_this, void 0, void 0, function () {
+                var error_1;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!(this.privSpeechState !== SpeechState.Inactive)) return [3 /*break*/, 4];
+                            _a.label = 1;
+                        case 1:
+                            _a.trys.push([1, 3, , 4]);
+                            return [4 /*yield*/, this.cancelSpeech()];
+                        case 2:
+                            _a.sent();
+                            return [3 /*break*/, 4];
+                        case 3:
+                            error_1 = _a.sent();
+                            this.privSpeechState = SpeechState.Inactive;
+                            return [3 /*break*/, 4];
+                        case 4: return [2 /*return*/];
+                    }
+                });
+            }); };
+        }
+        return _this;
+    }
+    Object.defineProperty(ConversationTranslationRecognizer.prototype, "state", {
+        get: function () {
+            return this.privSpeechState;
+        },
+        set: function (newState) {
+            this.privSpeechState = newState;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    ConversationTranslationRecognizer.prototype.onConnection = function () {
+        this.privSpeechState = SpeechState.Connected;
+    };
+    ConversationTranslationRecognizer.prototype.onDisconnection = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.privSpeechState = SpeechState.Inactive;
+                        return [4 /*yield*/, this.cancelSpeech()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Fire a cancel event
+     * @param error
+     */
+    ConversationTranslationRecognizer.prototype.fireCancelEvent = function (error) {
+        var _a, _b, _c;
+        try {
+            if (!!this.privTranslator.canceled) {
+                var cancelEvent = new Exports_4.ConversationTranslationCanceledEventArgs((_a = error === null || error === void 0 ? void 0 : error.reason) !== null && _a !== void 0 ? _a : Exports_3.CancellationReason.Error, (_b = error === null || error === void 0 ? void 0 : error.errorDetails) !== null && _b !== void 0 ? _b : error, (_c = error === null || error === void 0 ? void 0 : error.errorCode) !== null && _c !== void 0 ? _c : Exports_3.CancellationErrorCode.RuntimeError, undefined, error === null || error === void 0 ? void 0 : error.sessionId);
+                this.privTranslator.canceled(this.privTranslator, cancelEvent);
+            }
+        }
+        catch (e) {
+            //
+        }
+    };
+    ConversationTranslationRecognizer.prototype.cancelSpeech = function () {
+        var _a;
+        return __awaiter(this, void 0, void 0, function () {
+            var e_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        this.stopContinuousRecognitionAsync();
+                        return [4 /*yield*/, ((_a = this.privReco) === null || _a === void 0 ? void 0 : _a.disconnect())];
+                    case 1:
+                        _b.sent();
+                        this.privSpeechState = SpeechState.Inactive;
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_1 = _b.sent();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return ConversationTranslationRecognizer;
+}(Exports_3.TranslationRecognizer));
 /***
  * Join, leave or connect to a conversation.
  */
@@ -16605,23 +16970,9 @@ var ConversationTranslator = /** @class */ (function (_super) {
         var _this = _super.call(this, audioConfig) || this;
         _this.privIsDisposed = false;
         _this.privIsSpeaking = false;
-        _this.privSpeechState = SpeechState.Inactive;
         _this.privErrors = Exports_1.ConversationConnectionConfig.restErrors;
         _this.privPlaceholderKey = "abcdefghijklmnopqrstuvwxyz012345";
         _this.privPlaceholderRegion = "westus";
-        /** Recognizer callbacks */
-        _this.onSpeechConnected = function (e) {
-            _this.privSpeechState = SpeechState.Connected;
-        };
-        _this.onSpeechRecognizing = function (r, e) {
-            // TODO: add support for getting recognitions from here if own speech
-        };
-        _this.onSpeechSessionStarted = function (r, e) {
-            _this.privSpeechState = SpeechState.Connected;
-        };
-        _this.onSpeechSessionStopped = function (r, e) {
-            _this.privSpeechState = SpeechState.Inactive;
-        };
         _this.privProperties = new Exports_3.PropertyCollection();
         return _this;
     }
@@ -16724,7 +17075,7 @@ var ConversationTranslator = /** @class */ (function (_super) {
         Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
+                    case 0: 
                     // stop the speech websocket
                     return [4 /*yield*/, this.cancelSpeech()];
                     case 1:
@@ -16771,35 +17122,35 @@ var ConversationTranslator = /** @class */ (function (_super) {
     ConversationTranslator.prototype.startTranscribingAsync = function (cb, err) {
         var _this = this;
         Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
-            var error_1;
+            var error_2;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 4, , 6]);
                         Contracts_1.Contracts.throwIfNullOrUndefined(this.privConversation, this.privErrors.permissionDeniedSend);
                         Contracts_1.Contracts.throwIfNullOrUndefined(this.privConversation.room.token, this.privErrors.permissionDeniedConnect);
-                        if (!this.canSpeak) {
-                            this.handleError(new Error(this.privErrors.permissionDeniedSend), err);
-                        }
-                        if (!(this.privTranslationRecognizer === undefined)) return [3 /*break*/, 2];
+                        if (!(this.privCTRecognizer === undefined)) return [3 /*break*/, 2];
                         return [4 /*yield*/, this.connectTranslatorRecognizer()];
                     case 1:
                         _a.sent();
                         _a.label = 2;
-                    case 2: return [4 /*yield*/, this.startContinuousRecognition()];
+                    case 2:
+                        Contracts_1.Contracts.throwIfNullOrUndefined(this.privCTRecognizer, this.privErrors.permissionDeniedSend);
+                        if (!this.canSpeak) {
+                            this.handleError(new Error(this.privErrors.permissionDeniedSend), err);
+                        }
+                        return [4 /*yield*/, this.startContinuousRecognition()];
                     case 3:
                         _a.sent();
                         this.privIsSpeaking = true;
                         return [3 /*break*/, 6];
                     case 4:
-                        error_1 = _a.sent();
+                        error_2 = _a.sent();
                         this.privIsSpeaking = false;
-                        // this.fireCancelEvent(error);
                         return [4 /*yield*/, this.cancelSpeech()];
                     case 5:
-                        // this.fireCancelEvent(error);
                         _a.sent();
-                        throw error_1;
+                        throw error_2;
                     case 6: return [2 /*return*/];
                 }
             });
@@ -16813,7 +17164,7 @@ var ConversationTranslator = /** @class */ (function (_super) {
     ConversationTranslator.prototype.stopTranscribingAsync = function (cb, err) {
         var _this = this;
         Exports_2.marshalPromiseToCallbacks((function () { return __awaiter(_this, void 0, void 0, function () {
-            var error_2;
+            var error_3;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -16831,13 +17182,13 @@ var ConversationTranslator = /** @class */ (function (_super) {
                         this.privIsSpeaking = false;
                         return [4 /*yield*/, new Promise(function (resolve, reject) {
                                 var _a;
-                                (_a = _this.privTranslationRecognizer) === null || _a === void 0 ? void 0 : _a.stopContinuousRecognitionAsync(resolve, reject);
+                                (_a = _this.privCTRecognizer) === null || _a === void 0 ? void 0 : _a.stopContinuousRecognitionAsync(resolve, reject);
                             })];
                     case 3:
                         _a.sent();
                         return [3 /*break*/, 6];
                     case 4:
-                        error_2 = _a.sent();
+                        error_3 = _a.sent();
                         return [4 /*yield*/, this.cancelSpeech()];
                     case 5:
                         _a.sent();
@@ -16880,24 +17231,21 @@ var ConversationTranslator = /** @class */ (function (_super) {
      * Cancel the speech websocket
      */
     ConversationTranslator.prototype.cancelSpeech = function () {
-        var _a, _b;
+        var _a;
         return __awaiter(this, void 0, void 0, function () {
-            var e_1;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
+            var e_2;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
-                        _c.trys.push([0, 2, , 3]);
+                        _b.trys.push([0, 2, , 3]);
                         this.privIsSpeaking = false;
-                        (_a = this.privTranslationRecognizer) === null || _a === void 0 ? void 0 : _a.stopContinuousRecognitionAsync();
-                        return [4 /*yield*/, ((_b = this.privTranslationRecognizerConnection) === null || _b === void 0 ? void 0 : _b.closeConnection())];
+                        return [4 /*yield*/, ((_a = this.privCTRecognizer) === null || _a === void 0 ? void 0 : _a.onDisconnection())];
                     case 1:
-                        _c.sent();
-                        this.privTranslationRecognizerConnection = undefined;
-                        this.privTranslationRecognizer = undefined;
-                        this.privSpeechState = SpeechState.Inactive;
+                        _b.sent();
+                        this.privCTRecognizer = undefined;
                         return [3 /*break*/, 3];
                     case 2:
-                        e_1 = _c.sent();
+                        e_2 = _b.sent();
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -16914,7 +17262,7 @@ var ConversationTranslator = /** @class */ (function (_super) {
      */
     ConversationTranslator.prototype.connectTranslatorRecognizer = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var token, endpointHost, url, error_3;
+            var token, endpointHost, url, error_4;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -16932,22 +17280,14 @@ var ConversationTranslator = /** @class */ (function (_super) {
                         endpointHost = endpointHost.replace("{region}", this.privConversation.room.cognitiveSpeechRegion);
                         url = "wss://" + endpointHost + Exports_1.ConversationConnectionConfig.speechPath + "?" + Exports_1.ConversationConnectionConfig.configParams.token + "=" + token;
                         this.privSpeechTranslationConfig.setProperty(Exports_3.PropertyId[Exports_3.PropertyId.SpeechServiceConnection_Endpoint], url);
-                        this.privTranslationRecognizer = new Exports_3.TranslationRecognizer(this.privSpeechTranslationConfig, this.privAudioConfig);
-                        this.privTranslationRecognizerConnection = Exports_3.Connection.fromRecognizer(this.privTranslationRecognizer);
-                        this.privTranslationRecognizerConnection.connected = this.onSpeechConnected;
-                        this.privTranslationRecognizerConnection.disconnected = this.onSpeechDisconnected;
-                        this.privTranslationRecognizer.recognized = this.onSpeechRecognized;
-                        this.privTranslationRecognizer.recognizing = this.onSpeechRecognizing;
-                        this.privTranslationRecognizer.canceled = this.onSpeechCanceled;
-                        this.privTranslationRecognizer.sessionStarted = this.onSpeechSessionStarted;
-                        this.privTranslationRecognizer.sessionStopped = this.onSpeechSessionStopped;
+                        this.privCTRecognizer = new ConversationTranslationRecognizer(this.privSpeechTranslationConfig, this.privAudioConfig, this);
                         return [3 /*break*/, 3];
                     case 1:
-                        error_3 = _a.sent();
+                        error_4 = _a.sent();
                         return [4 /*yield*/, this.cancelSpeech()];
                     case 2:
                         _a.sent();
-                        throw error_3;
+                        throw error_4;
                     case 3: return [2 /*return*/];
                 }
             });
@@ -16961,88 +17301,17 @@ var ConversationTranslator = /** @class */ (function (_super) {
     ConversationTranslator.prototype.startContinuousRecognition = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this.privTranslationRecognizer.startContinuousRecognitionAsync(resolve, reject);
+            _this.privCTRecognizer.startContinuousRecognitionAsync(resolve, reject);
         });
-    };
-    ConversationTranslator.prototype.onSpeechDisconnected = function (e) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this.privSpeechState = SpeechState.Inactive;
-                        return [4 /*yield*/, this.cancelSpeech()];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    ConversationTranslator.prototype.onSpeechRecognized = function (r, e) {
-        var _a;
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        if (!((_a = e.result) === null || _a === void 0 ? void 0 : _a.errorDetails)) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.cancelSpeech()];
-                    case 1:
-                        _b.sent();
-                        // TODO: format the error message contained in 'errorDetails'
-                        this.fireCancelEvent(e.result.errorDetails);
-                        _b.label = 2;
-                    case 2: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    ConversationTranslator.prototype.onSpeechCanceled = function (r, e) {
-        return __awaiter(this, void 0, void 0, function () {
-            var error_4;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!(this.privSpeechState !== SpeechState.Inactive)) return [3 /*break*/, 4];
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, this.cancelSpeech()];
-                    case 2:
-                        _a.sent();
-                        return [3 /*break*/, 4];
-                    case 3:
-                        error_4 = _a.sent();
-                        this.privSpeechState = SpeechState.Inactive;
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
-     * Fire a cancel event
-     * @param error
-     */
-    ConversationTranslator.prototype.fireCancelEvent = function (error) {
-        var _a, _b, _c;
-        try {
-            if (!!this.canceled) {
-                var cancelEvent = new Exports_4.ConversationTranslationCanceledEventArgs((_a = error === null || error === void 0 ? void 0 : error.reason) !== null && _a !== void 0 ? _a : Exports_3.CancellationReason.Error, (_b = error === null || error === void 0 ? void 0 : error.errorDetails) !== null && _b !== void 0 ? _b : error, (_c = error === null || error === void 0 ? void 0 : error.errorCode) !== null && _c !== void 0 ? _c : Exports_3.CancellationErrorCode.RuntimeError, undefined, error === null || error === void 0 ? void 0 : error.sessionId);
-                this.canceled(this, cancelEvent);
-            }
-        }
-        catch (e) {
-            //
-        }
     };
     Object.defineProperty(ConversationTranslator.prototype, "canSpeak", {
         get: function () {
-            // is there a Conversation websocket available
-            if (!this.privConversation.isConnected) {
+            // is there a Conversation websocket available and has the Recognizer been set up
+            if (!this.privConversation.isConnected || !this.privCTRecognizer) {
                 return false;
             }
             // is the user already speaking
-            if (this.privIsSpeaking || this.privSpeechState === SpeechState.Connected || this.privSpeechState === SpeechState.Connecting) {
+            if (this.privIsSpeaking || this.privCTRecognizer.state === SpeechState.Connected || this.privCTRecognizer.state === SpeechState.Connecting) {
                 return false;
             }
             // is the user muted
@@ -17061,7 +17330,7 @@ exports.ConversationTranslator = ConversationTranslator;
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17243,13 +17512,23 @@ var ConversationTranscriber = /** @class */ (function () {
     ConversationTranscriber.prototype.dispose = function (disposing) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                if (this.privDisposedRecognizer) {
-                    return [2 /*return*/];
+                switch (_a.label) {
+                    case 0:
+                        if (this.privDisposedRecognizer) {
+                            return [2 /*return*/];
+                        }
+                        if (!!!this.privRecognizer) return [3 /*break*/, 2];
+                        return [4 /*yield*/, this.privRecognizer.close()];
+                    case 1:
+                        _a.sent();
+                        this.privRecognizer = undefined;
+                        _a.label = 2;
+                    case 2:
+                        if (disposing) {
+                            this.privDisposedRecognizer = true;
+                        }
+                        return [2 /*return*/];
                 }
-                if (disposing) {
-                    this.privDisposedRecognizer = true;
-                }
-                return [2 /*return*/];
             });
         });
     };
@@ -17260,7 +17539,7 @@ exports.ConversationTranscriber = ConversationTranscriber;
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17371,7 +17650,7 @@ exports.Participant = Participant;
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17396,7 +17675,7 @@ var ParticipantChangedReason;
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17828,7 +18107,7 @@ exports.SynthesisRequest = SynthesisRequest;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17936,7 +18215,7 @@ exports.SpeechSynthesisResult = SpeechSynthesisResult;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17980,7 +18259,7 @@ exports.SpeechSynthesisEventArgs = SpeechSynthesisEventArgs;
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18072,7 +18351,7 @@ exports.SpeechSynthesisWordBoundaryEventArgs = SpeechSynthesisWordBoundaryEventA
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18132,7 +18411,7 @@ exports.SpeechSynthesisBookmarkEventArgs = SpeechSynthesisBookmarkEventArgs;
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18208,7 +18487,7 @@ exports.SpeechSynthesisVisemeEventArgs = SpeechSynthesisVisemeEventArgs;
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18256,21 +18535,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpeakerAudioDestination = void 0;
 var Exports_1 = __webpack_require__(43);
 var Exports_2 = __webpack_require__(4);
-var AudioOutputFormat_1 = __webpack_require__(64);
 var AudioOutputStream_1 = __webpack_require__(63);
+var AudioStreamFormat_1 = __webpack_require__(62);
 var MediaDurationPlaceholderSeconds = 60 * 30;
 var AudioFormatToMimeType = (_a = {},
-    _a[AudioOutputFormat_1.AudioFormatTag.PCM] = "audio/wav",
-    _a[AudioOutputFormat_1.AudioFormatTag.MP3] = "audio/mpeg",
-    _a[AudioOutputFormat_1.AudioFormatTag.OGG_OPUS] = "audio/ogg",
-    _a[AudioOutputFormat_1.AudioFormatTag.WEBM_OPUS] = "audio/webm; codecs=opus",
+    _a[AudioStreamFormat_1.AudioFormatTag.PCM] = "audio/wav",
+    _a[AudioStreamFormat_1.AudioFormatTag.MuLaw] = "audio/x-wav",
+    _a[AudioStreamFormat_1.AudioFormatTag.MP3] = "audio/mpeg",
+    _a[AudioStreamFormat_1.AudioFormatTag.OGG_OPUS] = "audio/ogg",
+    _a[AudioStreamFormat_1.AudioFormatTag.WEBM_OPUS] = "audio/webm; codecs=opus",
+    _a[AudioStreamFormat_1.AudioFormatTag.ALaw] = "audio/x-wav",
     _a);
 /**
  * Represents the speaker playback audio destination, which only works in browser.
  * Note: the SDK will try to use <a href="https://www.w3.org/TR/media-source/">Media Source Extensions</a> to play audio.
  * Mp3 format has better supports on Microsoft Edge, Chrome and Safari (desktop), so, it's better to specify mp3 format for playback.
  * @class SpeakerAudioDestination
- * Updated in version 1.12.1
+ * Updated in version 1.17.0
  */
 var SpeakerAudioDestination = /** @class */ (function () {
     function SpeakerAudioDestination(audioDestinationId) {
@@ -18318,27 +18599,41 @@ var SpeakerAudioDestination = /** @class */ (function () {
             });
         }
         else if (this.privAudioOutputStream !== undefined) {
-            var receivedAudio_1 = new ArrayBuffer(this.privBytesReceived);
-            this.privAudioOutputStream.read(receivedAudio_1).then(function (_) {
-                if (_this.privFormat.hasHeader) {
-                    receivedAudio_1 = Exports_1.SynthesisAdapterBase.addHeader(receivedAudio_1, _this.privFormat);
+            if ((this.privFormat.formatTag === AudioStreamFormat_1.AudioFormatTag.PCM || this.privFormat.formatTag === AudioStreamFormat_1.AudioFormatTag.MuLaw
+                || this.privFormat.formatTag === AudioStreamFormat_1.AudioFormatTag.ALaw) && this.privFormat.hasHeader === false) {
+                // tslint:disable-next-line:no-console
+                console.warn("Play back is not supported for raw PCM, mulaw or alaw format without header.");
+                if (!!this.onAudioEnd) {
+                    this.onAudioEnd(this);
                 }
-                var audioBlob = new Blob([receivedAudio_1], { type: AudioFormatToMimeType[_this.privFormat.formatTag] });
-                _this.privAudio.src = window.URL.createObjectURL(audioBlob);
-                _this.notifyPlayback().then(function () {
-                    if (!!cb) {
-                        cb();
-                    }
+            }
+            else {
+                var receivedAudio_1 = new ArrayBuffer(this.privBytesReceived);
+                this.privAudioOutputStream.read(receivedAudio_1).then(function (_) {
+                    receivedAudio_1 = Exports_1.SynthesisAdapterBase.addHeader(receivedAudio_1, _this.privFormat);
+                    var audioBlob = new Blob([receivedAudio_1], { type: AudioFormatToMimeType[_this.privFormat.formatTag] });
+                    _this.privAudio.src = window.URL.createObjectURL(audioBlob);
+                    _this.notifyPlayback().then(function () {
+                        if (!!cb) {
+                            cb();
+                        }
+                    }, function (error) {
+                        if (!!err) {
+                            err(error);
+                        }
+                    });
                 }, function (error) {
                     if (!!err) {
                         err(error);
                     }
                 });
-            }, function (error) {
-                if (!!err) {
-                    err(error);
-                }
-            });
+            }
+        }
+        else {
+            // unsupported format, call onAudioEnd directly.
+            if (!!this.onAudioEnd) {
+                this.onAudioEnd(this);
+            }
         }
     };
     Object.defineProperty(SpeakerAudioDestination.prototype, "format", {
@@ -18349,7 +18644,7 @@ var SpeakerAudioDestination = /** @class */ (function () {
                 var mimeType_1 = AudioFormatToMimeType[this.privFormat.formatTag];
                 if (mimeType_1 === undefined) {
                     // tslint:disable-next-line:no-console
-                    console.warn("Unknown mimeType for format " + AudioOutputFormat_1.AudioFormatTag[this.privFormat.formatTag] + ".");
+                    console.warn("Unknown mimeType for format " + AudioStreamFormat_1.AudioFormatTag[this.privFormat.formatTag] + "; playback is not supported.");
                 }
                 else if (typeof (MediaSource) !== "undefined" && MediaSource.isTypeSupported(mimeType_1)) {
                     this.privAudio = new Audio();
@@ -18381,7 +18676,7 @@ var SpeakerAudioDestination = /** @class */ (function () {
                 }
                 else {
                     // tslint:disable-next-line:no-console
-                    console.warn("Format " + AudioOutputFormat_1.AudioFormatTag[this.privFormat.formatTag] + " could not be played by MSE, streaming playback is not enabled.");
+                    console.warn("Format " + AudioStreamFormat_1.AudioFormatTag[this.privFormat.formatTag] + " could not be played by MSE, streaming playback is not enabled.");
                     this.privAudioOutputStream = new AudioOutputStream_1.PullAudioOutputStreamImpl();
                     this.privAudioOutputStream.format = this.privFormat;
                     this.privAudio = new Audio();
@@ -18524,7 +18819,7 @@ exports.SpeakerAudioDestination = SpeakerAudioDestination;
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18563,7 +18858,7 @@ exports.ConversationTranscriptionCanceledEventArgs = ConversationTranscriptionCa
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18594,7 +18889,7 @@ var PronunciationAssessmentGradingSystem;
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18630,7 +18925,7 @@ var PronunciationAssessmentGranularity;
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18762,7 +19057,7 @@ exports.PronunciationAssessmentConfig = PronunciationAssessmentConfig;
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18877,7 +19172,7 @@ exports.PronunciationAssessmentResult = PronunciationAssessmentResult;
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19101,7 +19396,7 @@ exports.RecognitionEndedEvent = RecognitionEndedEvent;
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19150,7 +19445,7 @@ var Exports_1 = __webpack_require__(2);
 var Exports_2 = __webpack_require__(4);
 var Exports_3 = __webpack_require__(51);
 var Exports_4 = __webpack_require__(43);
-var SpeechConnectionMessage_Internal_1 = __webpack_require__(159);
+var SpeechConnectionMessage_Internal_1 = __webpack_require__(160);
 var ServiceRecognizerBase = /** @class */ (function () {
     function ServiceRecognizerBase(authentication, connectionFactory, audioSource, recognizerConfig, recognizer) {
         var _this = this;
@@ -19179,6 +19474,12 @@ var ServiceRecognizerBase = /** @class */ (function () {
                     },
                 };
                 SpeechServiceConfigJson = JSON.stringify(replacement);
+            }
+            if (_this.privRecognizerConfig.parameters.getProperty("TranscriptionService_SingleChannel", "false").toLowerCase() === "true") {
+                var json = JSON.parse(SpeechServiceConfigJson);
+                json.context.DisableReferenceChannel = "True";
+                json.context.MicSpec = "1_0_0";
+                SpeechServiceConfigJson = JSON.stringify(json);
             }
             if (SpeechServiceConfigJson) {
                 return connection.send(new SpeechConnectionMessage_Internal_1.SpeechConnectionMessage(Exports_2.MessageType.Text, "speech.config", requestSession.requestId, "application/json", SpeechServiceConfigJson));
@@ -19220,7 +19521,11 @@ var ServiceRecognizerBase = /** @class */ (function () {
                     case 0:
                         if (!(connectionEvent.name === "ConnectionClosedEvent")) return [3 /*break*/, 2];
                         connectionClosedEvent = connectionEvent;
-                        if (!(connectionClosedEvent.statusCode !== 1000)) return [3 /*break*/, 2];
+                        if (!(connectionClosedEvent.statusCode === 1003 ||
+                            connectionClosedEvent.statusCode === 1007 ||
+                            connectionClosedEvent.statusCode === 1002 ||
+                            connectionClosedEvent.statusCode === 4000 ||
+                            this.privRequestSession.numConnectionAttempts > this.privRecognizerConfig.maxRetryCount)) return [3 /*break*/, 2];
                         return [4 /*yield*/, this.cancelRecognitionLocal(Exports_3.CancellationReason.Error, connectionClosedEvent.statusCode === 1007 ? Exports_3.CancellationErrorCode.BadRequestParameters : Exports_3.CancellationErrorCode.ConnectionFailure, connectionClosedEvent.reason + " websocket error code: " + connectionClosedEvent.statusCode)];
                     case 1:
                         _a.sent();
@@ -19405,24 +19710,28 @@ var ServiceRecognizerBase = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!this.privRequestSession.isRecognizing) return [3 /*break*/, 6];
-                        return [4 /*yield*/, this.audioSource.turnOff()];
+                        if (!this.privRequestSession.isRecognizing) return [3 /*break*/, 8];
+                        _a.label = 1;
                     case 1:
-                        _a.sent();
-                        return [4 /*yield*/, this.sendFinalAudio()];
+                        _a.trys.push([1, , 6, 8]);
+                        return [4 /*yield*/, this.audioSource.turnOff()];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, this.privRequestSession.onStopRecognizing()];
+                        return [4 /*yield*/, this.sendFinalAudio()];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, this.privRequestSession.turnCompletionPromise];
+                        return [4 /*yield*/, this.privRequestSession.onStopRecognizing()];
                     case 4:
                         _a.sent();
-                        return [4 /*yield*/, this.privRequestSession.dispose()];
+                        return [4 /*yield*/, this.privRequestSession.turnCompletionPromise];
                     case 5:
                         _a.sent();
-                        _a.label = 6;
-                    case 6: return [2 /*return*/];
+                        return [3 /*break*/, 8];
+                    case 6: return [4 /*yield*/, this.privRequestSession.dispose()];
+                    case 7:
+                        _a.sent();
+                        return [7 /*endfinally*/];
+                    case 8: return [2 /*return*/];
                 }
             });
         });
@@ -19713,9 +20022,8 @@ var ServiceRecognizerBase = /** @class */ (function () {
         });
     };
     // Establishes a websocket connection to the end point.
-    ServiceRecognizerBase.prototype.connectImpl = function (isUnAuthorized) {
+    ServiceRecognizerBase.prototype.connectImpl = function () {
         var _this = this;
-        if (isUnAuthorized === void 0) { isUnAuthorized = false; }
         if (this.privConnectionPromise) {
             return this.privConnectionPromise.then(function (connection) {
                 if (connection.state() === Exports_2.ConnectionState.Disconnected) {
@@ -19732,53 +20040,7 @@ var ServiceRecognizerBase = /** @class */ (function () {
                 return _this.connectImpl();
             });
         }
-        this.privAuthFetchEventId = Exports_2.createNoDashGuid();
-        var sessionId = this.privRecognizerConfig.parameters.getProperty(Exports_3.PropertyId.Speech_SessionId, undefined);
-        this.privConnectionId = (sessionId !== undefined) ? sessionId : Exports_2.createNoDashGuid();
-        this.privRequestSession.onPreConnectionStart(this.privAuthFetchEventId, this.privConnectionId);
-        var authPromise = isUnAuthorized ? this.privAuthentication.fetchOnExpiry(this.privAuthFetchEventId) : this.privAuthentication.fetch(this.privAuthFetchEventId);
-        this.privConnectionPromise = authPromise.then(function (result) { return __awaiter(_this, void 0, void 0, function () {
-            var connection, response;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.privRequestSession.onAuthCompleted(false)];
-                    case 1:
-                        _a.sent();
-                        connection = this.privConnectionFactory.create(this.privRecognizerConfig, result, this.privConnectionId);
-                        this.privRequestSession.listenForServiceTelemetry(connection.events);
-                        // Attach to the underlying event. No need to hold onto the detach pointers as in the event the connection goes away,
-                        // it'll stop sending events.
-                        connection.events.attach(function (event) {
-                            _this.connectionEvents.onEvent(event);
-                        });
-                        return [4 /*yield*/, connection.open()];
-                    case 2:
-                        response = _a.sent();
-                        if (!(response.statusCode === 200)) return [3 /*break*/, 4];
-                        return [4 /*yield*/, this.privRequestSession.onConnectionEstablishCompleted(response.statusCode)];
-                    case 3:
-                        _a.sent();
-                        return [2 /*return*/, Promise.resolve(connection)];
-                    case 4:
-                        if (!(response.statusCode === 403 && !isUnAuthorized)) return [3 /*break*/, 5];
-                        return [2 /*return*/, this.connectImpl(true)];
-                    case 5: return [4 /*yield*/, this.privRequestSession.onConnectionEstablishCompleted(response.statusCode, response.reason)];
-                    case 6:
-                        _a.sent();
-                        return [2 /*return*/, Promise.reject("Unable to contact server. StatusCode: " + response.statusCode + ", " + this.privRecognizerConfig.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Endpoint) + " Reason: " + response.reason)];
-                }
-            });
-        }); }, function (error) { return __awaiter(_this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.privRequestSession.onAuthCompleted(true, error)];
-                    case 1:
-                        _a.sent();
-                        throw new Error(error);
-                }
-            });
-        }); });
+        this.privConnectionPromise = this.retryableConnect();
         // Attach an empty handler to allow the promise to run in the background while
         // other startup events happen. It'll eventually be awaited on.
         this.privConnectionPromise.catch(function () { });
@@ -19908,6 +20170,64 @@ var ServiceRecognizerBase = /** @class */ (function () {
             });
         });
     };
+    ServiceRecognizerBase.prototype.retryableConnect = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var isUnAuthorized, sessionId, lastStatusCode, lastReason, authPromise, auth, connection, response;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        isUnAuthorized = false;
+                        this.privAuthFetchEventId = Exports_2.createNoDashGuid();
+                        sessionId = this.privRequestSession.sessionId;
+                        this.privConnectionId = (sessionId !== undefined) ? sessionId : Exports_2.createNoDashGuid();
+                        this.privRequestSession.onPreConnectionStart(this.privAuthFetchEventId, this.privConnectionId);
+                        lastStatusCode = 0;
+                        lastReason = "";
+                        _a.label = 1;
+                    case 1:
+                        if (!(this.privRequestSession.numConnectionAttempts <= this.privRecognizerConfig.maxRetryCount)) return [3 /*break*/, 8];
+                        authPromise = isUnAuthorized ? this.privAuthentication.fetchOnExpiry(this.privAuthFetchEventId) : this.privAuthentication.fetch(this.privAuthFetchEventId);
+                        return [4 /*yield*/, authPromise];
+                    case 2:
+                        auth = _a.sent();
+                        return [4 /*yield*/, this.privRequestSession.onAuthCompleted(false)];
+                    case 3:
+                        _a.sent();
+                        connection = this.privConnectionFactory.create(this.privRecognizerConfig, auth, this.privConnectionId);
+                        // Attach the telemetry handlers.
+                        this.privRequestSession.listenForServiceTelemetry(connection.events);
+                        // Attach to the underlying event. No need to hold onto the detach pointers as in the event the connection goes away,
+                        // it'll stop sending events.
+                        connection.events.attach(function (event) {
+                            _this.connectionEvents.onEvent(event);
+                        });
+                        return [4 /*yield*/, connection.open()];
+                    case 4:
+                        response = _a.sent();
+                        if (!(response.statusCode === 200)) return [3 /*break*/, 6];
+                        return [4 /*yield*/, this.privRequestSession.onConnectionEstablishCompleted(response.statusCode)];
+                    case 5:
+                        _a.sent();
+                        return [2 /*return*/, Promise.resolve(connection)];
+                    case 6:
+                        if (response.statusCode === 1006) {
+                            isUnAuthorized = true;
+                        }
+                        _a.label = 7;
+                    case 7:
+                        lastStatusCode = response.statusCode;
+                        lastReason = response.reason;
+                        this.privRequestSession.onRetryConnection();
+                        return [3 /*break*/, 1];
+                    case 8: return [4 /*yield*/, this.privRequestSession.onConnectionEstablishCompleted(lastStatusCode, lastReason)];
+                    case 9:
+                        _a.sent();
+                        return [2 /*return*/, Promise.reject("Unable to contact server. StatusCode: " + lastStatusCode + ", " + this.privRecognizerConfig.parameters.getProperty(Exports_3.PropertyId.SpeechServiceConnection_Endpoint) + " Reason: " + lastReason)];
+                }
+            });
+        });
+    };
     ServiceRecognizerBase.prototype.delay = function (delayMs) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -19976,7 +20296,7 @@ exports.ServiceRecognizerBase = ServiceRecognizerBase;
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20115,7 +20435,7 @@ exports.SpeechConnectionMessage = SpeechConnectionMessage;
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20142,6 +20462,7 @@ var RecognizerConfig = /** @class */ (function () {
         this.privRecognitionMode = RecognitionMode.Interactive;
         this.privSpeechServiceConfig = speechServiceConfig ? speechServiceConfig : new SpeechServiceConfig(new Context(null));
         this.privParameters = parameters;
+        this.privMaxRetryCount = parseInt(parameters.getProperty("SPEECH-Error-MaxRetryCount", "4"), 10);
     }
     Object.defineProperty(RecognizerConfig.prototype, "parameters", {
         get: function () {
@@ -20186,6 +20507,13 @@ var RecognizerConfig = /** @class */ (function () {
     Object.defineProperty(RecognizerConfig.prototype, "autoDetectSourceLanguages", {
         get: function () {
             return this.parameters.getProperty(Exports_1.PropertyId.SpeechServiceConnection_AutoDetectSourceLanguages, undefined);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(RecognizerConfig.prototype, "maxRetryCount", {
+        get: function () {
+            return this.privMaxRetryCount;
         },
         enumerable: false,
         configurable: true
@@ -20244,7 +20572,7 @@ exports.Context = Context;
 var System = /** @class */ (function () {
     function System() {
         // Note: below will be patched for official builds.
-        var SPEECHSDK_CLIENTSDK_VERSION = "1.16.0";
+        var SPEECHSDK_CLIENTSDK_VERSION = "1.15.0-alpha.0.1";
         this.name = "SpeechSDK";
         this.version = SPEECHSDK_CLIENTSDK_VERSION;
         this.build = "JavaScript";
@@ -20298,7 +20626,7 @@ var type;
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20310,7 +20638,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20447,7 +20775,7 @@ exports.WebsocketMessageFormatter = WebsocketMessageFormatter;
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20544,7 +20872,7 @@ exports.SpeechConnectionFactory = SpeechConnectionFactory;
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20618,7 +20946,7 @@ exports.TranscriberConnectionFactory = TranscriberConnectionFactory;
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20688,7 +21016,7 @@ exports.TranslationConnectionFactory = TranslationConnectionFactory;
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20737,7 +21065,7 @@ exports.SpeechSynthesisConnectionFactory = SpeechSynthesisConnectionFactory;
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20809,7 +21137,7 @@ exports.EnumTranslation = EnumTranslation;
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20854,7 +21182,7 @@ var RecognitionStatus;
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20893,7 +21221,7 @@ exports.TranslationSynthesisEnd = TranslationSynthesisEnd;
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20946,7 +21274,7 @@ exports.TranslationHypothesis = TranslationHypothesis;
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21010,7 +21338,7 @@ exports.TranslationPhrase = TranslationPhrase;
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21077,6 +21405,23 @@ var TranslationServiceRecognizer = /** @class */ (function (_super) {
     function TranslationServiceRecognizer(authentication, connectionFactory, audioSource, recognizerConfig, translationRecognizer) {
         var _this = _super.call(this, authentication, connectionFactory, audioSource, recognizerConfig, translationRecognizer) || this;
         _this.privTranslationRecognizer = translationRecognizer;
+        _this.connectionEvents.attach(function (connectionEvent) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!(connectionEvent.name === "ConnectionEstablishedEvent")) return [3 /*break*/, 1];
+                        this.privTranslationRecognizer.onConnection();
+                        return [3 /*break*/, 3];
+                    case 1:
+                        if (!(connectionEvent.name === "ConnectionClosedEvent")) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.privTranslationRecognizer.onDisconnection()];
+                    case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
+                }
+            });
+        }); });
         return _this;
     }
     TranslationServiceRecognizer.prototype.processTypeSpecificMessages = function (connectionMessage) {
@@ -21309,7 +21654,7 @@ exports.TranslationServiceRecognizer = TranslationServiceRecognizer;
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21339,7 +21684,7 @@ exports.SpeechDetected = SpeechDetected;
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21404,7 +21749,58 @@ exports.SpeechHypothesis = SpeechHypothesis;
 
 
 /***/ }),
-/* 175 */
+/* 176 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpeechKeyword = void 0;
+var SpeechKeyword = /** @class */ (function () {
+    function SpeechKeyword(json) {
+        this.privSpeechKeyword = JSON.parse(json);
+    }
+    SpeechKeyword.fromJSON = function (json) {
+        return new SpeechKeyword(json);
+    };
+    Object.defineProperty(SpeechKeyword.prototype, "Status", {
+        get: function () {
+            return this.privSpeechKeyword.Status;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(SpeechKeyword.prototype, "Text", {
+        get: function () {
+            return this.privSpeechKeyword.Text;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(SpeechKeyword.prototype, "Offset", {
+        get: function () {
+            return this.privSpeechKeyword.Offset;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(SpeechKeyword.prototype, "Duration", {
+        get: function () {
+            return this.privSpeechKeyword.Duration;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return SpeechKeyword;
+}());
+exports.SpeechKeyword = SpeechKeyword;
+
+
+
+/***/ }),
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21617,7 +22013,7 @@ exports.SpeechServiceRecognizer = SpeechServiceRecognizer;
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21678,7 +22074,7 @@ exports.TranscriptionServiceRecognizer = void 0;
 var Exports_1 = __webpack_require__(4);
 var Exports_2 = __webpack_require__(51);
 var Exports_3 = __webpack_require__(43);
-var SpeechConnectionMessage_Internal_1 = __webpack_require__(159);
+var SpeechConnectionMessage_Internal_1 = __webpack_require__(160);
 // tslint:disable-next-line:max-classes-per-file
 var TranscriptionServiceRecognizer = /** @class */ (function (_super) {
     __extends(TranscriptionServiceRecognizer, _super);
@@ -21873,7 +22269,7 @@ exports.TranscriptionServiceRecognizer = TranscriptionServiceRecognizer;
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21940,7 +22336,7 @@ exports.DetailedSpeechPhrase = DetailedSpeechPhrase;
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22014,7 +22410,7 @@ exports.SimpleSpeechPhrase = SimpleSpeechPhrase;
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22045,7 +22441,7 @@ exports.AddedLmIntent = AddedLmIntent;
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22295,7 +22691,7 @@ exports.IntentServiceRecognizer = IntentServiceRecognizer;
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22340,7 +22736,7 @@ exports.IntentResponse = IntentResponse;
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22386,8 +22782,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequestSession = void 0;
 var Exports_1 = __webpack_require__(4);
-var RecognitionEvents_1 = __webpack_require__(157);
-var ServiceTelemetryListener_Internal_1 = __webpack_require__(183);
+var RecognitionEvents_1 = __webpack_require__(158);
+var ServiceTelemetryListener_Internal_1 = __webpack_require__(185);
 var RequestSession = /** @class */ (function () {
     function RequestSession(audioSourceId) {
         var _this = this;
@@ -22402,6 +22798,7 @@ var RequestSession = /** @class */ (function () {
         this.privBytesSent = 0;
         this.privRecogNumber = 0;
         this.privInTurn = false;
+        this.privConnectionAttempts = 0;
         this.onPreConnectionStart = function (authFetchEventId, connectionId) {
             _this.privAuthFetchEventId = authFetchEventId;
             _this.privSessionId = connectionId;
@@ -22411,6 +22808,9 @@ var RequestSession = /** @class */ (function () {
             if (!!_this.privTurnDeferral && !!_this.privInTurn) {
                 // What? How are we starting a turn with another not done?
                 _this.privTurnDeferral.reject("Another turn started before current completed.");
+                // Avoid UnhandledPromiseRejection if privTurnDeferral is not being awaited
+                /* tslint:disable:no-empty */
+                _this.privTurnDeferral.promise.then().catch(function () { });
             }
             _this.privInTurn = true;
             _this.privTurnDeferral = new Exports_1.Deferred();
@@ -22488,6 +22888,13 @@ var RequestSession = /** @class */ (function () {
     Object.defineProperty(RequestSession.prototype, "recogNumber", {
         get: function () {
             return this.privRecogNumber;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(RequestSession.prototype, "numConnectionAttempts", {
+        get: function () {
+            return this.privConnectionAttempts;
         },
         enumerable: false,
         configurable: true
@@ -22612,35 +23019,40 @@ var RequestSession = /** @class */ (function () {
         this.privLastRecoOffset = offset;
         this.privHypothesisReceived = false;
         this.privAudioNode.shrinkBuffers(offset);
+        this.privConnectionAttempts = 0;
     };
     RequestSession.prototype.onAudioSent = function (bytesSent) {
         this.privBytesSent += bytesSent;
     };
+    RequestSession.prototype.onRetryConnection = function () {
+        this.privConnectionAttempts++;
+    };
     RequestSession.prototype.dispose = function (error) {
+        var _a;
         return __awaiter(this, void 0, void 0, function () {
-            var _i, _a, detachable;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            var _i, _b, detachable;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         if (!!this.privIsDisposed) return [3 /*break*/, 5];
                         // we should have completed by now. If we did not its an unknown error.
                         this.privIsDisposed = true;
-                        _i = 0, _a = this.privDetachables;
-                        _b.label = 1;
+                        _i = 0, _b = this.privDetachables;
+                        _c.label = 1;
                     case 1:
-                        if (!(_i < _a.length)) return [3 /*break*/, 4];
-                        detachable = _a[_i];
+                        if (!(_i < _b.length)) return [3 /*break*/, 4];
+                        detachable = _b[_i];
                         return [4 /*yield*/, detachable.detach()];
                     case 2:
-                        _b.sent();
-                        _b.label = 3;
+                        _c.sent();
+                        _c.label = 3;
                     case 3:
                         _i++;
                         return [3 /*break*/, 1];
                     case 4:
-                        this.privServiceTelemetryListener.dispose();
+                        (_a = this.privServiceTelemetryListener) === null || _a === void 0 ? void 0 : _a.dispose();
                         this.privIsRecognizing = false;
-                        _b.label = 5;
+                        _c.label = 5;
                     case 5: return [2 /*return*/];
                 }
             });
@@ -22702,7 +23114,7 @@ exports.RequestSession = RequestSession;
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22713,7 +23125,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServiceTelemetryListener = void 0;
 // tslint:disable:max-classes-per-file
 var Exports_1 = __webpack_require__(4);
-var RecognitionEvents_1 = __webpack_require__(157);
+var RecognitionEvents_1 = __webpack_require__(158);
 var ServiceTelemetryListener = /** @class */ (function () {
     function ServiceTelemetryListener(requestId, audioSourceId, audioNodeId) {
         var _this = this;
@@ -22911,7 +23323,7 @@ exports.ServiceTelemetryListener = ServiceTelemetryListener;
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22978,7 +23390,7 @@ exports.SpeechContext = SpeechContext;
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23054,7 +23466,7 @@ exports.DynamicGrammarBuilder = DynamicGrammarBuilder;
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23066,7 +23478,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23129,10 +23541,10 @@ var DialogEvents_1 = __webpack_require__(17);
 var Exports_2 = __webpack_require__(4);
 var AudioOutputFormat_1 = __webpack_require__(64);
 var Exports_3 = __webpack_require__(51);
-var DialogServiceTurnStateManager_1 = __webpack_require__(188);
+var DialogServiceTurnStateManager_1 = __webpack_require__(190);
 var Exports_4 = __webpack_require__(43);
-var ActivityResponsePayload_1 = __webpack_require__(190);
-var SpeechConnectionMessage_Internal_1 = __webpack_require__(159);
+var ActivityResponsePayload_1 = __webpack_require__(192);
+var SpeechConnectionMessage_Internal_1 = __webpack_require__(160);
 var DialogServiceAdapter = /** @class */ (function (_super) {
     __extends(DialogServiceAdapter, _super);
     function DialogServiceAdapter(authentication, connectionFactory, audioSource, recognizerConfig, dialogServiceConnector) {
@@ -23277,7 +23689,7 @@ var DialogServiceAdapter = /** @class */ (function (_super) {
     };
     DialogServiceAdapter.prototype.processTypeSpecificMessages = function (connectionMessage) {
         return __awaiter(this, void 0, void 0, function () {
-            var resultProps, result, processed, speechPhrase, args, hypothesis, offset, ev, audioRequestId, turn;
+            var resultProps, result, processed, speechPhrase, args, hypothesis, offset, ev, keyword, event_1, audioRequestId, turn;
             return __generator(this, function (_a) {
                 resultProps = new Exports_3.PropertyCollection();
                 if (connectionMessage.messageType === Exports_2.MessageType.Text) {
@@ -23312,6 +23724,25 @@ var DialogServiceAdapter = /** @class */ (function (_super) {
                         if (!!this.privDialogServiceConnector.recognizing) {
                             try {
                                 this.privDialogServiceConnector.recognizing(this.privDialogServiceConnector, ev);
+                                /* tslint:disable:no-empty */
+                            }
+                            catch (error) {
+                                // Not going to let errors in the event handler
+                                // trip things up.
+                            }
+                        }
+                        processed = true;
+                        break;
+                    case "speech.keyword":
+                        keyword = Exports_4.SpeechKeyword.fromJSON(connectionMessage.textBody);
+                        result = new Exports_3.SpeechRecognitionResult(this.privRequestSession.requestId, keyword.Status === "Accepted" ? Exports_3.ResultReason.RecognizedKeyword : Exports_3.ResultReason.NoMatch, keyword.Text, keyword.Duration, keyword.Offset, undefined, undefined, undefined, undefined, connectionMessage.textBody, resultProps);
+                        if (keyword.Status !== "Accepted") {
+                            this.privLastResult = result;
+                        }
+                        event_1 = new Exports_3.SpeechRecognitionEventArgs(result, result.duration, result.resultId);
+                        if (!!this.privDialogServiceConnector.recognized) {
+                            try {
+                                this.privDialogServiceConnector.recognized(this.privDialogServiceConnector, event_1);
                                 /* tslint:disable:no-empty */
                             }
                             catch (error) {
@@ -23656,11 +24087,15 @@ var DialogServiceAdapter = /** @class */ (function (_super) {
                     case 0: return [4 /*yield*/, this.fetchConnection()];
                     case 1:
                         connection = _a.sent();
-                        return [4 /*yield*/, this.sendAgentContext(connection)];
+                        this.addKeywordContextData();
+                        return [4 /*yield*/, this.sendSpeechContext(connection)];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, this.sendWaveHeader(connection)];
+                        return [4 /*yield*/, this.sendAgentContext(connection)];
                     case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.sendWaveHeader(connection)];
+                    case 4:
                         _a.sent();
                         return [2 /*return*/];
                 }
@@ -23678,6 +24113,37 @@ var DialogServiceAdapter = /** @class */ (function (_super) {
         this.privEvents.onEvent(event);
         Exports_2.Events.instance.onEvent(event);
     };
+    DialogServiceAdapter.prototype.addKeywordContextData = function () {
+        var keywordPropertyValue = this.privRecognizerConfig.parameters.getProperty("SPEECH-KeywordsToDetect");
+        if (keywordPropertyValue === undefined) {
+            return;
+        }
+        var keywordOffsetPropertyValue = this.privRecognizerConfig.parameters
+            .getProperty("SPEECH-KeywordsToDetect-Offsets");
+        var keywordDurationPropertyValue = this.privRecognizerConfig.parameters
+            .getProperty("SPEECH-KeywordsToDetect-Durations");
+        var keywords = keywordPropertyValue.split(";");
+        var keywordOffsets = keywordOffsetPropertyValue === undefined ? [] : keywordOffsetPropertyValue.split(";");
+        var keywordDurations = keywordDurationPropertyValue === undefined ? [] : keywordDurationPropertyValue.split(";");
+        var keywordDefinitionArray = [];
+        for (var i = 0; i < keywords.length; i++) {
+            var definition = {};
+            definition.text = keywords[i];
+            if (i < keywordOffsets.length) {
+                definition.offset = Number(keywordOffsets[i]);
+            }
+            if (i < keywordDurations.length) {
+                definition.duration = Number(keywordDurations[i]);
+            }
+            keywordDefinitionArray.push(definition);
+        }
+        this.speechContext.setSection("invocationSource", "VoiceActivationWithKeyword");
+        this.speechContext.setSection("keywordDetection", [{
+                clientDetectedKeywords: keywordDefinitionArray,
+                onReject: { action: "EndOfTurn" },
+                type: "startTrigger"
+            }]);
+    };
     return DialogServiceAdapter;
 }(Exports_4.ServiceRecognizerBase));
 exports.DialogServiceAdapter = DialogServiceAdapter;
@@ -23685,7 +24151,7 @@ exports.DialogServiceAdapter = DialogServiceAdapter;
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23695,7 +24161,7 @@ exports.DialogServiceAdapter = DialogServiceAdapter;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DialogServiceTurnStateManager = void 0;
 var Error_1 = __webpack_require__(15);
-var DialogServiceTurnState_1 = __webpack_require__(189);
+var DialogServiceTurnState_1 = __webpack_require__(191);
 var DialogServiceTurnStateManager = /** @class */ (function () {
     function DialogServiceTurnStateManager() {
         this.privTurnMap = new Map();
@@ -23728,7 +24194,7 @@ exports.DialogServiceTurnStateManager = DialogServiceTurnStateManager;
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23739,7 +24205,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DialogServiceTurnState = void 0;
 var AudioOutputFormat_1 = __webpack_require__(64);
 var AudioOutputStream_1 = __webpack_require__(63);
-var ActivityResponsePayload_1 = __webpack_require__(190);
+var ActivityResponsePayload_1 = __webpack_require__(192);
 var DialogServiceTurnState = /** @class */ (function () {
     function DialogServiceTurnState(manager, requestId) {
         this.privRequestId = requestId;
@@ -23800,7 +24266,7 @@ exports.DialogServiceTurnState = DialogServiceTurnState;
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23857,7 +24323,7 @@ var MessageDataStreamType;
 
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23892,7 +24358,7 @@ exports.AgentConfig = AgentConfig;
 
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23900,22 +24366,22 @@ exports.AgentConfig = AgentConfig;
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license.
 Object.defineProperty(exports, "__esModule", { value: true });
-var ConversationManager_1 = __webpack_require__(193);
+var ConversationManager_1 = __webpack_require__(195);
 Object.defineProperty(exports, "ConversationManager", { enumerable: true, get: function () { return ConversationManager_1.ConversationManager; } });
-var ConversationConnectionConfig_1 = __webpack_require__(194);
+var ConversationConnectionConfig_1 = __webpack_require__(196);
 Object.defineProperty(exports, "ConversationConnectionConfig", { enumerable: true, get: function () { return ConversationConnectionConfig_1.ConversationConnectionConfig; } });
-var ConversationTranslatorRecognizer_1 = __webpack_require__(198);
+var ConversationTranslatorRecognizer_1 = __webpack_require__(200);
 Object.defineProperty(exports, "ConversationRecognizerFactory", { enumerable: true, get: function () { return ConversationTranslatorRecognizer_1.ConversationRecognizerFactory; } });
-var TranscriberRecognizer_1 = __webpack_require__(210);
+var TranscriberRecognizer_1 = __webpack_require__(212);
 Object.defineProperty(exports, "TranscriberRecognizer", { enumerable: true, get: function () { return TranscriberRecognizer_1.TranscriberRecognizer; } });
-var ConversationTranslatorEventArgs_1 = __webpack_require__(204);
+var ConversationTranslatorEventArgs_1 = __webpack_require__(206);
 Object.defineProperty(exports, "ConversationReceivedTranslationEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.ConversationReceivedTranslationEventArgs; } });
 Object.defineProperty(exports, "LockRoomEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.LockRoomEventArgs; } });
 Object.defineProperty(exports, "MuteAllEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.MuteAllEventArgs; } });
 Object.defineProperty(exports, "ParticipantAttributeEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.ParticipantAttributeEventArgs; } });
 Object.defineProperty(exports, "ParticipantEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.ParticipantEventArgs; } });
 Object.defineProperty(exports, "ParticipantsListEventArgs", { enumerable: true, get: function () { return ConversationTranslatorEventArgs_1.ParticipantsListEventArgs; } });
-var ConversationTranslatorInterfaces_1 = __webpack_require__(205);
+var ConversationTranslatorInterfaces_1 = __webpack_require__(207);
 Object.defineProperty(exports, "ConversationTranslatorCommandTypes", { enumerable: true, get: function () { return ConversationTranslatorInterfaces_1.ConversationTranslatorCommandTypes; } });
 Object.defineProperty(exports, "ConversationTranslatorMessageTypes", { enumerable: true, get: function () { return ConversationTranslatorInterfaces_1.ConversationTranslatorMessageTypes; } });
 Object.defineProperty(exports, "InternalParticipants", { enumerable: true, get: function () { return ConversationTranslatorInterfaces_1.InternalParticipants; } });
@@ -23923,7 +24389,7 @@ Object.defineProperty(exports, "InternalParticipants", { enumerable: true, get: 
 
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23934,8 +24400,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConversationManager = void 0;
 var Contracts_1 = __webpack_require__(53);
 var Exports_1 = __webpack_require__(51);
-var ConversationConnectionConfig_1 = __webpack_require__(194);
-var ConversationUtils_1 = __webpack_require__(196);
+var ConversationConnectionConfig_1 = __webpack_require__(196);
+var ConversationUtils_1 = __webpack_require__(198);
 var ConversationManager = /** @class */ (function () {
     function ConversationManager() {
         //
@@ -24095,7 +24561,7 @@ exports.ConversationManager = ConversationManager;
 
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24117,7 +24583,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConversationConnectionConfig = void 0;
-var RestConfigBase_1 = __webpack_require__(195);
+var RestConfigBase_1 = __webpack_require__(197);
 var ConversationConnectionConfig = /** @class */ (function (_super) {
     __extends(ConversationConnectionConfig, _super);
     function ConversationConnectionConfig() {
@@ -24202,7 +24668,7 @@ exports.ConversationConnectionConfig = ConversationConnectionConfig;
 
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24277,7 +24743,7 @@ exports.RestConfigBase = RestConfigBase;
 
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24305,9 +24771,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PromiseToEmptyCallback = exports.request = exports.extractHeaderValue = void 0;
-var RestConfigBase_1 = __webpack_require__(195);
+var RestConfigBase_1 = __webpack_require__(197);
 // Node.JS specific xmlhttprequest / browser support.
-var XHR = __importStar(__webpack_require__(197));
+var XHR = __importStar(__webpack_require__(199));
 /**
  * Config settings for Conversation Translator
  */
@@ -24442,13 +24908,13 @@ exports.PromiseToEmptyCallback = PromiseToEmptyCallback;
 
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24510,9 +24976,9 @@ var Exports_1 = __webpack_require__(43);
 var Exports_2 = __webpack_require__(4);
 var Contracts_1 = __webpack_require__(53);
 var Exports_3 = __webpack_require__(51);
-var ConversationConnectionFactory_1 = __webpack_require__(199);
-var ConversationServiceAdapter_1 = __webpack_require__(202);
-var ConversationUtils_1 = __webpack_require__(196);
+var ConversationConnectionFactory_1 = __webpack_require__(201);
+var ConversationServiceAdapter_1 = __webpack_require__(204);
+var ConversationUtils_1 = __webpack_require__(198);
 var ConversationRecognizerFactory = /** @class */ (function () {
     function ConversationRecognizerFactory() {
     }
@@ -24737,7 +25203,7 @@ exports.ConversationTranslatorRecognizer = ConversationTranslatorRecognizer;
 
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24764,8 +25230,8 @@ var Exports_2 = __webpack_require__(4);
 var Contracts_1 = __webpack_require__(53);
 var Exports_3 = __webpack_require__(51);
 var ConnectionFactoryBase_1 = __webpack_require__(113);
-var ConversationConnectionConfig_1 = __webpack_require__(194);
-var ConversationWebsocketMessageFormatter_1 = __webpack_require__(200);
+var ConversationConnectionConfig_1 = __webpack_require__(196);
+var ConversationWebsocketMessageFormatter_1 = __webpack_require__(202);
 /**
  * Create a connection to the Conversation Translator websocket for sending instant messages and commands, and for receiving translated messages.
  * The conversation must already have been started or joined.
@@ -24795,7 +25261,7 @@ exports.ConversationConnectionFactory = ConversationConnectionFactory;
 
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24805,7 +25271,7 @@ exports.ConversationConnectionFactory = ConversationConnectionFactory;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConversationWebsocketMessageFormatter = void 0;
 var Exports_1 = __webpack_require__(4);
-var ConversationConnectionMessage_1 = __webpack_require__(201);
+var ConversationConnectionMessage_1 = __webpack_require__(203);
 /**
  * Based off WebsocketMessageFormatter. The messages for Conversation Translator have some variations from the Speech messages.
  */
@@ -24854,7 +25320,7 @@ exports.ConversationWebsocketMessageFormatter = ConversationWebsocketMessageForm
 
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24901,7 +25367,7 @@ exports.ConversationConnectionMessage = ConversationConnectionMessage;
 
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24962,11 +25428,11 @@ exports.ConversationServiceAdapter = void 0;
 var Exports_1 = __webpack_require__(4);
 var Exports_2 = __webpack_require__(51);
 var Exports_3 = __webpack_require__(43);
-var ConversationConnectionMessage_1 = __webpack_require__(201);
-var ConversationRequestSession_1 = __webpack_require__(203);
-var ConversationTranslatorEventArgs_1 = __webpack_require__(204);
-var ConversationTranslatorInterfaces_1 = __webpack_require__(205);
-var Exports_4 = __webpack_require__(206);
+var ConversationConnectionMessage_1 = __webpack_require__(203);
+var ConversationRequestSession_1 = __webpack_require__(205);
+var ConversationTranslatorEventArgs_1 = __webpack_require__(206);
+var ConversationTranslatorInterfaces_1 = __webpack_require__(207);
+var Exports_4 = __webpack_require__(208);
 /***
  * The service adapter handles sending and receiving messages to the Conversation Translator websocket.
  */
@@ -25401,7 +25867,7 @@ exports.ConversationServiceAdapter = ConversationServiceAdapter;
 
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25541,7 +26007,7 @@ exports.ConversationRequestSession = ConversationRequestSession;
 
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25760,7 +26226,7 @@ exports.ConversationReceivedTranslationEventArgs = ConversationReceivedTranslati
 
 
 /***/ }),
-/* 205 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25872,25 +26338,25 @@ exports.ConversationTranslatorCommandTypes = {
 
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var CommandResponsePayload_1 = __webpack_require__(207);
+var CommandResponsePayload_1 = __webpack_require__(209);
 Object.defineProperty(exports, "CommandResponsePayload", { enumerable: true, get: function () { return CommandResponsePayload_1.CommandResponsePayload; } });
-var ParticipantResponsePayload_1 = __webpack_require__(208);
+var ParticipantResponsePayload_1 = __webpack_require__(210);
 Object.defineProperty(exports, "ParticipantsListPayloadResponse", { enumerable: true, get: function () { return ParticipantResponsePayload_1.ParticipantsListPayloadResponse; } });
 Object.defineProperty(exports, "ParticipantPayloadResponse", { enumerable: true, get: function () { return ParticipantResponsePayload_1.ParticipantPayloadResponse; } });
-var TranslationResponsePayload_1 = __webpack_require__(209);
+var TranslationResponsePayload_1 = __webpack_require__(211);
 Object.defineProperty(exports, "SpeechResponsePayload", { enumerable: true, get: function () { return TranslationResponsePayload_1.SpeechResponsePayload; } });
 Object.defineProperty(exports, "TextResponsePayload", { enumerable: true, get: function () { return TranslationResponsePayload_1.TextResponsePayload; } });
 
 
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25962,7 +26428,7 @@ exports.CommandResponsePayload = CommandResponsePayload;
 
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26122,7 +26588,7 @@ exports.ParticipantPayloadResponse = ParticipantPayloadResponse;
 
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26289,7 +26755,7 @@ exports.TextResponsePayload = TextResponsePayload;
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26519,7 +26985,7 @@ exports.TranscriberRecognizer = TranscriberRecognizer;
 
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26555,7 +27021,7 @@ exports.SynthesisAudioMetadata = SynthesisAudioMetadata;
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26602,8 +27068,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SynthesisTurn = void 0;
 var Exports_1 = __webpack_require__(4);
 var AudioOutputStream_1 = __webpack_require__(63);
-var SynthesisAdapterBase_1 = __webpack_require__(213);
-var SynthesisEvents_1 = __webpack_require__(214);
+var SynthesisAdapterBase_1 = __webpack_require__(215);
+var SynthesisEvents_1 = __webpack_require__(216);
 var SynthesisTurn = /** @class */ (function () {
     function SynthesisTurn() {
         var _this = this;
@@ -26646,6 +27112,9 @@ var SynthesisTurn = /** @class */ (function () {
             if (!!_this.privTurnDeferral && !!_this.privInTurn) {
                 // What? How are we starting a turn with another not done?
                 _this.privTurnDeferral.reject("Another turn started before current completed.");
+                // Avoid UnhandledPromiseRejection if privTurnDeferral is not being awaited
+                /* tslint:disable:no-empty */
+                _this.privTurnDeferral.promise.then().catch(function () { });
             }
             _this.privInTurn = true;
             _this.privTurnDeferral = new Exports_1.Deferred();
@@ -26874,7 +27343,7 @@ exports.SynthesisTurn = SynthesisTurn;
 
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26922,7 +27391,7 @@ exports.SynthesisAdapterBase = void 0;
 var Exports_1 = __webpack_require__(4);
 var Exports_2 = __webpack_require__(51);
 var Exports_3 = __webpack_require__(43);
-var SpeechConnectionMessage_Internal_1 = __webpack_require__(159);
+var SpeechConnectionMessage_Internal_1 = __webpack_require__(160);
 var SynthesisAdapterBase = /** @class */ (function () {
     function SynthesisAdapterBase(authentication, connectionFactory, synthesizerConfig, speechSynthesizer, audioDestination) {
         var _this = this;
@@ -27454,7 +27923,7 @@ exports.SynthesisAdapterBase = SynthesisAdapterBase;
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27559,7 +28028,7 @@ exports.SynthesisStartedEvent = SynthesisStartedEvent;
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27611,7 +28080,7 @@ exports.SynthesizerConfig = SynthesizerConfig;
 
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27676,7 +28145,7 @@ exports.SynthesisContext = SynthesisContext;
 
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27712,7 +28181,7 @@ exports.SpeakerRecognitionConfig = SpeakerRecognitionConfig;
 
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27868,6 +28337,39 @@ var SpeakerIdMessageAdapter = /** @class */ (function () {
         });
     };
     /**
+     * Sends profile status request to endpoint.
+     * @function
+     * @param {VoiceProfile} profile - voice profile to check.
+     * @public
+     * @returns {Promise<IRestResponse>} rest response to status request
+     */
+    SpeakerIdMessageAdapter.prototype.getProfileStatus = function (profile) {
+        var uri = this.getOperationUri(profile.profileType) + "/" + profile.profileId;
+        return this.privRestAdapter.request(Exports_1.RestRequestType.Get, uri, {});
+    };
+    /**
+     * Sends get all profiles request to endpoint.
+     * @function
+     * @param {VoiceProfileType} profileType - type of profiles to return list of
+     * @public
+     * @returns {Promise<IRestResponse>} promised rest response containing all profiles
+     */
+    SpeakerIdMessageAdapter.prototype.getProfiles = function (profileType) {
+        var uri = this.getOperationUri(profileType);
+        return this.privRestAdapter.request(Exports_1.RestRequestType.Get, uri, {});
+    };
+    /**
+     * Sends get authorization phrases request to endpoint.
+     * @function
+     * @param {string} lang - language/locale of voice profile
+     * @public
+     * @returns {Promise<IRestResponse>} promised rest response containing list of valid phrases
+     */
+    SpeakerIdMessageAdapter.prototype.getAuthorizationPhrases = function (lang) {
+        var uri = ("" + this.getOperationUri(Exports_2.VoiceProfileType.TextDependentVerification)).replace("profiles", "phrases") + "/" + lang;
+        return this.privRestAdapter.request(Exports_1.RestRequestType.Get, uri, {});
+    };
+    /**
      * Sends delete profile request to endpoint.
      * @function
      * @param {VoiceProfile} profile - voice profile to delete.
@@ -27901,7 +28403,7 @@ exports.SpeakerIdMessageAdapter = SpeakerIdMessageAdapter;
 
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28192,7 +28694,7 @@ exports.FileAudioSource = FileAudioSource;
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28314,7 +28816,7 @@ exports.PcmRecorder = PcmRecorder;
 
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28360,7 +28862,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebsocketConnection = void 0;
 var Exports_1 = __webpack_require__(4);
-var WebsocketMessageAdapter_1 = __webpack_require__(222);
+var WebsocketMessageAdapter_1 = __webpack_require__(224);
 var WebsocketConnection = /** @class */ (function () {
     function WebsocketConnection(uri, queryParameters, headers, messageFormatter, proxyInfo, enableCompression, connectionId) {
         var _this = this;
@@ -28451,7 +28953,7 @@ exports.WebsocketConnection = WebsocketConnection;
 
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28502,8 +29004,8 @@ exports.WebsocketMessageAdapter = void 0;
 var HeaderNames_1 = __webpack_require__(45);
 var Exports_1 = __webpack_require__(4);
 // Node.JS specific web socket / browser support.
-var ws_1 = __importDefault(__webpack_require__(223));
-var CertChecks_1 = __webpack_require__(224);
+var ws_1 = __importDefault(__webpack_require__(225));
+var CertChecks_1 = __webpack_require__(226);
 var WebsocketMessageAdapter = /** @class */ (function () {
     function WebsocketMessageAdapter(uri, connectionId, messageFormatter, proxyInfo, headers, enableCompression) {
         var _this = this;
@@ -28565,6 +29067,7 @@ var WebsocketMessageAdapter = /** @class */ (function () {
                 }
                 else {
                     _this.privConnectionState = Exports_1.ConnectionState.Disconnected;
+                    _this.privWebsocketClient = null;
                     _this.onEvent(new Exports_1.ConnectionClosedEvent(_this.privConnectionId, e.code, e.reason));
                 }
                 _this.onClose(e.code, e.reason).catch(function (reason) {
@@ -28771,13 +29274,13 @@ exports.WebsocketMessageAdapter = WebsocketMessageAdapter;
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 224 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28855,15 +29358,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CertCheckAgent = void 0;
-var tls = __importStar(__webpack_require__(226));
-var parse = __importStar(__webpack_require__(227));
-var ocsp = __importStar(__webpack_require__(230));
+var tls = __importStar(__webpack_require__(228));
+var parse = __importStar(__webpack_require__(229));
+var ocsp = __importStar(__webpack_require__(232));
 var Exports_1 = __webpack_require__(4);
-var agent_base_1 = __importDefault(__webpack_require__(231));
+var agent_base_1 = __importDefault(__webpack_require__(233));
 // @ts-ignore
-var async_disk_cache_1 = __importDefault(__webpack_require__(232));
-var https_proxy_agent_1 = __importDefault(__webpack_require__(233));
-var net = __importStar(__webpack_require__(234));
+var async_disk_cache_1 = __importDefault(__webpack_require__(234));
+var https_proxy_agent_1 = __importDefault(__webpack_require__(235));
+var net = __importStar(__webpack_require__(236));
 var OCSPEvents_1 = __webpack_require__(39);
 var CertCheckAgent = /** @class */ (function () {
     function CertCheckAgent(proxyInfo) {
@@ -29216,10 +29719,10 @@ var CertCheckAgent = /** @class */ (function () {
 exports.CertCheckAgent = CertCheckAgent;
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(225), __webpack_require__(57).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(227), __webpack_require__(57).Buffer))
 
 /***/ }),
-/* 225 */
+/* 227 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -29409,22 +29912,22 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 227 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var required = __webpack_require__(228)
-  , qs = __webpack_require__(229)
-  , slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//
-  , protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\S\s]*)/i
+var required = __webpack_require__(230)
+  , qs = __webpack_require__(231)
+  , slashes = /^[A-Za-z][A-Za-z0-9+-.]*:[\\/]+/
+  , protocolre = /^([a-z][a-z0-9.+-]*:)?([\\/]{1,})?([\S\s]*)/i
   , whitespace = '[\\x09\\x0A\\x0B\\x0C\\x0D\\x20\\xA0\\u1680\\u180E\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\\u205F\\u3000\\u2028\\u2029\\uFEFF]'
   , left = new RegExp('^'+ whitespace +'+');
 
@@ -29536,11 +30039,14 @@ function lolcation(loc) {
  */
 function extractProtocol(address) {
   address = trimLeft(address);
-  var match = protocolre.exec(address);
+
+  var match = protocolre.exec(address)
+    , protocol = match[1] ? match[1].toLowerCase() : ''
+    , slashes = !!(match[2] && match[2].length >= 2);
 
   return {
-    protocol: match[1] ? match[1].toLowerCase() : '',
-    slashes: !!match[2],
+    protocol: protocol,
+    slashes: slashes,
     rest: match[3]
   };
 }
@@ -29699,6 +30205,14 @@ function Url(address, location, parser) {
     && (url.pathname !== '' || location.pathname !== '')
   ) {
     url.pathname = resolve(url.pathname, location.pathname);
+  }
+
+  //
+  // Default to a / for pathname if none exists. This normalizes the URL
+  // to always have a /
+  //
+  if (url.pathname.charAt(0) !== '/' && url.hostname) {
+    url.pathname = '/' + url.pathname;
   }
 
   //
@@ -29873,7 +30387,7 @@ module.exports = Url;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(58)))
 
 /***/ }),
-/* 228 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29918,7 +30432,7 @@ module.exports = function required(port, protocol) {
 
 
 /***/ }),
-/* 229 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30043,18 +30557,6 @@ exports.parse = querystring;
 
 
 /***/ }),
-/* 230 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-/* 231 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
 /* 232 */
 /***/ (function(module, exports) {
 
@@ -30074,6 +30576,18 @@ exports.parse = querystring;
 
 /***/ }),
 /* 235 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30206,7 +30720,7 @@ var BufferEntry = /** @class */ (function () {
 
 
 /***/ }),
-/* 236 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30264,7 +30778,7 @@ exports.ProxyInfo = ProxyInfo;
 
 
 /***/ }),
-/* 237 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30294,7 +30808,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RestMessageAdapter = exports.RestRequestType = void 0;
 var Exports_1 = __webpack_require__(4);
 // Node.JS specific xmlhttprequest / browser support.
-var XHR = __importStar(__webpack_require__(238));
+var XHR = __importStar(__webpack_require__(240));
 var RestRequestType;
 (function (RestRequestType) {
     RestRequestType["Get"] = "get";
@@ -30398,7 +30912,7 @@ exports.RestMessageAdapter = RestMessageAdapter;
 
 
 /***/ }),
-/* 238 */
+/* 240 */
 /***/ (function(module, exports) {
 
 /* (ignored) */

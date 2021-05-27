@@ -171,7 +171,7 @@ function actions_after_display_profile() {
 		document.getElementById("Email_Display").innerHTML = "Email: " + decode_dict["message"]["Email"];
 		document.getElementById("PhoneNumber_Display").innerHTML = "Phone Number: " + decode_dict["message"]["PhoneNumber"];
 		document.getElementById("Address_Display").innerHTML = "Address: " + decode_dict["message"]["ResAddress"];
-		document.getElementById("VoiceProfileID").innerHTML = "Customer Voice ID: " + decode_dict["message"]["VoiceProfile"];
+		document.getElementById("VoiceProfile").innerHTML = "Customer Voice ID: " + decode_dict["message"]["VoiceProfileID"];
 		document.getElementById("AccountOpenedDate").innerHTML = "Account Opened: " + decode_dict["message"]["AccountOpenedDate"];
 		document.getElementById("LastActiveDate").innerHTML = "Last Active: " + decode_dict["message"]["LastActive"];
 	} else {

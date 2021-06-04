@@ -162,6 +162,10 @@ function actions_after_display_profile() {
 		var accountno = getCookie("AccountNo");
 		console.log(accountno);
 
+		setCookie("CustID", decode_dict["message"]["CustID"]);
+		var custid = getCookie("CustID");
+		console.log(custid);
+
 		document.getElementById("AccountNo_Display").innerHTML = "Account Number: " + decode_dict["message"]["AccountNo"];
 		document.getElementById("Name_Display").innerHTML = "Name: " + decode_dict["message"]["Fname"] + " " + decode_dict["message"]["Lname"];
 		document.getElementById("Gender_Display").innerHTML = "Gender: " + decode_dict["message"]["Gender"];
@@ -252,13 +256,17 @@ function verification(result, confidence_level) {
 	var accountno = getCookie("AccountNo");
 	console.log(accountno);
 
+	var custid = getCookie("CustID");
+	console.log(custid);
+
 	var request_data = {
 		"service": "verification",
 		"Fname": fname,
 		"Lname": lname,
 		"AccountNo": accountno,
 		"Result": result,
-		"Accuracy": confidence_level
+		"Accuracy": confidence_level,
+		"CustID": custid
 	};
 
 	var request_str = dict2jsonEncode(request_data);
@@ -295,7 +303,7 @@ function actions_after_system_performanc() {
 	var message = decode_dict["message"];
 	console.log(decode_dict["message"]);
 
-	var system = [["Time", "Date", "First Name", "Last Name", "Result", "Accuracy"]];
+	var system = [["Time", "Date", "First Name", "Last Name", "AccountNo", "Result", "Accuracy"]];
 
 	console.log(message[0]["Time"]);
 	console.log(message.length);
@@ -306,8 +314,9 @@ function actions_after_system_performanc() {
 		system_row[1] = message[i]["Date"];
 		system_row[2] = message[i]["Fname"];
 		system_row[3] = message[i]["Lname"];
-		system_row[4] = message[i]["Result"];
-		system_row[5] = message[i]["Accuracy"];
+		system_row[4] = message[i]["AccountNo"];
+		system_row[5] = message[i]["Result"];
+		system_row[6] = message[i]["Accuracy"];
 		system.push(system_row);
 	}
 

@@ -8,8 +8,9 @@ In order to reproduce our static web app the following criterias must be met:
     - Cognitive Services (subscription key and region noted)
 3) Speech SDK for JavaScript must be obtained (follow instructions here: https://www.npmjs.com/package/microsoft-cognitiveservices-speech-sdk)
 
-In order to create a web application using Microsoft Azure's Static Web App services, refer to the following tutorial: https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript 
-In order to implement text-dependent speaker verification using Microsoft Azure's Cognitive Services, refer to the following tutorial and follow the JavaScript instructions: https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speaker-recognition?tabs=script&pivots=programming-language-javascript
+In order to create a web application using Microsoft Azure's Static Web App services, refer to the following tutorial: https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript.
+
+In order to implement text-dependent speaker verification using Microsoft Azure's Cognitive Services, refer to the following tutorial and follow the JavaScript instructions: https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speaker-recognition?tabs=script&pivots=programming-language-javascript. The following sample scripts is also a valuable resource: https://github.com/Azure-Samples/cognitive-services-speech-sdk/tree/fa6428a0837779cbeae172688e0286625e340942/quickstart/javascript/browser. 
 
 ## Explaining the files:
 

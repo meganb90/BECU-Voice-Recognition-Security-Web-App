@@ -26,9 +26,9 @@ In order to implement text-dependent speaker verification using Microsoft Azure'
 | Audio&VerifySpeaker.js | Used by the 'BECU_Customer_Database.html' to verify users. |
 | AudioCapture.js | Used by the 'BECU_Add_New_User.html' to capture audio streams for enrollment. |
 | EnrollSpeaker.js | Used by the 'BECU_Add_New_User.html' to enroll new users into the Microsoft Azure Cognitive Service. |
-| functions.js | Used by the 'BECU_Add_New_User.html' to enter in new user's relevant bank account information. |
-| speech-processor.js | |
-| utils.js | |
+| functions.js | Used by the (1) 'index.html' to login into admin protal, (2) 'BECU_Add_New_User.html' to enter in new user's relevant bank account information, (3) 'BECU_Customer_Database.html' to display customer's profile, perform security questions verification, report voice recognition results, and (4) 'BECU_System_Dashboard.html' to show the system performance, statistics, and activitiy logs. |
+| speech-processor.js | Used by the 'EnrollSpeaker.js' and 'Audio&VerifySpeaker.js' for speaker verification. |
+| utils.js | Used by all HTML files to (1) send HTTP requests to the back-end and (2) use cookies to keep track of user's activity on the website. |
 
 | Images | |
 | --- |---|

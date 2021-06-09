@@ -1,0 +1,16 @@
+insert into Customer
+(VoiceProfileID, Email, Fname, Lname, AccountNo, Gender, Age, SSN, DOB, DriverLicense, PhoneNumber, FirstLanguage, NativeEnglishSpeaker, Nationality, Ethnicity, VoiceEquipment, Environment, Feedback, AccountOpenedDate, LastActive, ResAddress)
+values ('', 'amylin99@uw.edu', 'Amy', 'Lin', 0001, 'Female', 21, '123456789', '2000-01-01', 123456, 2061231234, 'English', 'Yes', 'American', 'Asian', 'Computer', 'Washing dishes in bathroom', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'kz9@uw.edu', 'Karen', 'Zhang', 0002, 'Female', 21, '123456789', '2000-01-01', 123456, 2061231234, 'English', 'Yes', 'American', 'Chinese Asian', 'Phone', 'Someone talking', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'b06702006@ntu.edu.tw', 'Leo', 'Wang', 0003, 'Male', 21, '123456789', '2000-01-01', 123456, 2061231234, 'Mandarin', 'No', 'Taiwan', 'Asian', 'Computer', 'Music', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'ck1031052@gl.ck.tp.edu.tw', 'Linga', 'Chen', 0004, 'Male', 22, '123456789', '2000-01-01', 123456, 2061231234, 'Mandarin', 'No', 'Taiwan', 'Asian', 'Phone', 'People talking', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'ck1031052@gl.ck.tp.edu.tw', 'Andrew', 'Wong', 0005, 'Male', 22, '123456789', '2000-01-01', 123456, 2061231234, 'Mandarin', 'No', 'Taiwan', 'Asian', 'Phone', 'People talking', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'koom3@uw.edu', 'Min Jung', 'Koo', 0006, 'Female', 22, '123456789', '2000-01-01', 123456, 2061231234, 'Korean', 'No', 'Korea', 'Asian', 'Phone', 'Living room construction', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'houts@spu.edu', 'Siekhuoy', 'Hout', 0007, 'Female', 29, '123456789', '2000-01-01', 123456, 2061231234, 'Khmer', 'No', 'Cambodian', 'Asian', 'Computer', 'Netflix on phone', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'liuxiulong1995@gmail.com', 'Xiulong', 'Liu', 0008, 'Male', 25, '123456789', '2000-01-01', 123456, 2061231234, 'Chinese', 'No', 'China', 'Asian', 'Computer', 'Music', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'haoboz@uw.edu', 'Haobo', 'Zhang', 0009, 'Male', 24, '123456789', '2000-01-01', 123456, 2061231234, 'Chinese', 'No', 'Chinese', 'Asian', 'Computer Mic', 'Water flowing', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'christianlanx@gmail.com', 'Christian', 'Lancaster', 0010, 'Male', 26, '123456789', '2000-01-01', 123456, 2061231234, 'English', 'Yes', 'USA', 'Hispanic', 'Webcam', 'Youtube', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'shrm145@uw.edu', 'Shruti', 'Misra', 0011, 'Female', 25, '123456789', '2000-01-01', 123456, 2061231234, 'English', 'Yes', 'Indian', 'Asian', 'Phone', 'Music', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'meganb90@uw.edu', 'Megan', 'Bui', 0012, 'Female', 21, '123456789', '2000-01-01', 123456, 2061231234, 'Vietnamese', 'No', 'American', 'Vietnamese-American', 'Phone', 'Music', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'meganb90@uw.edu', 'Diana', 'Bui', 0013, 'Female', 19, '123456789', '2000-01-01', 123456, 2061231234, 'Vietnamese', 'No', 'American', 'Vietnamese-American', 'Phone', 'People talking', 'NA', '2010-01-01', '2021-05-10', ''),
+	   ('', 'kellyh27@uw.edu', 'Kelly', 'Ho', 0014, 'Female', 21, '123456789', '2000-01-01', 123456, 2061231234, 'English', 'No', 'USA/Taiwan', 'Taiwanese', 'Phone', 'Music', 'NA', '2010-01-01', '2021-05-10', '');

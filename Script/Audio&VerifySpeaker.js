@@ -235,6 +235,11 @@ if (navigator.mediaDevices.getUserMedia) {
         let evtTgt = e.target;
         // numOfRecordings = numOfRecordings - 1;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+	console.log(array);
+        indexofDeletedAudio = audioStream.indexOf(array);
+        console.log(indexofDeletedAudio);
+        audioStream.splice(indexofDeletedAudio, 1);
+        console.log(audioStream);
       }
 
       clipLabel.onclick = function() {

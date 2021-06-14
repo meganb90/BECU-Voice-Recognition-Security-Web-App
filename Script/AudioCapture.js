@@ -11,6 +11,9 @@ var numOfRecordings = 0;
 // visualiser setup - create web audio api context and canvas
 var audioStream = []; // Store audio stream
 
+// Creating dictionary to store the index of the recordings
+var recordingIndex = {}
+
 let audioCtx;
 const canvasCtx = canvas.getContext("2d");
 
@@ -51,7 +54,10 @@ if (navigator.mediaDevices.getUserMedia) {
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      const clipName = 'Recording ' + numOfRecordings
+      // Associating index with recordings
+      recordingIndex[e.target] = numOfRecordings-1;
+
+      const clipName = 'Recording ' + numOfRecordings;
 
       const clipContainer = document.createElement('article');
       const clipLabel = document.createElement('p');
@@ -95,8 +101,12 @@ if (navigator.mediaDevices.getUserMedia) {
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
-        // numOfRecordings = numOfRecordings + 1;
         evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+        console.log(array);
+        indexofDeletedAudio = audioStream.indexOf(array);
+        console.log(indexofDeletedAudio);
+        audioStream.splice(indexofDeletedAudio, 1);
+        console.log(audioStream);
       }
 
       clipLabel.onclick = function() {
